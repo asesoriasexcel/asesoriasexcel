@@ -1,9 +1,0 @@
-Gmail: aloasesoriasexcel@gmail.com - cl***4
-GitHub: T**242
-
-
-
-$ cat ~/.ssh/asesorias.pub
-eval "$(ssh-agent -s)"
-npm run build
-npm run deploy
