@@ -53,6 +53,65 @@ body, html {
   }
 }
 
+
+/* ****** Estilos estandarizados ****** */
+.seccion {
+  border: 1px solid red;
+}
+
+.centered-content {
+  width: 80%;
+  max-width: 1200px;
+  overflow: hidden; /* Evita el desbordamiento */
+  margin: 5rem auto 3rem auto;
+}
+
+.seccion-encabezado {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto 4rem auto;
+}
+
+/* ****** Header centrado ****** */
+.header-centrado {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+}
+
+.header-centrado svg {
+  font-size: 50px;
+  user-select: none;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.header-centrado h2 {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--seccion_info_titulo_1);
+  text-align: center;
+}
+
+.header-centrado p {
+  font-size: 1.3rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+/* ****** Header simple ****** */
+
+
+
 /* Estilos Responsivos */
 @media (max-width: 768px) {
   .centered-content {

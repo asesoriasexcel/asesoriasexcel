@@ -6,12 +6,15 @@ import './PreguntasFrecuentes.css';
 
 const PreguntasFrecuentes = () => {
   return (
-    <section className="preguntas-section">
+    <section className="preguntas-section seccion">
       <div className="centered-content">
-        <div className="icon-title"><FaHandshakeSimple /></div>
-        <h2>¿Es tu primera vez?</h2>
-        <p>¡Si tienes dudas, aquí las resolvemos!</p>
-        
+        <div className="seccion-encabezado">
+          <div className="header-centrado">
+            <div className="icon-title"><FaHandshakeSimple /></div>
+            <h2>¿Es tu primera vez?</h2>
+            <p>¡Si tienes dudas, aquí las resolvemos!</p>
+          </div>
+        </div>
         <Accordion>
           <AccordionTab header="¿Qué es AsesoríasExcel?">
             <p>Somos un equipo chileno experto en crear herramientas avanzadas en Excel. Nuestras planillas están diseñadas para facilitar procesos, especialmente en educación, con funcionalidades inteligentes y confiables</p>

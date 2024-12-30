@@ -1,20 +1,17 @@
 .preguntas-section {
     background: var(--seccion_faq_fondo);
-    padding: 50px 20px;
 }
 
-.preguntas-section .centered-content {
-    margin-top: 30px;
-    margin-bottom: 160px;
+.preguntas-section .header-centrado svg {
+    fill: red;
 }
 
-.preguntas-section .centered-content h2 {
+.preguntas-section .header-centrado h2 {
     color: var(--seccion_faq_titulo);
 }
 
-.preguntas-section .centered-content p {
+.preguntas-section .header-centrado p {
     color: var(--seccion_faq_subtitulo);
-    margin-bottom: 60px !important;
 }
 
 .p-accordion {

@@ -1,40 +1,16 @@
 .referencias-section {
     background: var(--seccion_referencias_fondo);
-    padding: 50px 20px;
 }
 
-.referencias-section .centered-content {
-    margin-top: 0px;
-    max-width: 80%;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
+.referencias-section .header-centrado svg {
+    fill: red;
 }
 
-.referencias-icon svg {
-    font-size: 50px;
-    user-select: none;
-    width: 1.5em;
-    height: 1.5em;
-    display: inline-block;
-    flex-shrink: 0;
-    fill: var(--seccion_referencias_icon);
-}
-
-.referencias-section .centered-content h2 {
-    font-size: 3rem;
-    line-height: 1;
-    font-weight: 600;
+.referencias-section .header-centrado h2 {
     color: var(--seccion_referencias_titulo);
 }
 
-.referencias-section .centered-content p {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-    font-weight: 600;
-    margin-top: 1.5rem;
+.referencias-section .header-centrado p {
     color: var(--seccion_referencias_subtitulo);
 }
 

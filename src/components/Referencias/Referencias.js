@@ -10,12 +10,16 @@ const Referencias = () => {
   const terceraColumna = referenciasData.slice(8, 11); 
 
   return (
-    <section className="referencias-section">
+    <section className="referencias-section seccion">
       <div className="centered-content">
-        {/* Título */}
-        <div className="referencias-icon"><FaHandshakeSimple /></div>
-        <h2>Real Stories Real Results Our Customers</h2>
-        <p>Discover how our solutions have transformed businesses through authentic testimonials from our valued customers.</p>
+        
+        <div className="seccion-encabezado">
+          <div className="header-centrado">
+            <div className="referencias-icon"><FaHandshakeSimple /></div>
+            <h2>Real Stories Real Results Our Customers</h2>
+            <p>Discover how our solutions have transformed businesses through authentic testimonials from our valued customers.</p>
+          </div>
+        </div>
 
         <div className="referencias-rows">
           {/* Primera columna */}
