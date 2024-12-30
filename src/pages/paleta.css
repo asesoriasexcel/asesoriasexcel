@@ -47,16 +47,18 @@
     --seccion_destacados_titulo: var(--mp111_MicrowaveBlue);
     --seccion_destacados_subtitulo: var(--mp111_MicrowaveBlue);
     /* Aplicacion a CATEGORIAS */
-    --seccion_categorias_fondo: #24313d;
+    --seccion_categorias_fondo: var(--mp111_MicrowaveBlue);
     --seccion_categorias_titulo: var(--mp111_Lotion);
     --seccion_categorias_subtitulo: var(--mp111_Bookworm);
+    --seccion_categorias_icono: var(--mp111_MicrowaveBlue);
+    --seccion_categorias_fondoicono: var(--mp111_MistedYellow);
     /* Aplicacion a DISEÑO */
     --seccion_diseno_fondo: var(--mp111_Lotion);
     --seccion_diseno_titulo: var(--mp111_KokushokuBlack);
     --seccion_diseno_subtitulo: var(--mp111_MicrowaveBlue);
     --seccion_diseno_textolista: var(--mp111_MicrowaveBlue);
     /* Aplicacion a REFERENCIAS */
-    --seccion_referencias_fondo: var(--mp111_CoralBay);
+    --seccion_referencias_fondo: var(--mp111_Lotion);
     --seccion_referencias_icon: var(--mp111_KokushokuBlack);
     --seccion_referencias_titulo: var(--mp111_MicrowaveBlue);
     --seccion_referencias_subtitulo: var(--mp111_Bookworm);

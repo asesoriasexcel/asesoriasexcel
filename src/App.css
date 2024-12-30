@@ -56,7 +56,6 @@ body, html {
 
 /* ****** Estilos estandarizados ****** */
 .seccion {
-  border: 1px solid red;
 }
 
 .centered-content {
@@ -114,11 +113,11 @@ body, html {
   margin-top: 1.5rem;
 }
 
-/* ****** Header simple ****** */
+/* ****** Header izquierda ****** */
 .seccion-encabezado-izq {
   width: 100%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
   margin-top: 2.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -127,16 +126,16 @@ body, html {
 
 .header-izq {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items:flex-end;
   font-size: 2.1rem;
   line-height: 1.2;
   font-weight: 600;
   text-align: left;
-  gap: 20px;
+  gap: 10px;
 }
 
 .header-izq svg {
-  margin-right: 10px;
   font-size: 2rem;
 }
 
@@ -148,7 +147,8 @@ body, html {
   width: 100%;
   text-align: left;
   margin-inline: auto;
-  align-items: center; /* Alinea el ícono y el texto */
+  align-items: center;
+  margin-bottom: 0px;
 }
 
 .header-izq p {}
@@ -165,6 +165,10 @@ body, html {
   .contenido {
     width: 100%;
   }
+  
+  .centered-content {
+    padding: 40px 30px !important;
+  }
 
   .seccion-encabezado .header-centrado svg {
     font-size: 40px !important;
@@ -180,4 +184,11 @@ body, html {
     font-size: 16px !important;
     margin-top: 16px !important;
   }
+
+  .header-izq {
+    flex-direction: column;
+    align-items:flex-start;
+  }
+
+  
 }

@@ -1,5 +1,6 @@
 .referencias-section {
     background: var(--seccion_referencias_fondo);
+    border: 1px solid red;
 }
 
 .referencias-section .header-centrado svg {

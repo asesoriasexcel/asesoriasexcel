@@ -1,10 +1,15 @@
 /* Categorias.css */
 .categoria-grid-section {
   background: var(--seccion_categorias_fondo);
+  padding: 20px 0;
+}
+
+.seccion-encabezado-izq {
+  /* Puedes añadir más estilos si es necesario */
 }
 
 .categoria-grid-section .header-izq svg {
-  fill: var(--seccion_categorias_titulo);;  
+  fill: var(--seccion_categorias_titulo);  
 }
 
 .categoria-grid-section .header-izq h2 {
@@ -22,19 +27,19 @@
   gap: 20px;
   width: 80%;
   margin-inline: auto;
+  margin-top: 40px !important;
 }
 
 .categoria-card {
   display: flex;
   flex-direction: column;
-  padding: 20px;
   margin-top: 20px;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 8px;
   text-align: center;
-  justify-content: center;
-  transition: 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+  justify-content: space-between; /* Asegura que los elementos se distribuyan de manera adecuada */
+  height: 100%; /* Asegura que las tarjetas ocupen toda la altura disponible */
 }
 
 .categoria-card .icon {
@@ -47,17 +52,15 @@
   align-items: center;
   text-align: center;
   border-radius: 50%;
-  border: 1px solid;
-  border-color: hsla(210, 100%, 60%, 0.25);
-  background-color: hsla(210, 100%, 23%, 0.2);
-  box-shadow: 0 0 0 2px hsla(210, 100%, 42%, 0.1), 0px 2px 12px 0px rgba(0, 0, 0, 0.25) inset;
+  background-color: var(--seccion_categorias_fondoicono);
   margin-inline: auto;
 }
 
 .categoria-card .icon svg {
   font-size: 90px;
-  color: hsl(210, 100%, 60%);
+  color: var(--seccion_categorias_icono);
 }
+
 .categoria-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
@@ -69,31 +72,46 @@
   font-size: .9rem;
 }
 
-
-
 @media (max-width: 768px) {
-  .categoria-header {
-    margin-inline: 0px;
-    width: 100%;
-  }
-
-  .categoria-header h1 {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
   .categoria-grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 20px;
     width: 100%;
+    align-items: flex-start;
     margin-inline: auto;
   }
 
   .categoria-card {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que los elementos se distribuyan bien */
+    padding-inline: 0px;
+  }
+
+  .categoria-card .icon {
+    width: 90px;
+    height: 90px;
+  }
+
+  .categoria-card .icon svg {
+    font-size: 50px;
+  }
+
+  .categoria-card h3 {
+    font-size: .9rem;
+  }
+
+  .categoria-card p {
+    font-size: .7rem;
+  }
+
+  /* Asegurar que el botón "Ver más" esté alineado al centro */
+  .categoria-card .ver-mas-btn {
+    margin-top: 20px; /* Espacio entre el texto y el botón */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
