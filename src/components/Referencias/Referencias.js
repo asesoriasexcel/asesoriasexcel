@@ -13,7 +13,7 @@ const Referencias = () => {
     <section className="referencias-section">
       <div className="centered-content">
         {/* Título */}
-        <div className="icon-title"><FaHandshakeSimple /></div>
+        <div className="referencias-icon"><FaHandshakeSimple /></div>
         <h2>Real Stories Real Results Our Customers</h2>
         <p>Discover how our solutions have transformed businesses through authentic testimonials from our valued customers.</p>
 

@@ -57,12 +57,22 @@
     --seccion_diseno_textolista: var(--mp111_MicrowaveBlue);
     /* Aplicacion a REFERENCIAS */
     --seccion_referencias_fondo: var(--mp111_CoralBay);
+    --seccion_referencias_icon: var(--mp111_KokushokuBlack);
     --seccion_referencias_titulo: var(--mp111_MicrowaveBlue);
     --seccion_referencias_subtitulo: var(--mp111_Bookworm);
     --seccion_referencias_bordecards: var(--mp111_Bookworm);
     --seccion_referencias_textocards: var(--mp111_MicrowaveBlue);
     --seccion_referencias_cardnombre: var(--mp111_MistedYellow);
     --seccion_referencias_cardjob: var(--mp111_MicrowaveBlue);
+    /* Aplicacion a FAQ */
+    --seccion_faq_fondo: var(--mp111_Lotion);
+    --seccion_faq_titulo: var(--mp111_MicrowaveBlue);
+    --seccion_faq_subtitulo: var(--mp111_MicrowaveBlue);
+    --seccion_faq_bordeacordeon: var(--mp111_Bookworm);
+    --seccion_faq_pregunta: var(--mp111_KokushokuBlack);
+    --seccion_faq_preguntaicon: var(--mp111_KokushokuBlack);
+    --seccion_faq_respuesta: var(--mp111_MicrowaveBlue);
+
 
     /* Variables para colores de fondo */
     --fondo-seccion1: #172b36;

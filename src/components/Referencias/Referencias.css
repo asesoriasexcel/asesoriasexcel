@@ -13,6 +13,16 @@
     margin-right: auto;
 }
 
+.referencias-icon svg {
+    font-size: 50px;
+    user-select: none;
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    flex-shrink: 0;
+    fill: var(--seccion_referencias_icon);
+}
+
 .referencias-section .centered-content h2 {
     font-size: 3rem;
     line-height: 1;
