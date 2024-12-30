@@ -11,10 +11,8 @@ const ProductoDestacado = () => {
 
         <div className="seccion-encabezado-izq">
           <div className="header-izq">
-            <h2>
-              <PiMedalLight className="productos-icon" /> 
-              <span>Productos Destacados</span>
-            </h2>
+            <PiMedalLight className="productos-icon" /> 
+            <h2>Productos Destacados</h2>
           </div>
         </div>
 

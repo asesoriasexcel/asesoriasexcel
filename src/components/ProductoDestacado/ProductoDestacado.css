@@ -3,10 +3,12 @@
     background: var(--seccion_destacados_fondo);
   }
   
-
-
-  .productos-icon {
-
+  .productos-section .header-izq svg {
+    fill: var(--seccion_destacados_titulo);;  
+  }
+  
+  .productos-section .header-izq h2 {
+    color: var(--seccion_destacados_subtitulo);
   }
 
   .productos-sheet {
@@ -38,6 +40,7 @@
     font-weight: bold;
     color: #333;
     margin-bottom: 1.1rem;
+    padding: 20px 40px;
   }
   
   /* Estilo para los títulos dentro de las columnas */

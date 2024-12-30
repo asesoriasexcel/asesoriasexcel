@@ -3,25 +3,12 @@
   background: var(--seccion_categorias_fondo);
 }
 
-.categoria-header {
-  margin-bottom: 40px;
-  width: 80%;
-  margin-inline: auto;
+.categoria-grid-section .header-izq svg {
+  fill: var(--seccion_categorias_titulo);;  
 }
 
-.categoria-header h1 {
-  font-size: 2rem;
+.categoria-grid-section .header-izq h2 {
   color: var(--seccion_categorias_titulo);
-  font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-
-.categoria-header p {
-  font-size: 1.2rem;
-  color: var(--seccion_categorias_subtitulo);
-  display: flex;
-  align-items: center;
 }
 
 .categoria-icon {
@@ -38,16 +25,41 @@
 }
 
 .categoria-card {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
+  margin-top: 20px;
   background-color: transparent;
-  border: 1px solid hsla(210, 100%, 38%, 0.6);
+  border: 1px solid transparent;
   border-radius: 8px;
-  text-align: left;
+  text-align: center;
+  justify-content: center;
   transition: 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
 }
 
+.categoria-card .icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  width: 170px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid;
+  border-color: hsla(210, 100%, 60%, 0.25);
+  background-color: hsla(210, 100%, 23%, 0.2);
+  box-shadow: 0 0 0 2px hsla(210, 100%, 42%, 0.1), 0px 2px 12px 0px rgba(0, 0, 0, 0.25) inset;
+  margin-inline: auto;
+}
+
+.categoria-card .icon svg {
+  font-size: 90px;
+  color: hsl(210, 100%, 60%);
+}
 .categoria-card h3 {
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--seccion_categorias_titulo);
 }
@@ -57,31 +69,7 @@
   font-size: .9rem;
 }
 
-.categoria-card:hover {
-  border: 1px solid hsla(210, 100%, 38%, 0.8);
-  background: hsla(210, 100%, 30%, 0.2);
-  box-shadow: 0px 2px 8px rgba(20, 172, 223, 0.6);
-}
 
-.categoria-card .icon {
-  font-size: 40px;
-  margin-bottom: 10px;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  border: 1px solid;
-  border-color: hsla(210, 100%, 60%, 0.25);
-  background-color: hsla(210, 100%, 23%, 0.2);
-  box-shadow: 0 0 0 2px hsla(210, 100%, 42%, 0.1), 0px 2px 12px 0px rgba(0, 0, 0, 0.25) inset;
-}
-
-.categoria-card .icon svg {
-  font-size: 1.125rem;
-  color: hsl(210, 100%, 60%);
-}
 
 @media (max-width: 768px) {
   .categoria-header {
