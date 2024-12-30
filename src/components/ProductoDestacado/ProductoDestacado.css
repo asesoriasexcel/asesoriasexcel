@@ -1,6 +1,6 @@
   /* General styles */
   .productos {
-    padding: 50px 20px;
+    padding: 100px 20px;
     background: var(--seccion_destacados_fondo);
   }
   
@@ -67,7 +67,7 @@
   .productos-column h2 {
     font-size: 1.6rem;
     text-align: left;
-    color: var(--texto2);
+    color: var(--seccion_destacados_titulo);
     font-weight: 500;
     max-width: 32rem;
   }
@@ -77,7 +77,7 @@
     font-size: 1.13rem;
     line-height: 1.5rem;
     text-align: justify;
-    color: var(--texto2);
+    color: var(--seccion_destacados_subtitulo);
   }
   
   .precio {

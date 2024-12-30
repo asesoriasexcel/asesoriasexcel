@@ -44,11 +44,25 @@
     --seccion_info_subtitulo: var(--mp111_Bookworm);
     /* Aplicacion en DESTACADOS */
     --seccion_destacados_fondo: var(--mp111_Lotion);
-    /* Aplicacion a PRODUCTOS */
-    --seccion_productos_fondo: var(--mp111_KokushokuBlack);
-    --seccion_productos_texto: var(--mp111_Lotion);
-  
-
+    --seccion_destacados_titulo: var(--mp111_KokushokuBlack);
+    --seccion_destacados_subtitulo: var(--mp111_MicrowaveBlue);
+    /* Aplicacion a CATEGORIAS */
+    --seccion_categorias_fondo: #24313d;
+    --seccion_categorias_titulo: var(--mp111_Lotion);
+    --seccion_categorias_subtitulo: var(--mp111_Bookworm);
+    /* Aplicacion a DISEÑO */
+    --seccion_diseno_fondo: var(--mp111_Lotion);
+    --seccion_diseno_titulo: var(--mp111_KokushokuBlack);
+    --seccion_diseno_subtitulo: var(--mp111_MicrowaveBlue);
+    --seccion_diseno_textolista: var(--mp111_MicrowaveBlue);
+    /* Aplicacion a REFERENCIAS */
+    --seccion_referencias_fondo: var(--mp111_CoralBay);
+    --seccion_referencias_titulo: var(--mp111_MicrowaveBlue);
+    --seccion_referencias_subtitulo: var(--mp111_Bookworm);
+    --seccion_referencias_bordecards: var(--mp111_Bookworm);
+    --seccion_referencias_textocards: var(--mp111_MicrowaveBlue);
+    --seccion_referencias_cardnombre: var(--mp111_MistedYellow);
+    --seccion_referencias_cardjob: var(--mp111_MicrowaveBlue);
 
     /* Variables para colores de fondo */
     --fondo-seccion1: #172b36;

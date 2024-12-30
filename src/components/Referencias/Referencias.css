@@ -1,5 +1,5 @@
 .referencias-section {
-    background: #24313d;
+    background: var(--seccion_referencias_fondo);
     padding: 50px 20px;
 }
 
@@ -17,7 +17,7 @@
     font-size: 3rem;
     line-height: 1;
     font-weight: 600;
-    color: #ffffff
+    color: var(--seccion_referencias_titulo);
 }
 
 .referencias-section .centered-content p {
@@ -25,7 +25,7 @@
     line-height: 1.75rem;
     font-weight: 600;
     margin-top: 1.5rem;
-    color: rgb(182, 190, 201);
+    color: var(--seccion_referencias_subtitulo);
 }
 
 .referencias-rows {
@@ -41,7 +41,7 @@
 }
 
 .referencias-card {
-    border: 1px solid rgb(51, 65, 85);
+    border: 1px solid var(--seccion_referencias_bordecard);
     padding: 1.5rem;
     border-radius: 1.5rem;
     width: 100%;
@@ -50,7 +50,7 @@
 }
 
 .referencias-section .centered-content .referencias-words p {
-    color: rgb(100, 116, 139);
+    color: var(--seccion_referencias_textocards);
     text-align: left;
     font-size: 14px;
     font-weight: 300;

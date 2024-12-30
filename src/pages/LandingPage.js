@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../components/Header/Header';
 import InfoSection from '../components/InfoSection/InfoSection';
 import ProductoDestacado from '../components/ProductoDestacado/ProductoDestacado';
-import Productos from '../components/Productos/Productos';
+import Categorias from '../components/Categorias/Categorias';
 import Diseno from '../components/Diseno/Diseno';
 import Referencias from '../components/Referencias/Referencias';
 import PreguntasFrecuentes from '../components/PreguntasFrecuentes/PreguntasFrecuentes';
@@ -17,7 +17,7 @@ const LandingPage = () => {
       <Header />
       <InfoSection />
       <ProductoDestacado />
-      <Productos />
+      <Categorias />
       <Diseno />
       <Referencias />
       <PreguntasFrecuentes />

@@ -1,0 +1,112 @@
+/* Categorias.css */
+.categoria-grid-section {
+  padding: 130px 20px;
+  background: var(--seccion_categorias_fondo);
+}
+
+.categoria-header {
+  margin-bottom: 40px;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.categoria-header h1 {
+  font-size: 2rem;
+  color: var(--seccion_categorias_titulo);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.categoria-header p {
+  font-size: 1.2rem;
+  color: var(--seccion_categorias_subtitulo);
+  display: flex;
+  align-items: center;
+}
+
+.categoria-icon {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+.categoria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin-inline: auto;
+}
+
+.categoria-card {
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid hsla(210, 100%, 38%, 0.6);
+  border-radius: 8px;
+  text-align: left;
+  transition: 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
+}
+
+.categoria-card h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--seccion_categorias_titulo);
+}
+
+.categoria-card p {
+  color: var(--seccion_categorias_subtitulo);
+  font-size: .9rem;
+}
+
+.categoria-card:hover {
+  border: 1px solid hsla(210, 100%, 38%, 0.8);
+  background: hsla(210, 100%, 30%, 0.2);
+  box-shadow: 0px 2px 8px rgba(20, 172, 223, 0.6);
+}
+
+.categoria-card .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  border: 1px solid;
+  border-color: hsla(210, 100%, 60%, 0.25);
+  background-color: hsla(210, 100%, 23%, 0.2);
+  box-shadow: 0 0 0 2px hsla(210, 100%, 42%, 0.1), 0px 2px 12px 0px rgba(0, 0, 0, 0.25) inset;
+}
+
+.categoria-card .icon svg {
+  font-size: 1.125rem;
+  color: hsl(210, 100%, 60%);
+}
+
+@media (max-width: 768px) {
+  .categoria-header {
+    margin-inline: 0px;
+    width: 100%;
+  }
+
+  .categoria-header h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .categoria-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .categoria-card {
+    width: 100%;
+  }
+}
