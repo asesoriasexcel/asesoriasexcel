@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/asesoriasexcel/static/css/main.d6ea803c.css",
-    "main.js": "/asesoriasexcel/static/js/main.e109e55e.js",
+    "main.css": "/asesoriasexcel/static/css/main.a490383c.css",
+    "main.js": "/asesoriasexcel/static/js/main.120fee4d.js",
     "static/media/imagen1.png": "/asesoriasexcel/static/media/imagen1.fe8303ac8d365bb7c97d.png",
     "static/media/primeicons.svg": "/asesoriasexcel/static/media/primeicons.6ed59f962963a4a73af2.svg",
     "static/media/primeicons.eot": "/asesoriasexcel/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
@@ -10,11 +10,11 @@
     "static/media/diseno.jpg": "/asesoriasexcel/static/media/diseno.8a32be50a631584690b9.jpg",
     "static/media/primeicons.woff2": "/asesoriasexcel/static/media/primeicons.024b32cc7bf399b1a847.woff2",
     "index.html": "/asesoriasexcel/index.html",
-    "main.d6ea803c.css.map": "/asesoriasexcel/static/css/main.d6ea803c.css.map",
-    "main.e109e55e.js.map": "/asesoriasexcel/static/js/main.e109e55e.js.map"
+    "main.a490383c.css.map": "/asesoriasexcel/static/css/main.a490383c.css.map",
+    "main.120fee4d.js.map": "/asesoriasexcel/static/js/main.120fee4d.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6ea803c.css",
-    "static/js/main.e109e55e.js"
+    "static/css/main.a490383c.css",
+    "static/js/main.120fee4d.js"
   ]
 }
