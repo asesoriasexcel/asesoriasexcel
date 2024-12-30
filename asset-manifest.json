@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/site/static/css/main.77e432b0.css",
-    "main.js": "/site/static/js/main.e9e74f3b.js",
-    "static/media/imagen1.png": "/site/static/media/imagen1.fe8303ac8d365bb7c97d.png",
-    "static/media/primeicons.svg": "/site/static/media/primeicons.6ed59f962963a4a73af2.svg",
-    "static/media/primeicons.eot": "/site/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
-    "static/media/primeicons.woff": "/site/static/media/primeicons.8931fda1930c3bd21e96.woff",
-    "static/media/primeicons.ttf": "/site/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
-    "static/media/diseno.jpg": "/site/static/media/diseno.8a32be50a631584690b9.jpg",
-    "static/media/primeicons.woff2": "/site/static/media/primeicons.024b32cc7bf399b1a847.woff2",
-    "index.html": "/site/index.html",
-    "main.77e432b0.css.map": "/site/static/css/main.77e432b0.css.map",
-    "main.e9e74f3b.js.map": "/site/static/js/main.e9e74f3b.js.map"
+    "main.css": "/asesoriasexcel/static/css/main.d6ea803c.css",
+    "main.js": "/asesoriasexcel/static/js/main.e109e55e.js",
+    "static/media/imagen1.png": "/asesoriasexcel/static/media/imagen1.fe8303ac8d365bb7c97d.png",
+    "static/media/primeicons.svg": "/asesoriasexcel/static/media/primeicons.6ed59f962963a4a73af2.svg",
+    "static/media/primeicons.eot": "/asesoriasexcel/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
+    "static/media/primeicons.woff": "/asesoriasexcel/static/media/primeicons.8931fda1930c3bd21e96.woff",
+    "static/media/primeicons.ttf": "/asesoriasexcel/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
+    "static/media/diseno.jpg": "/asesoriasexcel/static/media/diseno.8a32be50a631584690b9.jpg",
+    "static/media/primeicons.woff2": "/asesoriasexcel/static/media/primeicons.024b32cc7bf399b1a847.woff2",
+    "index.html": "/asesoriasexcel/index.html",
+    "main.d6ea803c.css.map": "/asesoriasexcel/static/css/main.d6ea803c.css.map",
+    "main.e109e55e.js.map": "/asesoriasexcel/static/js/main.e109e55e.js.map"
   },
   "entrypoints": [
-    "static/css/main.77e432b0.css",
-    "static/js/main.e9e74f3b.js"
+    "static/css/main.d6ea803c.css",
+    "static/js/main.e109e55e.js"
   ]
 }
