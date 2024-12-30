@@ -2,7 +2,7 @@
   "name": "asesoriasexcel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://asesoriasexcel.github.io/site",
+  "homepage": "https://asesoriasexcel.github.io/asesoriasexcel",
   "dependencies": {
     "antd": "^5.22.6",
     "country-flag-icons": "^1.5.13",
