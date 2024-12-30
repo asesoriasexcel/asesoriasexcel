@@ -1,0 +1,80 @@
+/* InfoSection.css */
+
+.info-section {
+  padding: 50px 20px 10px 20px;
+  background: var(--seccion_info_fondo);
+  /* background-image: linear-gradient(to bottom, #dcdde033 0%, hsla(0, 0%, 100%, 0) 200px); */
+}
+
+.centered-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  color: var(--seccion_info_titulo_1);
+  text-align: center;
+}
+
+.titulo span {
+  display: block;
+}
+
+.titulo .destacado {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--seccion_info_titulo_2);
+}
+
+.info-section .centered-content p {
+  font-size: 1.3rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  color: var(--seccion_info_subtitulo);
+}
+
+.centered-content .icon-title {
+  font-size: 50px;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.centered-content .icon-title svg {
+  font-size: 50px;
+  user-select: none;
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  flex-shrink: 0;
+  fill: var(--seccion_info_titulo_2);
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+  .info-section {
+    padding-top: 4rem;
+  }
+
+  .centered-content .icon-title svg {
+    font-size: 40px;
+  }
+
+  .titulo {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  .info-section .centered-content p {
+    font-size: 1.1rem;
+  }
+}

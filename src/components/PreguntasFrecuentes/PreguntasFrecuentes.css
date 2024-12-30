@@ -1,0 +1,71 @@
+.preguntas-section {
+    background: #0f1214;
+    padding: 50px 20px;
+}
+
+.preguntas-section .centered-content {
+    margin-top: 30px;
+    margin-bottom: 160px;
+}
+
+.p-accordion {
+    margin-top: 15px;
+}
+
+.p-accordion-header-link {
+    background: transparent;
+    border: 1px solid hsla(0, 0%, 100%, .12);
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.p-accordion-header svg {
+    color: #fff;
+    fill: #fff;
+}
+
+.p-accordion-header-text {
+    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.75rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+.p-accordion-content {
+    text-align: justify;
+    background: transparent;
+    color: hsla(0, 0%, 100%, .64);
+    border-top: 1px solid transparent;
+    border-left: 1px solid hsla(0, 0%, 100%, .12);
+    border-right: 1px solid hsla(0, 0%, 100%, .12);
+    border-bottom: 1px solid hsla(0, 0%, 100%, .12);
+    padding-bottom: 1.5rem;
+    margin: 0 !important;
+    padding-top: 0 !important;
+    border-end-start-radius: 1.5rem;
+    border-end-end-radius: 1.5rem;
+}
+
+.p-accordion-content p {
+    font-size: 1rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    margin: 0 !important;
+}
+
+/* NUEVOS ESTILOS */
+
+/* Elimina el borde inferior del encabezado cuando está activo */
+.p-accordion-header.p-highlight .p-accordion-header-link {
+    border-bottom: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Quita el borde superior del contenido del acordeón */
+.p-accordion-header.p-highlight + .p-accordion-content {
+    border-top: none;
+    margin-top: -1px; /* Evita cualquier separación visible */
+}

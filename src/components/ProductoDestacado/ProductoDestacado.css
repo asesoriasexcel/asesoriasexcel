@@ -1,0 +1,156 @@
+  /* General styles */
+  .productos {
+    padding: 50px 20px;
+    background: var(--seccion_destacados_fondo);
+  }
+  
+  .productos-sheet {
+    margin-bottom: 40px;
+    width: 80%;
+    margin-inline: auto;
+    padding: 30px 25px;
+    border: 1px solid rgb(146, 146, 146, 0.2);
+    border-radius: 20px;
+    background-image: radial-gradient(100% 25% at 50% -10%, rgba(94, 176, 239, .1), hsla(0, 0%, 100%, 0));
+}
+
+.productos-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin: 20px auto;
+    padding: 15px 0; /* Ajustado */
+    border-bottom: 1px solid rgb(146, 146, 146, 0.3);
+    height: auto;
+  }
+
+  .productos-header {
+    margin-top: 3rem;
+    margin-bottom: 40px; /* Espaciado inferior al título */
+  }
+  
+  .productos-header h1 {
+    font-size: 2rem;
+    color: var(--texto2);
+    font-weight: 600;
+    display: flex;
+    width: 80%;
+    margin-inline: auto;
+    align-items: center; /* Alinea el ícono y el texto */
+  }
+  
+  .productos-icon {
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+    font-size: 2rem; /* Tamaño del ícono */
+  }
+  
+  .productos-column {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    width: 50%;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.1rem;
+  }
+  
+  /* Estilo para los títulos dentro de las columnas */
+  .tag-label {
+    display: inline-block; /* Asegura que el elemento se comporte como un bloque en línea */
+    text-align: left; /* Alineación del texto hacia la izquierda */
+    margin-bottom: 10px; /* Opcional: Para dar un poco de separación */
+  }
+  
+  .productos-column h2 {
+    font-size: 1.6rem;
+    text-align: left;
+    color: var(--texto2);
+    font-weight: 500;
+    max-width: 32rem;
+  }
+  
+  /* Estilo para el párrafo */
+  .productos-column p {
+    font-size: 1.13rem;
+    line-height: 1.5rem;
+    text-align: justify;
+    color: var(--texto2);
+  }
+  
+  .precio {
+    color: rgb(204, 167, 0) !important;
+    font-size: 0.9rem !important;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  /* Estilo para los botones */
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: end;
+  }
+  
+  
+  
+  /* Estilo de la imagen */
+  .productos-image {
+    width: 100%;
+    max-width: 32rem;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+/* Responsive styles */
+@media (max-width: 768px) {
+  .productos-sheet {
+    width: 100%;
+  }
+
+  .productos-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .productos-column {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .productos-header {
+    margin-bottom: 10px; /* Espaciado inferior al título */
+  }  
+
+  .productos-header h1 {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de columna */
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start; /* Alinea ambos elementos a la izquierda */
+  }
+
+  .productos-icon {
+    margin-right: 0; /* Elimina el margen derecho del ícono */
+    margin-bottom: 5px; /* Agrega espacio entre el ícono y el texto */
+  }
+
+  .productos-image {
+    width: 100%;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+}
+
+  
