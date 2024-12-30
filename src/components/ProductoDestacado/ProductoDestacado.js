@@ -6,14 +6,19 @@ import productosDestacados from '../../data/productosDestacados'; // Archivo de 
 
 const ProductoDestacado = () => {
   return (
-    <section className="productos">
-      <div className="productos-header">
-          <h1>
-            <PiMedalLight className="productos-icon" /> Productos Destacados
-          </h1>
+    <section className="productos-section seccion">
+      <div className="centered-content">
+
+        <div className="seccion-encabezado-izq">
+          <div className="header-izq">
+            <h2>
+              <PiMedalLight className="productos-icon" /> 
+              <span>Productos Destacados</span>
+            </h2>
+          </div>
         </div>
 
-      <div className="productos-sheet">
+        <div className="contenido productos-sheet">
         {/* Bucle para renderizar productos */}
         {productosDestacados.map((producto) => (
           <div className="productos-content" key={producto.id}>
@@ -36,6 +41,7 @@ const ProductoDestacado = () => {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );

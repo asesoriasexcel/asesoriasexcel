@@ -63,9 +63,17 @@ body, html {
   width: 80%;
   max-width: 1200px;
   overflow: hidden; /* Evita el desbordamiento */
-  margin: 5rem auto 3rem auto;
+  padding: 60px 30px;
+  margin-inline: auto;
 }
 
+.contenido {
+  width: 100%;
+  margin-inline: auto;
+  padding: 30px 25px;
+}
+
+/* ****** Header centrado ****** */
 .seccion-encabezado {
   max-width: 600px;
   margin: 0 auto;
@@ -76,7 +84,6 @@ body, html {
   margin: 0 auto 4rem auto;
 }
 
-/* ****** Header centrado ****** */
 .header-centrado {
   font-size: 2.1rem;
   line-height: 1.2;
@@ -109,8 +116,40 @@ body, html {
 }
 
 /* ****** Header simple ****** */
+.seccion-encabezado-izq {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto 4rem auto;
+}
 
+.header-izq {
+  font-size: 2.1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+}
 
+.header-izq svg {
+  margin-right: 10px;
+  font-size: 2rem;
+}
+
+.header-izq h2 {
+  font-size: 2rem;
+  color: var(--texto2);
+  font-weight: 600;
+  display: flex;
+  width: 100%;
+  text-align: left;
+  margin-inline: auto;
+  align-items: center; /* Alinea el ícono y el texto */
+}
+
+.header-izq p {}
 
 /* Estilos Responsivos */
 @media (max-width: 768px) {
@@ -118,6 +157,11 @@ body, html {
     width: 100% !important;
     max-width: 100% !important;
     margin-inline: 0px !important;
+    padding-inline: 20px;
+  }
+
+  .contenido {
+    width: 100%;
   }
 
   .seccion-encabezado .header-centrado svg {
@@ -126,13 +170,12 @@ body, html {
   }
 
   .seccion-encabezado .header-centrado h2 {
-    font-size: 40px !important;
-    font-size: 2rem !important;
+    font-size: 32px !important;
     margin-bottom: 0px !important;
   }
 
   .seccion-encabezado .header-centrado p {
-    font-size: 1rem !important;
-    margin-top: 12px !important;
+    font-size: 16px !important;
+    margin-top: 16px !important;
   }
 }
