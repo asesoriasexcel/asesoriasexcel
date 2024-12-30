@@ -20,31 +20,3 @@
 .info-section .centered-content p {
   color: var(--seccion_info_subtitulo);
 }
-
-.centered-content .icon-title {
-  font-size: 50px;
-  -webkit-box-pack: center;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-/* Estilos Responsivos */
-@media (max-width: 768px) {
-  .info-section {
-    padding-top: 4rem;
-  }
-
-  .centered-content .icon-title svg {
-    font-size: 40px;
-  }
-
-  .titulo {
-    font-size: 2rem;
-    font-weight: 900;
-  }
-
-  .info-section .centered-content p {
-    font-size: 1.1rem;
-  }
-}

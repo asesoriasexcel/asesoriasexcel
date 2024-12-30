@@ -95,25 +95,7 @@
 
 /* Estilos Responsivos */
 @media (max-width: 768px) {
-    .referencias-section {
-      padding-top: 4rem;
-    }
-  
-    .referencias-section .centered-content {
-        margin-inline: 0px;
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .referencias-section .centered-content h2 {
-      font-size: 2rem;
-      font-weight: 900;
-    }
-  
-    .referencias-section .centered-content p {
-      font-size: 1rem;
-    }
-  
+        
     /* Ocultar las columnas excepto la primera */
     .referencias-rows {
       grid-template-columns: 1fr; /* Mostrar solo una columna */
