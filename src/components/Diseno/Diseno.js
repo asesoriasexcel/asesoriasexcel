@@ -8,7 +8,7 @@ const { Title, Text } = Typography;
 
 const Diseno = () => {
   return (
-    <section className="diseno-section">
+    <section className="diseno-section seccion">
       <Row className="centered-content" gutter={[16, 16]} align="middle">
         {/* Columna Izquierda con Imagen */}
         <Col xs={24} md={12} className="image-container">

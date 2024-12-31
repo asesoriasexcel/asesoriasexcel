@@ -26,26 +26,26 @@
     --mp072_AnchorfishBlue: #1B2632; /* color oscuro */
 
     /* Aplicacion de paleta MP111 */
-    --texto1: var(--mp111_KokushokuBlack);
-    --texto2: var(--mp111_MicrowaveBlue);
-  
+    --warning-p1: rgb(149, 30, 30);
 
     /* Aplicacion en HEADER */
     --seccion_header_fondo: var(--mp111_Lotion);
-    --seccion_header_titulo_1: var(--mp111_KokushokuBlack);
+    --seccion_header_titulo_1: rgb(64, 64, 64);
     --seccion_header_titulo_2: var(--mp111_MicrowaveBlue);
-    --seccion_header_titulo_subtitulo: var(--mp111_Bookworm);
+    --seccion_header_titulo_subtitulo: rgb(64, 64, 64);
     --seccion_header_topmenu_text: var(--mp111_MicrowaveBlue);
     --seccion_header_topmenu_hover: var(--mp111_CoralBay);
     /* Aplicacion en INFO */
-    --seccion_info_fondo: var(--mp111_MicrowaveBlue);
-    --seccion_info_titulo_1: var(--mp111_Lotion);
+    --seccion_info_fondo: rgba(255, 255, 255, 1);
+    --seccion_info_svg: var(--mp111_MistedYellow);
+    --seccion_info_titulo_1: var(--mp111_MicrowaveBlue);
     --seccion_info_titulo_2: var(--mp111_MistedYellow);
     --seccion_info_subtitulo: var(--mp111_Bookworm);
     /* Aplicacion en DESTACADOS */
     --seccion_destacados_fondo: var(--mp111_Lotion);
     --seccion_destacados_titulo: var(--mp111_MicrowaveBlue);
     --seccion_destacados_subtitulo: var(--mp111_MicrowaveBlue);
+    --seccion_destacados_precio: var(--mp111_MicrowaveBlue);
     /* Aplicacion a CATEGORIAS */
     --seccion_categorias_fondo: var(--mp111_MicrowaveBlue);
     --seccion_categorias_titulo: var(--mp111_Lotion);
@@ -61,13 +61,14 @@
     --seccion_referencias_fondo: var(--mp111_Lotion);
     --seccion_referencias_icon: var(--mp111_KokushokuBlack);
     --seccion_referencias_titulo: var(--mp111_MicrowaveBlue);
-    --seccion_referencias_subtitulo: var(--mp111_Bookworm);
+    --seccion_referencias_subtitulo: var(--mp111_MicrowaveBlue);
     --seccion_referencias_bordecards: var(--mp111_Bookworm);
     --seccion_referencias_textocards: var(--mp111_MicrowaveBlue);
     --seccion_referencias_cardnombre: var(--mp111_MistedYellow);
     --seccion_referencias_cardjob: var(--mp111_MicrowaveBlue);
     /* Aplicacion a FAQ */
     --seccion_faq_fondo: var(--mp111_Lotion);
+    --seccion_faq_icon: var(--mp111_MicrowaveBlue);
     --seccion_faq_titulo: var(--mp111_MicrowaveBlue);
     --seccion_faq_subtitulo: var(--mp111_MicrowaveBlue);
     --seccion_faq_bordeacordeon: var(--mp111_Bookworm);
@@ -75,11 +76,6 @@
     --seccion_faq_preguntaicon: var(--mp111_KokushokuBlack);
     --seccion_faq_respuesta: var(--mp111_MicrowaveBlue);
 
-
-    /* Variables para colores de fondo */
-    --fondo-seccion1: #172b36;
-    --fondo-seccion2: #114c5a;
-    --fondo-seccion3: #ff9932;
 
 
   }

@@ -96,7 +96,7 @@
   width: 26px; /* Círculo más pequeño */
   height: 26px; /* Igual a `width` para mantener la proporción */
   padding: 5px; /* Menos padding para hacer el círculo más pequeño */
-  box-shadow: 0 0 10px #3b5998, 0 0 20px #3b5998, 0 0 30px #3b5998; /* Brillo de Facebook */
+  box-shadow: 0 0 5px #3b5998, 0 0 10px #3b5998, 0 0 150px #3b5998; /* Brillo de Facebook */
   animation: animate-facebook 3s linear infinite; /* Sin animación de escala */
 }
 
@@ -109,36 +109,9 @@
   width: 26px; /* Círculo más pequeño */
   height: 26px; /* Igual a `width` para mantener la proporción */
   padding: 5px; /* Menos padding para hacer el círculo más pequeño */
-  box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; /* Brillo de YouTube */
+  box-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000, 0 0 22px #ff0000; /* Brillo de YouTube */
   animation: animate-youtube 3s linear infinite; /* Sin animación de escala */
 }
-
-/* Animación de brillo para el ícono de Facebook */
-@keyframes animate-facebook {
-  0% {
-    box-shadow: 0 0 10px #3b5998, 0 0 20px #3b5998, 0 0 30px #3b5998;
-  }
-  50% {
-    box-shadow: 0 0 20px #3b5998, 0 0 40px #3b5998, 0 0 60px #3b5998;
-  }
-  100% {
-    box-shadow: 0 0 10px #3b5998, 0 0 20px #3b5998, 0 0 30px #3b5998;
-  }
-}
-
-/* Animación de brillo para el ícono de YouTube */
-@keyframes animate-youtube {
-  0% {
-    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
-  }
-  50% {
-    box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 60px #ff0000;
-  }
-  100% {
-    box-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
-  }
-}
-
 
 
 @media (max-width: 768px) {
@@ -156,4 +129,15 @@
     justify-content: flex-start !important;
   }
 
+  .footer-subtitle {
+    margin-bottom: 50px;
+  }
+
+  .social-icons {
+    margin-bottom: 8px !important;
+  }
+
+  .copyright {
+    margin-bottom: 20px;
+  }
 }

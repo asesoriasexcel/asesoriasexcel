@@ -1,7 +1,7 @@
 // PreguntasFrecuentes.js
 import React from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
-import { FaHandshakeSimple } from "react-icons/fa6";
+import { FaHeadset } from "react-icons/fa";
 import './PreguntasFrecuentes.css';
 
 const PreguntasFrecuentes = () => {
@@ -10,7 +10,7 @@ const PreguntasFrecuentes = () => {
       <div className="centered-content">
         <div className="seccion-encabezado">
           <div className="header-centrado">
-            <div className="icon-title"><FaHandshakeSimple /></div>
+            <div className="icon-title"><FaHeadset /></div>
             <h2>¿Es tu primera vez?</h2>
             <p>¡Si tienes dudas, aquí las resolvemos!</p>
           </div>

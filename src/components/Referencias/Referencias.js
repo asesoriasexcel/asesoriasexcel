@@ -1,6 +1,6 @@
 import React from 'react';
 import referenciasData from '../../data/referenciasData';  // Importamos los datos
-import { FaHandshakeSimple } from "react-icons/fa6";
+import { FaQuoteLeft } from "react-icons/fa";
 import './Referencias.css';
 
 const Referencias = () => {
@@ -15,7 +15,7 @@ const Referencias = () => {
         
         <div className="seccion-encabezado">
           <div className="header-centrado">
-            <div className="referencias-icon"><FaHandshakeSimple /></div>
+            <div className="referencias-icon"><FaQuoteLeft /></div>
             <h2>Real Stories Real Results Our Customers</h2>
             <p>Discover how our solutions have transformed businesses through authentic testimonials from our valued customers.</p>
           </div>

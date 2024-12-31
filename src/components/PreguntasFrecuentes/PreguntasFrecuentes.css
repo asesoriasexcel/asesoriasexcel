@@ -3,7 +3,7 @@
 }
 
 .preguntas-section .header-centrado svg {
-    fill: red;
+    fill: var(--seccion_faq_icon);
 }
 
 .preguntas-section .header-centrado h2 {
@@ -12,6 +12,10 @@
 
 .preguntas-section .header-centrado p {
     color: var(--seccion_faq_subtitulo);
+}
+
+.preguntas-section .seccion-encabezado {
+    margin-bottom: 3rem;
 }
 
 .p-accordion {
