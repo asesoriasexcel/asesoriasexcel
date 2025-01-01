@@ -5,9 +5,9 @@
   width: 100%;
   height: 540px;
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 18%, rgba(255, 255, 255, 0) 50%), /* Degradado limitado al 60% */
-              url('../../images/imagen1.png');
+              url('../../images/bg-2.jpg');
   background-size: cover;
-  background-position: center 10%;
+  background-position: center 30%;
   background-repeat: no-repeat;
   display: flex;
   align-items: center;
@@ -121,9 +121,9 @@
 @media (max-width: 768px) {
   .header {
     background: linear-gradient(to top, rgba(255, 255, 255, 1) 1%, rgba(255, 255, 255, 0) 60%), /* Degradado limitado al 60% */
-              url('../../images/imagen1.png');
+              url('../../images/bg-2.jpg');
     background-size: cover; /* Asegura que la imagen de fondo no se repita ni se estire */
-    background-position: right;
+    background-position: center;
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     height: 540px; /* Ajusta la altura para la vista responsive */
     display: flex;
