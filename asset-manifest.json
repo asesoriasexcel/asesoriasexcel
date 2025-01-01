@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/asesoriasexcel/static/css/main.5d0c16b8.css",
-    "main.js": "/asesoriasexcel/static/js/main.d79b6585.js",
+    "main.css": "/asesoriasexcel/static/css/main.a5eb6c7b.css",
+    "main.js": "/asesoriasexcel/static/js/main.23246ec9.js",
     "static/media/imagen1.png": "/asesoriasexcel/static/media/imagen1.fe8303ac8d365bb7c97d.png",
     "static/media/primeicons.svg": "/asesoriasexcel/static/media/primeicons.6ed59f962963a4a73af2.svg",
     "static/media/primeicons.eot": "/asesoriasexcel/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
@@ -12,6 +12,7 @@
     "static/media/primeicons.woff2": "/asesoriasexcel/static/media/primeicons.024b32cc7bf399b1a847.woff2",
     "static/media/avatar12.png": "/asesoriasexcel/static/media/avatar12.c328d4e61a52ce8ccb8a.png",
     "static/media/avatar3.png": "/asesoriasexcel/static/media/avatar3.56ba798956907d5521eb.png",
+    "static/media/bg-2.jpg": "/asesoriasexcel/static/media/bg-2.7ade67fbf6d0a4b5694e.jpg",
     "static/media/avatar8.png": "/asesoriasexcel/static/media/avatar8.2d5c6cd6dfa08f4d6c16.png",
     "static/media/avatar11.png": "/asesoriasexcel/static/media/avatar11.f535623680a9e697ea4e.png",
     "static/media/avatar5.png": "/asesoriasexcel/static/media/avatar5.935f61a2e26b89991c96.png",
@@ -22,11 +23,11 @@
     "static/media/avatar9.png": "/asesoriasexcel/static/media/avatar9.83db35a6aab057ad05a3.png",
     "static/media/avatar6.png": "/asesoriasexcel/static/media/avatar6.ac50fa9bdc88524370f5.png",
     "index.html": "/asesoriasexcel/index.html",
-    "main.5d0c16b8.css.map": "/asesoriasexcel/static/css/main.5d0c16b8.css.map",
-    "main.d79b6585.js.map": "/asesoriasexcel/static/js/main.d79b6585.js.map"
+    "main.a5eb6c7b.css.map": "/asesoriasexcel/static/css/main.a5eb6c7b.css.map",
+    "main.23246ec9.js.map": "/asesoriasexcel/static/js/main.23246ec9.js.map"
   },
   "entrypoints": [
-    "static/css/main.5d0c16b8.css",
-    "static/js/main.d79b6585.js"
+    "static/css/main.a5eb6c7b.css",
+    "static/js/main.23246ec9.js"
   ]
 }
