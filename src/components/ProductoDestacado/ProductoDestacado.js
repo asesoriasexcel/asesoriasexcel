@@ -30,8 +30,8 @@ const ProductoDestacado = () => {
               <p>{producto.descripcion}</p>
 
               <div className="button-group">
-                <button className="action-button btn-primary">Comprar</button>
-                <p className="precio">Valor: ${producto.precio.toLocaleString('es-CL')} CLP</p>
+                <button className="action-button btn-primary btn-azul">Comprar</button>
+                <p className="precio">${producto.precio.toLocaleString('es-CL')} CLP</p>
               </div>
             </div>
             <div className="productos-column">

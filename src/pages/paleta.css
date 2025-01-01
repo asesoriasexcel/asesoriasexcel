@@ -37,10 +37,14 @@
     --seccion_header_topmenu_hover: var(--mp111_CoralBay);
     /* Aplicacion en INFO */
     --seccion_info_fondo: rgba(255, 255, 255, 1);
-    --seccion_info_svg: var(--mp111_MistedYellow);
+    --seccion_info_svg: var(--mp111_MicrowaveBlue);
     --seccion_info_titulo_1: var(--mp111_MicrowaveBlue);
     --seccion_info_titulo_2: var(--mp111_MistedYellow);
-    --seccion_info_subtitulo: var(--mp111_Bookworm);
+    --seccion_info_subtitulo: gray;
+    /* Aplicacion en INFO GRID */
+    --seccion_info_grid_icon: var(--mp111_MicrowaveBlue);
+    --seccion_info_grid_titulo: var(--mp111_MicrowaveBlue);
+    --seccion_info_grid_descripcion: var(--mp111_MistedYellow);
     /* Aplicacion en DESTACADOS */
     --seccion_destacados_fondo: var(--mp111_Lotion);
     --seccion_destacados_titulo: var(--mp111_MicrowaveBlue);

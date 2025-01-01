@@ -1,7 +1,7 @@
 /* Categorias.css */
 .categoria-grid-section {
   background: var(--seccion_categorias_fondo);
-  padding: 20px 0;
+  padding: 0;
 }
 
 .seccion-encabezado-izq {
@@ -30,6 +30,11 @@
   margin-top: 40px !important;
 }
 
+.categoria-grid .btn-naranjo {
+  width: 100%;
+  max-width: 130px;
+}
+
 .categoria-card {
   display: flex;
   flex-direction: column;
@@ -40,6 +45,8 @@
   text-align: center;
   justify-content: space-between; /* Asegura que los elementos se distribuyan de manera adecuada */
   height: 100%; /* Asegura que las tarjetas ocupen toda la altura disponible */
+  height: auto;
+  min-height: 100px;
 }
 
 .categoria-card .icon {
@@ -113,5 +120,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .categoria-grid .btn-naranjo {
+    padding: 4px 12px;
   }
 }

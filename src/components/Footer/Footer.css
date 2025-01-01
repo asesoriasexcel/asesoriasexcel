@@ -109,10 +109,33 @@
   width: 26px; /* Círculo más pequeño */
   height: 26px; /* Igual a `width` para mantener la proporción */
   padding: 5px; /* Menos padding para hacer el círculo más pequeño */
-  box-shadow: 0 0 8px #ff0000, 0 0 15px #ff0000, 0 0 22px #ff0000; /* Brillo de YouTube */
+  box-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 150px #ff0000; /* Brillo de YouTube */
   animation: animate-youtube 3s linear infinite; /* Sin animación de escala */
 }
 
+/* Estilo para el ícono de Instagram */
+.footer-instagram {
+  font-size: 2.1em; /* Tamaño del ícono */
+  color: #e1306c; /* Rosa de Instagram */
+  background: #fff;
+  border-radius: 50%; /* Circular */
+  width: 26px; /* Círculo más pequeño */
+  height: 26px; /* Igual a `width` para mantener la proporción */
+  padding: 5px; /* Menos padding para hacer el círculo más pequeño */
+  box-shadow: 0 0 5px #e1306c, 0 0 10px #e1306c, 0 0 150px #e1306c; /* Brillo de Instagram */
+}
+
+/* Estilo para el ícono de TikTok */
+.footer-tiktok {
+  font-size: 2.1em; /* Tamaño del ícono */
+  color: #69c9d0; /* Azul claro de TikTok */
+  background: #fff;
+  border-radius: 50%; /* Circular */
+  width: 26px; /* Círculo más pequeño */
+  height: 26px; /* Igual a `width` para mantener la proporción */
+  padding: 5px; /* Menos padding para hacer el círculo más pequeño */
+  box-shadow: 0 0 5px #69c9d0, 0 0 10px #ee1d52, 0 0 150px #fff; /* Brillo combinado de TikTok */
+}
 
 @media (max-width: 768px) {
 
@@ -122,6 +145,7 @@
     padding-inline: 0px;
     margin-inline: 0px;
     gap: 25px;
+    margin-bottom: 80px !important;
   }
 
   .footer-column span {

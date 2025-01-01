@@ -57,14 +57,13 @@ body, html {
 /* ****** Estilos estandarizados ****** */
 .seccion {
   margin: 0 auto !important;
-  padding-bottom: 30px;
 }
 
 .centered-content {
   width: 80%;
   max-width: 1200px;
   overflow: hidden; /* Evita el desbordamiento */
-  padding: 80px 30px;
+  padding: 20px 30px 100px 30px;
   margin-inline: auto;
 }
 
@@ -149,23 +148,48 @@ body, html {
 
 .header-izq p {}
 
+/* botones */
+.btn-azul {
+  text-align: center;
+  color: #fff;
+  background-color: #0093b0;
+  border-radius: 8px;
+  padding: .6rem 1.5rem;
+  white-space: break-spaces;
+  text-decoration: none;
+}
+
+.btn-azul:hover {
+  background-color: #4169e1 !important;
+}
+
+.btn-naranjo {
+  text-align: center;
+  color: #fff;
+  background-color: #e86e2f;
+  border-radius: 8px;
+  padding: .6rem 1.5rem;
+  white-space: break-spaces;
+  text-decoration: none;
+}
+
+.btn-naranjo:hover {
+  background-color: #cf2e2e !important;
+}
+
 /* Estilos Responsivos */
 @media (max-width: 768px) {
   .centered-content {
     width: 100% !important;
     max-width: 100% !important;
     margin-inline: 0px !important;
-    padding-inline: 20px;
+    padding: 0px 30px 40px 30px!important;
   }
 
   .contenido {
     width: 100%;
   }
   
-  .centered-content {
-    padding: 40px 30px !important;
-  }
-
   .seccion-encabezado .header-centrado svg {
     font-size: 40px !important;
     margin-bottom: 6px !important;

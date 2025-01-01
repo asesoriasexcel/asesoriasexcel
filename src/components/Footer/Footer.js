@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import { FaFacebookF } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
 import { GrYoutube } from "react-icons/gr";
 import { IoIosMail } from "react-icons/io";
 
@@ -19,6 +19,8 @@ const Footer = () => {
           <div className="social-icons">
             <FaFacebookF className="footer-facebook" />
             <GrYoutube className="footer-youtube" />
+            <FaInstagram className="footer-instagram" />
+            <FaTiktok className="footer-tiktok" />
           </div>
           <span className="copyright">Copyright Asesorias Excel 2024. Todos los derechos reservados.</span>
         </div>

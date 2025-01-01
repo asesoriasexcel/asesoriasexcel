@@ -37,7 +37,7 @@ const Diseno = () => {
               </List.Item>
             )}
           />
-          <Button type="primary" className="diseno-button">Comenzar Ahora</Button>
+          <Button type="primary" className="diseno-button btn-azul">Comenzar Ahora</Button>
         </Col>
       </Row>
     </section>

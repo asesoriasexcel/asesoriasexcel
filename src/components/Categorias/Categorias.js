@@ -23,7 +23,7 @@ const Categorias = () => {
               <h3>{categoria.titulo}</h3>
               <p>{categoria.descripcion}</p>
               <div className="ver-mas-btn">
-                <Button type="primary">Ver más</Button>
+                <Button type="primary" className="btn-naranjo">Ver más</Button>
               </div>
             </div>
           ))}

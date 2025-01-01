@@ -22,8 +22,7 @@ const Header = () => {
             <h1>Your Key to Success in the Corporate World</h1>
             <p>Join us to transform groundbreaking ideas into reality and lead the next wave of innovation.</p>
             <div className="button-group">
-              <button className="action-button btn-primary">Ver productos</button>
-              <button className="action-button btn-default">Conocer</button>
+              <button className="action-button btn-primary btn-naranjo">Ver productos</button>
             </div>
           </div>
         </div>

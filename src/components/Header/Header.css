@@ -14,8 +14,6 @@
   flex-direction: column;
 }
 
-
-
 .header-sheet {
   width: 75%;
 }
@@ -127,7 +125,7 @@
     background-size: cover; /* Asegura que la imagen de fondo no se repita ni se estire */
     background-position: right;
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 600px; /* Ajusta la altura para la vista responsive */
+    height: 540px; /* Ajusta la altura para la vista responsive */
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Asegura que el contenido se alinee hacia abajo */
