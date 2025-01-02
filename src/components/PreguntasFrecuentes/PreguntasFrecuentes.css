@@ -43,7 +43,7 @@
     font-weight: 600;
 }
 
-.p-accordion-content {
+.preguntas-section .p-accordion-content {
     text-align: justify;
     background: transparent;
     color: var(--seccion_faq_respuesta);

@@ -1,5 +1,6 @@
 .referencias-section {
     background: var(--seccion_referencias_fondo);
+    background-image: linear-gradient(to top, rgba(7, 16, 22, 0.8), hsla(0, 0%, 100%, 0));
 }
 
 .referencias-section .header-centrado svg {

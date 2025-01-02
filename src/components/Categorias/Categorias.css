@@ -1,6 +1,7 @@
 /* Categorias.css */
 .categoria-grid-section {
   background: var(--seccion_categorias_fondo);
+  
   padding: 0;
 }
 
@@ -98,12 +99,12 @@
   }
 
   .categoria-card .icon {
-    width: 90px;
-    height: 90px;
+    width: 6.5rem;
+    height: 6.5rem;
   }
 
   .categoria-card .icon svg {
-    font-size: 50px;
+    font-size: 4.5rem;
   }
 
   .categoria-card h3 {

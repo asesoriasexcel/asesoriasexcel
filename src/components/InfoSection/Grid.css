@@ -25,13 +25,13 @@
     transition: 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
   }
 
-  .grid-card h3 {
+  .grid-section .grid-card h3 {
     font-size: 1.2rem; /* Tamaño más grande para el título */
     font-weight: 600;
     color: var(--seccion_info_grid_titulo);
   }
 
-  .grid-card p {
+  .grid-section .grid-card p {
     color: var(--seccion_info_grid_descripcion);
     font-size: 1rem; /* Aumentar un poco el tamaño */
   }

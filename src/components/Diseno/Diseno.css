@@ -48,7 +48,10 @@
 }
 
 /* Estilos para el título */
-.diseno-title {
+.diseno-section .diseno-title h2 {
+  color: var(--seccion_diseno_titulo);
+}
+.diseno-section .diseno-title {
   color: var(--seccion_diseno_titulo);
   text-align: left;
   font-size: 2.5rem !important;
@@ -58,7 +61,7 @@
 }
 
 /* Estilos para el subtítulo */
-.diseno-subtitle {
+.diseno-section .diseno-subtitle {
   text-align: left;
   color: var(--seccion_diseno_subtitulo);
   font-size: 1.25rem;

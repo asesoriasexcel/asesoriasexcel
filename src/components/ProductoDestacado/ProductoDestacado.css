@@ -1,6 +1,7 @@
   /* General styles */
   .productos-section {
     background: var(--seccion_destacados_fondo);
+    background-image: linear-gradient(to top, rgba(7, 16, 22, 0.8), hsla(0, 0%, 100%, 0));
   }
   
   .productos-section .header-izq svg {
@@ -80,7 +81,7 @@
   }
   
   .precio {
-    color: var(--warning-p1) !important;
+    color: var(--seccion_destacados_precio) !important;
     font-size: 0.9rem !important;
     font-weight: 600;
     margin: 0;
@@ -124,6 +125,7 @@
 
   .productos-sheet {
     border: 1px solid transparent;
+    background-image: none;
   }
 
   .productos-column {
