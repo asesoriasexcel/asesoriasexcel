@@ -1,7 +1,7 @@
 /* Categorias.css */
 .categoria-grid-section {
   background: var(--seccion_categorias_fondo);
-  
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 1), hsla(0, 0%, 100%, 0));
   padding: 0;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; 
 import './Footer.css';
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
 import { GrYoutube } from "react-icons/gr";
@@ -14,13 +14,21 @@ const Footer = () => {
             <span className="footer-title_a">Asesorias</span>
             <span className="footer-title_b">Excel</span>
           </span>
-          <span className="footer-subtitle">No solo lo que necesitas, lo mejor.</span>
+          <span className="footer-subtitle">Soluciones precisas, en Excel y otras tecnologías.</span>
           <span>Síguenos</span>
           <div className="social-icons">
-            <FaFacebookF className="footer-facebook" />
-            <GrYoutube className="footer-youtube" />
-            <FaInstagram className="footer-instagram" />
-            <FaTiktok className="footer-tiktok" />
+            <a href="https://www.facebook.com/profile.php?id=61566069431755&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
+              <FaFacebookF className="footer-facebook" />
+            </a>
+            <a href="https://www.youtube.com/@aloasesoriasexcel" target="_blank" rel="noopener noreferrer">
+              <GrYoutube className="footer-youtube" />
+            </a>
+            <a href="https://www.instagram.com/aloasesoriasexcel" target="_blank" rel="noopener noreferrer">
+              <FaInstagram className="footer-instagram" />
+            </a>
+            <a href="https://www.tiktok.com/@aloasesoriasexcel1" target="_blank" rel="noopener noreferrer">
+              <FaTiktok className="footer-tiktok" />
+            </a>
           </div>
           <span className="copyright">Copyright Asesorias Excel 2024. Todos los derechos reservados.</span>
         </div>

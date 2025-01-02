@@ -1,18 +1,29 @@
 import React from 'react';
 import './Categorias.css';
-import { AiOutlineProduct } from "react-icons/ai";
+import { MdOutlineStorefront } from "react-icons/md";
+import { AiOutlineAppstore } from "react-icons/ai";
 import { Button } from 'antd'; // Importa el componente Button de Ant Design
 import categorias from '../../data/categorias'; // Importar los datos
 
+import LlamadaAccion from './LlamadaAccion';
+
 const Categorias = () => {
   return (
-    <section className="categoria-grid-section seccion">
+    <section id="lp-tienda" className="categoria-grid-section seccion">
       <div className="centered-content"> 
 
         <div className="seccion-encabezado-izq">
           <div className="header-izq">
-            <AiOutlineProduct className="categoria-icon" /> 
-            <h2>Categorías de Productos</h2>
+            <MdOutlineStorefront className="categoria-icon" /> 
+            <h2>Nuestros productos</h2>
+          </div>
+        </div>
+        <LlamadaAccion />
+
+        <div className="seccion-encabezado-izq">
+          <div className="header-izq">
+            <AiOutlineAppstore className="categoria-icon" /> 
+            <h2>Categorías de Educación</h2>
           </div>
         </div>
 
@@ -23,7 +34,7 @@ const Categorias = () => {
               <h3>{categoria.titulo}</h3>
               <p>{categoria.descripcion}</p>
               <div className="ver-mas-btn">
-                <Button type="primary" className="btn-naranjo">Ver más</Button>
+                <Button type="primary" className="btn-azul">Ver más</Button>
               </div>
             </div>
           ))}

@@ -183,6 +183,20 @@ body, html {
   background-color: #cf2e2e !important;
 }
 
+.btn-verde {
+  text-align: center;
+  color: #fff;
+  background-color: #28a745;
+  border-radius: 8px;
+  padding: .6rem 1.5rem;
+  white-space: break-spaces;
+  text-decoration: none;
+}
+
+.btn-verde:hover {
+  background-color: #28a745 !important;
+}
+
 /* Estilos Responsivos */
 @media (max-width: 768px) {
   .centered-content {

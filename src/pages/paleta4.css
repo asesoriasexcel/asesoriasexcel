@@ -34,7 +34,7 @@
 /* Aplicación en INFO GRID */
 --seccion_info_grid_icon: var(--lh_o); /* menos oscuro */
 --seccion_info_grid_titulo: var(--lh_o); /* menos oscuro */
---seccion_info_grid_descripcion: var(--comentarios); /* warning */
+--seccion_info_grid_descripcion: var(--comentarios_oscuro); /* warning */
 
 /* Aplicación en DESTACADOS */
 --seccion_destacados_fondo: var(--lh_po); /* menos claro */
@@ -77,3 +77,4 @@
 
 
 }
+  

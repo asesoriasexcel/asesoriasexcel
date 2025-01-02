@@ -1,0 +1,45 @@
+.floating-buttons-container {
+  position: fixed;
+  bottom: 40px; /* Espacio desde la parte inferior */
+  right: 20px;  /* Espacio desde la parte derecha */
+  display: flex;
+  flex-direction: column; /* Apilar los botones uno debajo del otro */
+  gap: 20px; /* Espacio entre los botones */
+}
+
+.floating-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff; /* Color de fondo del botón */
+  border-radius: 50%;
+  width: 53px; /* Ancho del botón */
+  height: 53px; /* Alto del botón */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.floating-button:hover {
+  background-color: #0056b3; /* Cambio de color al pasar el mouse */
+  transform: scale(1); /* Aumentar tamaño en hover */
+}
+
+/* Estilos adicionales para el botón de tienda */
+.floating-button.storefront {
+  background-color: #28a745; /* Color de fondo del botón de tienda */
+}
+
+.floating-button.storefront:hover {
+  background-color: #19692b; /* Cambio de color en hover */
+}
+
+/* Estilos adicionales para el botón de flecha */
+.floating-button.arrow {
+  background-color: #8d959c; /* Color de fondo del botón de flecha */
+}
+
+.floating-button.arrow:hover {
+  background-color: #5a6064; /* Cambio de color en hover */
+}

@@ -13,14 +13,13 @@ import 'antd/dist/reset.css';
 const Header = () => {
 
   return (
-    <header className="header">
+    <header id="lp-header" className="header">
       <div className="header-sheet">
         
         <TopMenu />
         <div className="header-content">
           <div className="column">
-            <h1>Your Key to Success in the Corporate World</h1>
-            <p>Join us to transform groundbreaking ideas into reality and lead the next wave of innovation.</p>
+            <h1>Aló! AsesoriasExcel Soluciones en Excel y Otras Tecnologías</h1>
             <div className="button-group">
               <button className="action-button btn-primary btn-naranjo">Ver productos</button>
             </div>

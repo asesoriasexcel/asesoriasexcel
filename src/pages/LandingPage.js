@@ -1,4 +1,3 @@
-// LandingPage.js
 import React from 'react';
 import Header from '../components/Header/Header';
 import InfoSection from '../components/InfoSection/InfoSection';
@@ -8,12 +7,13 @@ import Diseno from '../components/Diseno/Diseno';
 import Referencias from '../components/Referencias/Referencias';
 import PreguntasFrecuentes from '../components/PreguntasFrecuentes/PreguntasFrecuentes';
 import Footer from '../components/Footer/Footer';
+import FloatingButtons from '../components/FloatingButtons/FloatingButtons';
 
 import './paleta4.css';
 
 const LandingPage = () => {
   return (
-    <div className='landing-container'>
+    <div className="landing-container">
       <Header />
       <InfoSection />
       <ProductoDestacado />
@@ -22,6 +22,7 @@ const LandingPage = () => {
       <Referencias />
       <PreguntasFrecuentes />
       <Footer />
+      <FloatingButtons />
     </div>
   );
 };

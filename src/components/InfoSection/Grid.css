@@ -26,7 +26,7 @@
   }
 
   .grid-section .grid-card h3 {
-    font-size: 1.2rem; /* Tamaño más grande para el título */
+    font-size: 1.3rem; /* Tamaño más grande para el título */
     font-weight: 600;
     color: var(--seccion_info_grid_titulo);
   }
@@ -45,7 +45,7 @@
   }
 
   .grid-card .icon svg {
-    font-size: 3rem;
+    font-size: 3.5rem;
     user-select: none;
     width: 1em;
     height: 1em;
@@ -71,4 +71,13 @@
       max-width: 50%;
       padding-inline: 10px;
     }
+
+    
+  .grid-section .grid-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .grid-card .icon svg {
+    font-size: 3rem;
+  }
   }
