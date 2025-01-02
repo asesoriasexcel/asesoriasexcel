@@ -1,5 +1,5 @@
   .grid-section {
-    padding: 20px;
+
   }
 
   .grid {
@@ -10,7 +10,7 @@
     width: 100%;
     max-width: 1200px; /* Ancho máximo para limitar las columnas */
     margin-inline: auto;
-    margin-bottom: 2rem;
+    margin: 0px;
   }
 
   .grid-card {

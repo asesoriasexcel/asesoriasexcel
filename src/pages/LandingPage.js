@@ -9,7 +9,7 @@ import Referencias from '../components/Referencias/Referencias';
 import PreguntasFrecuentes from '../components/PreguntasFrecuentes/PreguntasFrecuentes';
 import Footer from '../components/Footer/Footer';
 
-import './paleta.css';
+import './paleta3.css';
 
 const LandingPage = () => {
   return (

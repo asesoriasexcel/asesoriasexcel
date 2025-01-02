@@ -6,7 +6,7 @@
   height: 540px;
   background: linear-gradient(to right, rgba(255, 255, 255, 1) 18%, rgba(255, 255, 255, 0) 50%), /* Degradado limitado al 60% */
               url('../../images/bg-2.jpg');
-  background-size: cover;
+  background-size:cover;
   background-position: center 30%;
   background-repeat: no-repeat;
   display: flex;
@@ -45,7 +45,7 @@
   max-width: 32rem;
   color: #ffffff;
   margin-bottom: 30px;
-  background: linear-gradient(to right, var(--seccion_header_titulo_1), var(--seccion_header_titulo_1));
+  background: linear-gradient(to right, var(--seccion_header_titulo_1), var(--seccion_header_titulo_2));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

@@ -12,6 +12,7 @@
 
 .referencias-section .header-centrado p {
     color: var(--seccion_referencias_subtitulo);
+    font-weight: 300;
 }
 
 .referencias-rows {
@@ -27,7 +28,7 @@
 }
 
 .referencias-card {
-    border: 1px solid var(--seccion_referencias_bordecard);
+    border: 1px solid rgba(151, 150, 150, 0.2);
     padding: 1.5rem;
     border-radius: 1.5rem;
     width: 100%;
@@ -76,13 +77,13 @@
 
 .referencias-name {
     font-size: 16px;
-    color: #fff;
+    color: var(--seccion_referencias_cardnombre);
     font-weight: bold;
 }
 
 .referencias-job {
     font-size: 12px;
-    color: rgb(156, 163, 175);
+    color: var(--seccion_referencias_cardjob);
     margin-top: 4px;
 }
 

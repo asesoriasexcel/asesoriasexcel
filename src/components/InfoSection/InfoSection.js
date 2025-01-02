@@ -15,7 +15,6 @@ const InfoSection = () => {
               <span>Simplify Your Work with</span>
               <span className="destacado">Our Standout Features</span>
             </h2>
-            <p>Enhance your business processes and maximize efficiency with our enterprise-grade solutions.</p>
           </div>
         </div>
       

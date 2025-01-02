@@ -5,6 +5,15 @@ import { PiMedalLight } from "react-icons/pi";
 import productosDestacados from '../../data/productosDestacados'; // Archivo de datos
 
 const ProductoDestacado = () => {
+  // Función para convertir enlaces de YouTube al formato embebido
+  const convertirEnlaceEmbed = (link) => {
+    if (link.includes("youtube.com/watch?v=")) {
+      const videoId = link.split("v=")[1];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    return link; // Si no es un enlace estándar de YouTube, lo deja como está
+  };
+
   return (
     <section className="productos-section seccion">
       <div className="centered-content">
@@ -17,7 +26,6 @@ const ProductoDestacado = () => {
         </div>
 
         <div className="contenido productos-sheet">
-        {/* Bucle para renderizar productos */}
         {productosDestacados.map((producto, index) => (
           <div
             className={`productos-content ${
@@ -36,18 +44,30 @@ const ProductoDestacado = () => {
             </div>
             <div className="productos-column">
               <div className="tag-container">
-                <Tag color="blue" className="tag-label">Video Explicativo</Tag>
+                {producto.video_si && (
+                  <Tag color="blue" className="tag-label">Video Explicativo</Tag>
+                )}
               </div>
-              <img 
-                src={producto.imagen} 
-                alt={`Imagen de ${producto.nombre}`} 
-                className="productos-image" 
-              />
+              {producto.video_si ? (
+                <iframe
+                  src={convertirEnlaceEmbed(producto.video_link)}
+                  title={`Video de ${producto.nombre}`}
+                  className="productos-video"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
+              ) : (
+                <img 
+                  src={producto.imagen} 
+                  alt={`Imagen de ${producto.nombre}`} 
+                  className="productos-image" 
+                />
+              )}
             </div>
           </div>
         ))}
       </div>
-
 
       </div>
     </section>
@@ -55,3 +75,4 @@ const ProductoDestacado = () => {
 };
 
 export default ProductoDestacado;
+

@@ -105,6 +105,14 @@
     margin: 0 auto;
   }
   
+  .productos-video {
+    width: 100%;
+    height: 250px; /* Ajusta según el diseño */
+    border: none;
+    margin-top: 0px;
+  }
+
+  
 /* Responsive styles */
 @media (max-width: 768px) {
 

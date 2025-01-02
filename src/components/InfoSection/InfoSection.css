@@ -6,11 +6,12 @@
 }
 
 .info-section .seccion-encabezado {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .info-section .centered-content {
   padding-top: 40px;
+  padding-bottom: 40px;
 }
 
 .info-section .header-centrado svg {
