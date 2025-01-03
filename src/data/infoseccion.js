@@ -1,4 +1,4 @@
-import { FaClock, FaSuitcase, FaFileAlt, FaGem, FaTrophy, FaChartLine } from 'react-icons/fa';
+import { FaClock, FaGem, FaTrophy, FaChartLine } from 'react-icons/fa';
 
 export const cardInfo = [
   {
