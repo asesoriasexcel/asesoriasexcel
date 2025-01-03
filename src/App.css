@@ -243,13 +243,6 @@ body, html {
 
 
 /* === PAGINAS SECUNDARIAS ===*/
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  box-sizing: border-box;
-}
-
 .cuerpo-page-container {
   min-height: calc(100vh - 346px); /* Resta 250px de la altura de la pantalla */
   background: gray;
