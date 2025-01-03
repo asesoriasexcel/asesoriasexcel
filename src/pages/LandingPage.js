@@ -15,12 +15,7 @@ import TopMenu from '../components/Header/TopMenu';
 
 // Importar páginas
 import TiendaPage from '../components/TiendaPage/TiendaPage';
-import CarritoPage from '../components/CarritoPage/CarritoPage';
-import ConfirmaCompraPage from '../components/ConfirmaCompraPage/ConfirmaCompraPage';
-import ContactoPage from '../components/ContactoPage/ContactoPage';
-import DisenoPage from '../components/DisenoPage/DisenoPage';
-import ProductoPage from '../components/ProductoPage/ProductoPage';
-import TerminosCondicionesPage from '../components/TerminosCondicionesPage/TerminosCondicionesPage';
+
 
 import './paleta4.css';
 
@@ -52,12 +47,6 @@ const App = () => {
 
           {/* Ruta para la página de tienda */}
           <Route path="/tienda" element={<TiendaPage />} />
-          <Route path="/carrito" element={<CarritoPage />} />
-          <Route path="/confirmar-compra" element={<ConfirmaCompraPage />} />
-          <Route path="/contacto" element={<ContactoPage />} />
-          <Route path="/diseno" element={<DisenoPage />} />
-          <Route path="/producto" element={<ProductoPage />} />
-          <Route path="/terminos-condiciones" element={<TerminosCondicionesPage />} />
         </Routes>
 
         {/* Componentes fijos en todas las páginas */}
