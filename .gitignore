@@ -22,4 +22,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Ignore compressed files
+*.zip
+*.rar
+*.7z
+
+# Additional tool-specific files
 .codegpt
