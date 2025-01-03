@@ -15,14 +15,16 @@
     --comentarios: #9ba4ac;
     --comentarios_oscuro: #62686d;
     --blanco: #FEFDFA;
+    --primary: #0093b0;
 
     /* Aplicación en HEADER */
 --seccion_header_fondo: var(--lh_c); /* claro */
 --seccion_header_titulo_1: rgb(32, 32, 32); /* oscuro */
 --seccion_header_titulo_2: var(--lh_o); /* menos oscuro */
 --seccion_header_titulo_subtitulo: rgb(32, 32, 32); /* oscuro */
---seccion_header_topmenu_text: var(--lh_o); /* menos oscuro */
---seccion_header_topmenu_hover: var(--lh_especial); /* especial */
+--seccion_header_topmenu_fondo: var(--blanco);
+--seccion_header_topmenu_text: var(--lh_po); /* menos oscuro */
+--seccion_header_topmenu_hover: var(--primary); /* especial */
 
 /* Aplicación en INFO */
 --seccion_info_fondo: rgba(255, 255, 255, 1); /* claro */

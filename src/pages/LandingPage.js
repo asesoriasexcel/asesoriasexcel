@@ -8,12 +8,14 @@ import Referencias from '../components/Referencias/Referencias';
 import PreguntasFrecuentes from '../components/PreguntasFrecuentes/PreguntasFrecuentes';
 import Footer from '../components/Footer/Footer';
 import FloatingButtons from '../components/FloatingButtons/FloatingButtons';
+import TopMenu from '../components/Header/TopMenu';  // Importar el subcomponente TopMenu
 
 import './paleta4.css';
 
 const LandingPage = () => {
   return (
     <div className="landing-container">
+      <TopMenu />
       <Header />
       <InfoSection />
       <ProductoDestacado />

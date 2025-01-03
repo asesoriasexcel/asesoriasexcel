@@ -1,6 +1,5 @@
 // src/components/Header.js
 import React from 'react';
-import TopMenu from './TopMenu';  // Importar el subcomponente TopMenu
 import './Header.css';
 
 // PrimeReact styles
@@ -16,10 +15,10 @@ const Header = () => {
     <header id="lp-header" className="header">
       <div className="header-sheet">
         
-        <TopMenu />
+        
         <div className="header-content">
           <div className="column">
-            <h1>Aló! AsesoriasExcel Soluciones en Excel y Otras Tecnologías</h1>
+            <h1>Aló! AsesoriasExcel: Soluciones en Excel y Otras Tecnologías</h1>
             <div className="button-group">
               <button className="action-button btn-primary btn-naranjo">Ver productos</button>
             </div>
