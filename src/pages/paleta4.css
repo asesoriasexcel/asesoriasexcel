@@ -16,6 +16,7 @@
     --comentarios_oscuro: #62686d;
     --blanco: #FEFDFA;
     --primary: #0093b0;
+    --especial: #e86e2f;
 
     /* Aplicación en HEADER */
 --seccion_header_fondo: var(--lh_c); /* claro */
@@ -28,14 +29,14 @@
 
 /* Aplicación en INFO */
 --seccion_info_fondo: rgba(255, 255, 255, 1); /* claro */
---seccion_info_svg: var(--lh_o); /* menos oscuro */
---seccion_info_titulo_1: var(--lh_o); /* menos oscuro */
---seccion_info_titulo_2: var(--lh_especial); /* warning */
+--seccion_info_svg: var(--primary); /* menos oscuro */
+--seccion_info_titulo_1: var(--primary); /* menos oscuro */
+--seccion_info_titulo_2: var(--especial); /* warning */
 --seccion_info_subtitulo: var(--lh_mc); /* menos claro */
 
 /* Aplicación en INFO GRID */
---seccion_info_grid_icon: var(--lh_o); /* menos oscuro */
---seccion_info_grid_titulo: var(--lh_o); /* menos oscuro */
+--seccion_info_grid_icon: var(--primary); /* menos oscuro */
+--seccion_info_grid_titulo: var(--primary); /* menos oscuro */
 --seccion_info_grid_descripcion: var(--comentarios_oscuro); /* warning */
 
 /* Aplicación en DESTACADOS */
