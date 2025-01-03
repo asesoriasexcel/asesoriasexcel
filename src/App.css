@@ -245,13 +245,15 @@ body, html {
 /* === PAGINAS SECUNDARIAS ===*/
 .cuerpo-page-container {
   min-height: calc(100vh - 346px); /* Resta 250px de la altura de la pantalla */
-  background: gray;
+  background: #fff;
   display: flex;
   justify-content: center; /* Centrar el contenido horizontalmente */
   align-items: center; /* Centrar el contenido verticalmente */
 }
 
 .cuerpo-page {
+  display: flex;
+  flex-direction: column;
   width: 100%; /* Asegura que el contenido ocupe el ancho completo */
   text-align: center;
 }
