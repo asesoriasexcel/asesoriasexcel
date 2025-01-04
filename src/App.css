@@ -245,7 +245,7 @@ body, html {
 /* === PAGINAS SECUNDARIAS ===*/
 .cuerpo-page-container {
   min-height: calc(100vh - 346px); /* Resta 250px de la altura de la pantalla */
-  background: #fff;
+  background: var(--blanco);
   display: flex;
   justify-content: center; /* Centrar el contenido horizontalmente */
   align-items: center; /* Centrar el contenido verticalmente */
@@ -261,6 +261,7 @@ body, html {
 /* Media query para pantallas más pequeñas */
 @media (max-width: 768px) {
   .cuerpo-page-container {
-    min-height: calc(100vh - 250px); /* Ajusta el espacio restante */
+    min-height: calc(100vh - 250px);
+    margin-top: 74px;
   }
 }

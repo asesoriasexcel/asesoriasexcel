@@ -1,17 +1,27 @@
 .cuerpo-page-container {
     display: flex;
-    justify-content: center;
+    justify-content: left;
     margin-inline: auto;
     padding: 20px;
     flex-direction: column;
   }
   
+  .cuerpo-page-container .ant-breadcrumb {
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 4px;
+  }
+
   .titulo-productos {
     font-size: 32px;
     font-weight: bold;
     color: #333;
     margin-bottom: 20px;
-    text-align: center;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 30px;
   }
   
   .productos-grid {

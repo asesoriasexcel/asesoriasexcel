@@ -9,7 +9,7 @@ const TiendaPage = () => {
   return (
     <div className="cuerpo-page-container">
       {/* Breadcrumb de Ant Design */}
-      <Breadcrumb style={{ marginBottom: '20px' }}>
+      <Breadcrumb>
         <Breadcrumb.Item>
           <Link to="/">Home</Link>
         </Breadcrumb.Item>
