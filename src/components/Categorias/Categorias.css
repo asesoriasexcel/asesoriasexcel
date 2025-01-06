@@ -84,7 +84,7 @@
   .categoria-grid {
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
     align-items: flex-start;
     margin-inline: auto;
@@ -99,8 +99,8 @@
   }
 
   .categoria-card .icon {
-    width: 6.5rem;
-    height: 6.5rem;
+    width: 6.8rem;
+    height: 6.8rem;
   }
 
   .categoria-card .icon svg {
@@ -108,11 +108,11 @@
   }
 
   .categoria-card h3 {
-    font-size: .9rem;
+    font-size: 1rem;
   }
 
   .categoria-card p {
-    font-size: .7rem;
+    font-size: .8rem;
   }
 
   /* Asegurar que el botón "Ver más" esté alineado al centro */

@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Importamos Link para navegación
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
+import { AiOutlineAppstore } from "react-icons/ai";
+import { AiOutlineHome } from "react-icons/ai";
+
 import './TopMenu.css';
 
 const TopMenu = () => {
@@ -9,13 +13,13 @@ const TopMenu = () => {
   // Lista de elementos del menú
   const items = [
     {
-      label: 'Home',
-      icon: 'pi pi-home',
+      label: 'Inicio',
+      icon: <AiOutlineHome className="icon-menuapp" />,
       command: () => alert('Home clicked')
     },
     {
-      label: 'Features',
-      icon: 'pi pi-star',
+      label: 'Tienda de productos',
+      icon: <AiOutlineAppstore className="icon-menuapp" />,
       command: () => alert('Features clicked')
     },
     {
@@ -107,10 +111,12 @@ const TopMenu = () => {
       {/* Menú para escritorio */}
       {!isMobile && (
         <div className="desktop-menu-container">
-          <span className="desktop-brand-name">
-            <span className="asesoria">Asesorias</span>
-            <span className="excel">Excel</span>
-          </span>
+          <Link to="/">
+            <span className="desktop-brand-name">
+              <span className="asesoria">Asesorias</span>
+              <span className="excel">Excel</span>
+            </span>
+          </Link>
           <Menubar model={items} />
           <Button
             icon="pi pi-shopping-cart"

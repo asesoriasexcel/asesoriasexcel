@@ -230,4 +230,8 @@
   .p-menubar-end svg {
     font-size: 1.2rem;
   }
+
+  .icon-menuapp{
+    margin-right: 6px;
+  }
 }

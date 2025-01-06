@@ -185,7 +185,9 @@
   }
 
   .btn-h1 {
-    padding: 1.5rem 2.25rem !important;
+    padding: 1.4rem 2.15rem !important;
+    font-size: 18px;
+    font-weight: 400;
   }
 
 }
