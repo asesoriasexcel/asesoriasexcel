@@ -9,7 +9,7 @@ const LlamadaAccion = () => {
       <h1 className="llamada-accion-titulo">Nuestros productos son únicos. Revisa nuestra tienda.</h1>
       {/* Usamos Link para la navegación */}
       <Link to="/tienda">
-        <Button type="primary" className="btn-verde">Entrar</Button>
+        <Button type="primary" className="btn-naranjo">Entrar</Button>
       </Link>
     </div>
   );
