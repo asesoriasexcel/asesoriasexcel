@@ -16,7 +16,10 @@
     --comentarios_oscuro: #62686d;
     --blanco: #FEFDFA;
     --primary: #0093b0;
+    --excel_1: #28a745;
+    --excel_2: #267c10;
     --especial: #e86e2f;
+    --especial-danger: #b1341e;
 
     /* Aplicación en HEADER */
 --seccion_header_fondo: var(--lh_c); /* claro */
@@ -31,7 +34,7 @@
 --seccion_info_fondo: rgba(255, 255, 255, 1); /* claro */
 --seccion_info_svg: var(--primary); /* menos oscuro */
 --seccion_info_titulo_1: var(--primary); /* menos oscuro */
---seccion_info_titulo_2: var(--especial); /* warning */
+--seccion_info_titulo_2: var(--excel_2); /* warning */
 --seccion_info_subtitulo: var(--lh_mc); /* menos claro */
 
 /* Aplicación en INFO GRID */

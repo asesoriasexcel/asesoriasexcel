@@ -19,7 +19,7 @@ const TiendaPage = () => {
       </Breadcrumb>
 
       {/* Título "Nuestros Productos" */}
-      <h1 className="titulo-productos">Nuestros Productos</h1>
+      <h1 className="titulo-productos">Tienda de Productos</h1>
 
       <div className="productos-grid">
         {productosDestacados.map((producto) => (

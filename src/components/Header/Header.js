@@ -20,7 +20,7 @@ const Header = () => {
           <div className="column">
             <h1>Aló! AsesoriasExcel: Soluciones en Excel y Otras Tecnologías</h1>
             <div className="button-group">
-              <button className="action-button btn-primary btn-naranjo">Ver productos</button>
+              <button className="action-button btn-primary btn-naranjo btn-h1">Ver productos</button>
             </div>
           </div>
         </div>

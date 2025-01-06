@@ -15,7 +15,7 @@ const Categorias = () => {
         <div className="seccion-encabezado-izq">
           <div className="header-izq">
             <MdOutlineStorefront className="categoria-icon" /> 
-            <h2>Nuestros productos</h2>
+            <h2>Tienda de productos</h2>
           </div>
         </div>
         <LlamadaAccion />
