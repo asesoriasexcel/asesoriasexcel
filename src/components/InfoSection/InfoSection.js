@@ -12,8 +12,8 @@ const InfoSection = () => {
           <div className="header-centrado">
             <div className="icon-title"><FaHandshakeSimple /></div>
             <h2>
-              <span>Simplify Your Work with</span>
-              <span className="destacado">Our Standout Features</span>
+              <span>Simplifica tu Trabajo con</span>
+              <span className="destacado">Nuestros Productos Únicos</span>
             </h2>
           </div>
         </div>

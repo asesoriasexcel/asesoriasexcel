@@ -43,7 +43,7 @@
 --seccion_info_grid_descripcion: var(--comentarios_oscuro); /* warning */
 
 /* Aplicación en DESTACADOS */
---seccion_destacados_fondo: var(--lh_po); /* menos claro */
+--seccion_destacados_fondo: var(--lh_o); /* menos claro */
 --seccion_destacados_titulo: var(--blanco); /* menos oscuro */
 --seccion_destacados_subtitulo: var(--blanco); /* menos oscuro */
 --seccion_destacados_precio: var(--comentarios); /* menos oscuro */
@@ -81,6 +81,7 @@
 --seccion_faq_preguntaicon: var(--lh_o); /* oscuro */
 --seccion_faq_respuesta: var(--comentarios_oscuro); /* menos oscuro */
 
-
+--tienda-titulo: var(--lh_mo);
+--tienda_texto: var(--lh_mo);
 }
   

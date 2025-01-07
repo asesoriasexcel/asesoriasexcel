@@ -1,43 +1,44 @@
 const productosDestacados = [
   {
-    id: 1,
-    nombre: "Producto 1",
-    descripcion:
-      "Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas. Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas. Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas.",
+    id_articulo: 1,
+    nombre: 'Monitor de Tareas',
+    descripcion: 'Optimiza la gestión de tareas de tus estudiantes o empleados. Registra entregas, monitorea el progreso y genera informes detallados de manera fácil y organizada. Incluye macros para exportar a PDF e imprimir. **Diseñado para profesores y jefes de área que supervisan procesos.**',
+    grado: 'Básico',
+    id_categoria: '3',
+    id_subcategoria: '2',
+    precio: 8000,
+    video_si: 'no',
+    video_link: "https://www.youtube.com/watch?v=a9VTSJEzqh4",
+    imagen: require('../images/productos/docente_1_2.png'),
+    disponible: 'si',
+    },
+    {
+    id_articulo: 2,
+    nombre: 'Informe de Calificaciones',
+    descripcion: 'La planilla de "Informe de Calificaciones" permite registrar y analizar el rendimiento académico de hasta 50 estudiantes, facilitando la entrada de puntajes y el cálculo automático de notas. Incluye funcionalidades para segmentar estudiantes en niveles de logro, generar informes detallados para reuniones con jefes de UTP o padres, y visualizar la distribución de calificaciones a través de gráficos estadísticos. Con opciones para listar a los estudiantes por nombre o RUT ideal para publicar calificaciones. Esta herramienta es ideal para evaluar y presentar el desempeño del curso de manera clara, rápida y efectiva.',
+    grado: 'Básico',
+    id_categoria: '3',
+    id_subcategoria: '3',
+    precio: 8000,
+    video_si: 'no',
+    video_link: "https://www.youtube.com/watch?v=a9VTSJEzqh4",
+    imagen: require('../images/productos/publicacion_1_1.png'),
+    disponible: 'no',
+    },
+    {
+    id_articulo: 4,
+    nombre: 'Ajuste de Calificaciones',
+    descripcion: 'Ajusta y optimiza las calificaciones de tus estudiantes de forma precisa y flexible. Registra puntajes, aplica ajustes personalizados como escalas, puntajes mínimos, media y desviación estándar, y compara visualmente las notas originales con las ajustadas. Ideal para jefes de UTP, coordinadores y profesores, la planilla permite adaptar las calificaciones según el contexto de cada estudiante, incluyendo casos particulares y NEE. Genera reportes detallados para dirección, docentes y estudiantes.',
+    grado: 'Básico',
+    id_categoria: '1',
+    id_subcategoria: '4',
     precio: 10000,
-    imagen: require('../images/imagen1.png'), // Ruta relativa a la imagen
-    video_si: true, // Indica si tiene video (booleano)
-    video_link: "https://www.youtube.com/watch?v=a9VTSJEzqh4", // Link del video
-    area: "Educación", // Área, por ejemplo, Educación
-    cargo: "Jefe de UTP", // Cargo, por ejemplo, Jefe de UTP
-    profesion: "Profesor de Lenguaje", // Profesión, por ejemplo, Profesor de Lenguaje
-  },
-  {
-    id: 2,
-    nombre: "Producto 2",
-    descripcion:
-      "Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas. Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas. Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas.",
-    precio: 15000,
-    imagen: require('../images/imagen1.png'),
-    video_si: true, // Indica si tiene video (booleano)
-    video_link: "https://www.youtube.com/watch?v=a9VTSJEzqh4", // No tiene video, así que está vacío
-    area: "Tecnología", // Área, por ejemplo, Tecnología
-    cargo: "Ingeniero de Software", // Cargo, por ejemplo, Ingeniero de Software
-    profesion: "Desarrollador Web", // Profesión, por ejemplo, Desarrollador Web
-  },
-  {
-    id: 3,
-    nombre: "Producto 3",
-    descripcion:
-      "Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas. Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas. Descubre cómo podemos ayudarte a llevar tus productos al siguiente nivel con soluciones únicas y efectivas.",
-    precio: 20000,
-    imagen: require('../images/imagen1.png'),
-    video_si: true, // Indica si tiene video (booleano)
-    video_link: "https://www.youtube.com/watch?v=a9VTSJEzqh4", // Link del video
-    area: "Salud", // Área, por ejemplo, Salud
-    cargo: "Médico General", // Cargo, por ejemplo, Médico General
-    profesion: "Doctor en Medicina", // Profesión, por ejemplo, Doctor en Medicina
-  },
+    video_si: 'no',
+    video_link: "https://www.youtube.com/watch?v=a9VTSJEzqh4",
+    imagen: require('../images/productos/analisis_1_1.png'),
+    disponible: 'no',
+    },
+
 ];
 
 export default productosDestacados;

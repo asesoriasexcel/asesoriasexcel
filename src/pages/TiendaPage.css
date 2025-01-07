@@ -1,0 +1,194 @@
+/* Estilos generales del contenedor */
+.cuerpo-page-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+  }
+  
+  .ant-tree-draggable-icon {
+    display: none;
+  }
+
+  .ant-tree-switcher-icon svg {
+    font-size: 14px;
+    transform: none !important;
+  }
+  /* Ajustes al contenedor del menú */
+.tiendapage-menu {
+    display: flex;
+    justify-content: flex-end; /* Esto alinea el contenido al final (derecha) */
+    width: 100%;
+    max-width: 30%; /* Limitar el ancho máximo al 30% */
+    min-width: 265px; /* Asegurarse de que no se haga más pequeño que 265px */
+    background-color: #ffffff;
+    box-sizing: border-box;
+    position: relative;
+  }
+  
+  /* Ajustes al canvas del menú */
+  .tiendapage-menu-canvas {
+    font-size: .9rem;
+    flex-shrink: 0; /* Esto asegura que el canvas no se reduzca y no se desborde */
+    padding-top: 20px;
+    width: 100%; /* El canvas ocupa el 100% del ancho disponible */
+    max-width: 265px; /* Ancho máximo para el canvas */
+  }
+  
+  /* Ajustes al contenido principal */
+  .tiendapage-contenido {
+    width: 100%;
+    position: relative;
+    padding-left: 20px;
+    background-color: #f6f7f9;
+  }
+  
+  /* Ajustes al canvas del contenido */
+  .tiendapage-contenido-canvas {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 800px;
+    width: 100%;
+    padding-left: 20px;
+  }
+  
+  /* Para el Breadcrumb */
+  .cuerpo-page-container .ant-breadcrumb {
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 4px;
+  }
+  
+  /* Título de la página */
+  .titulo-productos {
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  /* Estilo de la lista del Tree */
+  .ant-tree-treenode {
+    margin-bottom: 0px;
+  }
+  
+  .ant-tree-switcher,
+  .ant-tree-node-content-wrapper span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  .ant-tree-node-content-wrapper span:hover {
+    font-weight: 600;
+  }
+
+  .ant-tree-node-content-wrapper {
+    font-size: .9rem;
+    
+    transition: font-weight 0.3s ease;
+  }
+  
+  .ant-tree-node-content-wrapper:hover {
+    font-weight: bold;
+  }
+  
+  /* Añadir efectos al Tree */
+  .ant-tree-switcher-icon {
+    font-size: .95rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .ant-tree-node-content-wrapper {
+    cursor: pointer;
+  }
+  
+  /* Para mantener la indentación adecuada */
+  .ant-tree-treenode {
+    margin-left: 20px;  /* Añadimos indentación para los subelementos */
+  }
+  
+  .productos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cuatro columnas por defecto */
+    gap: 20px;
+  }
+  
+  .producto-card {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: fit-content !important;
+    background: #fff;
+    border: 2px transparent solid;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(17, 20, 24, .15);
+    transition: transform .2s cubic-bezier(.4,1,.75,.9), box-shadow .2s cubic-bezier(.4,1,.75,.9), -webkit-transform .2s cubic-bezier(.4,1,.75,.9), -webkit-box-shadow .2s cubic-bezier(.4,1,.75,.9);
+    cursor: pointer;
+  }
+  
+  .producto-card:hover {
+    box-shadow: 0 0 0 1px rgba(17, 20, 24, .1), 0 2px 4px rgba(17, 20, 24, .2), 0 8px 24px rgba(17, 20, 24, .2);
+  }
+
+  .producto-imagen {
+    width: 100%;
+    height: 120px;  /* Altura fija de 80px */
+    object-fit: cover;  /* Mantiene la imagen proporcional sin distorsionarse */
+    border-radius: 8px;
+    margin-bottom: 0px;
+  }
+  
+  .producto-nombre {
+    margin: 8px 0;
+    font-size: .85rem;
+    color: var(--tienda-titulo);
+    font-weight: 500;
+    line-height: 15px;
+  }
+  
+  .producto-grado {
+    margin-bottom: 8px;
+  }
+
+  .producto-descripcion-corta {
+    font-size: .85rem;
+    font-weight: 300;
+    text-align: justify;
+    color: var(--tienda_texto);
+    margin-bottom: 12px;
+  }
+  
+  .producto-precio {
+    font-size: .9rem;
+    font-weight: 400;
+    color: #007BFF;
+    margin-bottom: 16px;
+  }
+  
+  .producto-botones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-inline: 0px;
+    justify-content: space-between;
+  }
+  
+  .producto-botones button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1rem !important;
+    margin: 2px 0px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

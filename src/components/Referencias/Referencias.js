@@ -16,8 +16,8 @@ const Referencias = () => {
         <div className="seccion-encabezado">
           <div className="header-centrado">
             <div className="referencias-icon"><FaQuoteLeft /></div>
-            <h2>Real Stories Real Results Our Customers</h2>
-            <p>Discover how our solutions have transformed businesses through authentic testimonials from our valued customers.</p>
+            <h2>Historias Reales, Resultados Reales Nuestros Clientes</h2>
+            <p>Descubre cómo nuestras soluciones han transformado experiencias a través de testimonios auténticos de nuestros valiosos clientes.</p>
           </div>
         </div>
 

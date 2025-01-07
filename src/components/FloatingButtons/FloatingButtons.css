@@ -28,13 +28,13 @@
 
 /* Estilos adicionales para el botón de tienda */
 .floating-button.storefront {
-  /*background-color: #28a745; /* Color de fondo del botón de tienda */
-  background-color: #e86e2f;
+  background-color: #28a745; /* Color de fondo del botón de tienda */
+  
 }
 
 .floating-button.storefront:hover {
-  /*background-color: #19692b; /* Cambio de color en hover */
-  background-color: #cf2e2e;
+  background-color: #19692b; /* Cambio de color en hover */
+  
 }
 
 /* Estilos adicionales para el botón de flecha */

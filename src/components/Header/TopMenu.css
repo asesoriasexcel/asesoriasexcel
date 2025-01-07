@@ -12,6 +12,10 @@
   width: 100%;
 }
 
+.desktop-menu-container a {
+  text-decoration: none;
+}
+
 /* === Estilos Comunes (Escritorio y Móvil) === */
 .movil-desktop-menu {
   display: flex;
@@ -106,6 +110,7 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%); /* Centrado del texto */
+  
 }
 
 .movil-cart-button {
@@ -140,6 +145,7 @@
 .excel {
   color: #107c10 !important;  /* Verde Excel */
   font-weight: 500;
+  text-decoration: none;
 }
 
 

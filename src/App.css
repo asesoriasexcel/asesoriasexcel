@@ -186,7 +186,7 @@ body, html {
 .btn-verde {
   text-align: center;
   color: #fff;
-  background-color: #28a745;
+  background-color: #228d3b;
   border-radius: 8px;
   padding: .6rem 1.5rem;
   white-space: break-spaces;
@@ -194,7 +194,7 @@ body, html {
 }
 
 .btn-verde:hover {
-  background-color: #28a745 !important;
+  background-color: #1b702f !important;
 }
 
 /* Estilos Responsivos */
@@ -247,8 +247,8 @@ body, html {
   min-height: calc(100vh - 346px); /* Resta 250px de la altura de la pantalla */
   background: var(--blanco);
   display: flex;
-  justify-content: center; /* Centrar el contenido horizontalmente */
-  align-items: center; /* Centrar el contenido verticalmente */
+  justify-content: left; /* Centrar el contenido horizontalmente */
+  align-items: left; /* Centrar el contenido verticalmente */
 }
 
 .cuerpo-page {
