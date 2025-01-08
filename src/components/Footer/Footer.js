@@ -1,7 +1,9 @@
 import React from 'react'; 
 import './Footer.css';
 import { FaFacebookF, FaInstagram, FaTiktok } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 import { GrYoutube } from "react-icons/gr";
+import { IoMdSend } from "react-icons/io";
 import { IoIosMail } from "react-icons/io";
 
 const Footer = () => {
@@ -42,10 +44,14 @@ const Footer = () => {
         {/* Columna 3 */}
         <div className="footer-column">
           <span className="footer-title contact">Contáctanos</span>
-          <span id="mail">
-            <IoIosMail className='footer-mail' />
-            asesoriasexcel@gmail.com
-          </span>
+          <Link className="contactostyle" to="/contacto">
+            <IoMdSend className="footer-mail" />
+            Mensaje
+          </Link>
+          <a href="mailto:asesoriasexcel@gmail.com" className="contactostyle">
+            <IoIosMail className="footer-mail" />
+            aloasesoriasexcel@gmail.com
+          </a>
         </div>
       </div>
     </footer>

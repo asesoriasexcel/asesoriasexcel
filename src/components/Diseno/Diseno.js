@@ -1,5 +1,6 @@
 import React from 'react';
 import { Tag, Typography, List, Button, Row, Col } from 'antd';
+import { Link } from 'react-router-dom';
 import { CheckCircleOutlined } from '@ant-design/icons'; // Importa el icono
 import './Diseno.css';
 import disenoImage from '../../images/diseno.jpg';
@@ -37,7 +38,7 @@ const Diseno = () => {
               </List.Item>
             )}
           />
-          <Button type="primary" className="diseno-button btn-azul">Comenzar Ahora</Button>
+          <Link to="/diseno" className="diseno-button btn-azul">Comenzar Ahora</Link>
         </Col>
       </Row>
     </section>

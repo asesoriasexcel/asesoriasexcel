@@ -70,21 +70,24 @@
   font-weight: 600;
 }
 
-#mail {
+.contactostyle {
   display: flex;
   flex-direction: row;
   color: rgb(189, 189, 189);
-  gap: 8px !important;
-  justify-content: flex-end;
-  align-items: flex-end;
+  gap: 8px;
+  text-align: left;
+  justify-content: flex-start;
+  align-items: center;
   margin-bottom: 0px;
-  transition: 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
+  text-decoration: none; /* Para enlaces como <a> o <Link> */
   cursor: pointer;
 }
 
-#mail:hover {
+.contactostyle:hover {
   color: rgb(255, 255, 255);
 }
+
 
 
 /* Ajustes para el ícono de Facebook */

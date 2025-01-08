@@ -10,16 +10,12 @@ import Referencias from '../components/Referencias/Referencias';
 import PreguntasFrecuentes from '../components/PreguntasFrecuentes/PreguntasFrecuentes';
 import FloatingButtons from '../components/FloatingButtons/FloatingButtons';
 
-import TopMenu from '../components/Header/TopMenu';
-import Footer from '../components/Footer/Footer';
-
 import './LandingPage.css';
 import './paleta4.css';
 
 const LandingPage = () => {
   return (
-    <>
-      <TopMenu />
+    <>      
       <Header />
       <InfoSection />
       <ProductoDestacado />
@@ -28,7 +24,6 @@ const LandingPage = () => {
       <Referencias />
       <PreguntasFrecuentes />
       <FloatingButtons />
-      <Footer />
     </>
   );
 };
