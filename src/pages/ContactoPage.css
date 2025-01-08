@@ -25,6 +25,7 @@
     font-weight: 500;
     border-left: 4px solid #0078D7; /* Barra decorativa */
     padding-left: 10px;
+    margin: 40px 0 30px 50px;
   }
   
   .contacto-section .contacto-section p {
@@ -36,18 +37,31 @@
   iframe {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
   
   @media (max-width: 768px) {
-    .centered-content {
-      padding: 15px;
+    .contacto-section {
+      background-color: #fff;
+      padding: 0;
+    }
+
+    .contacto-section .centered-content {
+      width: 100%;
+      padding: 15px 20px !important;
+      margin-top: 70px;
+      background-color: #fff;
+      border: 1px solid transparent;
+      box-shadow: none;
     }
   
-    .contacto-title {
+    .contacto-section .contacto-title {
       font-size: 1.5rem;
+      padding-left: 10px;
+      margin-left: 20px;
     }
-  
-    .contacto-section p {
+
+    .contacto-section .contacto-section p {
       font-size: 0.9rem;
     }
   }
