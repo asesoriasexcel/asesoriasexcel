@@ -177,7 +177,7 @@ const TiendaPage = () => {
                   <p className="producto-precio">CLP ${producto.precio}</p>
                   <div className="producto-botones">
                     <button className="btn-primary btn-azul">Comprar ahora</button>
-                    <button className="btn-primary btn-naranjo">Agregar al carrito</button>
+                    <button className="btn-primary btn-naranjo-claro">Agregar al carrito</button>
                   </div>
                 </div>
               </div>

@@ -183,6 +183,20 @@ body, html {
   background-color: #cf2e2e !important;
 }
 
+.btn-naranjo-claro {
+  text-align: center;
+  color: rgb(255, 143, 39);
+  background-color: rgb(255, 228, 203);
+  border-radius: 8px;
+  padding: .6rem 1.5rem;
+  white-space: break-spaces;
+  text-decoration: none;
+}
+
+.btn-naranjo-claro:hover {
+  background-color: rgb(255, 211, 169) !important;
+}
+
 .btn-verde {
   text-align: center;
   color: #fff;
