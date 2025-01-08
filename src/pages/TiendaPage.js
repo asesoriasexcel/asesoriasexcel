@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, Tree } from 'antd';
-import { FolderOutlined, FolderOpenOutlined } from '@ant-design/icons';
-import { Tag } from 'antd'; // Importa el componente Tag de Ant Design
+import { Breadcrumb, Tree, Drawer, Button, Tag } from 'antd'; // Asegúrate de incluir 'Tag'
+import { FolderOutlined, FolderOpenOutlined, MenuOutlined } from '@ant-design/icons';
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
 import './TiendaPage.css';
+
 
 // Función para construir el treeData dinámicamente
 const construirTreeData = () => {
@@ -42,18 +42,19 @@ const construirTreeData = () => {
 const TiendaPage = () => {
   const treeData = construirTreeData();
 
-  // Estado para la selección de categoría y subcategoría
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
   const [subcategoriaSeleccionada, setSubcategoriaSeleccionada] = useState(null);
 
-  // Manejar la selección en el árbol
+  // Estado para el Drawer (menú hamburguesa)
+  const [isDrawerVisible, setIsDrawerVisible] = useState(false);
+
   const onSelect = (keys, info) => {
     const { node } = info;
 
     if (node.key.startsWith('categoria-')) {
       const idCategoria = node.key.split('-')[1];
       setCategoriaSeleccionada(idCategoria);
-      setSubcategoriaSeleccionada(null); // Reinicia la subcategoría
+      setSubcategoriaSeleccionada(null);
     } else if (node.key.startsWith('subcategoria-')) {
       const idSubcategoria = node.key.split('-')[1];
       const idCategoria = tiendaSubcategorias.find(
@@ -65,17 +66,15 @@ const TiendaPage = () => {
     }
   };
 
-  // Filtrar los productos basados en las selecciones
   const productosFiltrados = tiendaProductos.filter((producto) => {
     if (subcategoriaSeleccionada) {
       return producto.id_subcategoria === subcategoriaSeleccionada;
     } else if (categoriaSeleccionada) {
       return producto.id_categoria === categoriaSeleccionada;
     }
-    return true; // Si no hay selección, mostrar todos los productos
+    return true;
   });
 
-  // Obtener los nombres para el breadcrumb
   const categoriaNombre = categoriaSeleccionada
     ? tiendaCategorias.find((cat) => String(cat.id) === categoriaSeleccionada)?.nombre
     : null;
@@ -87,6 +86,37 @@ const TiendaPage = () => {
 
   return (
     <div className="cuerpo-page-container" style={{ display: 'flex' }}>
+      {/* Menú hamburguesa visible solo en pantallas pequeñas */}
+      <Button
+        icon={<MenuOutlined />}
+        className="menu-hamburguesa"
+        onClick={() => setIsDrawerVisible(true)}
+      >
+        Menú
+      </Button>
+
+      <Drawer
+        title="Categorías"
+        placement="left"
+        onClose={() => setIsDrawerVisible(false)}
+        visible={isDrawerVisible}
+        bodyStyle={{ padding: 0 }}
+      >
+        <Tree
+          defaultExpandAll
+          onSelect={onSelect}
+          treeData={treeData}
+          showIcon={true}
+          switcherIcon={(props) =>
+            props.expanded ? (
+              <FolderOpenOutlined />
+            ) : (
+              <FolderOutlined />
+            )
+          }
+        />
+      </Drawer>
+
       {/* Menú de categorías a la izquierda */}
       <div className="tiendapage-menu">
         <div className="tiendapage-menu-canvas">
@@ -127,25 +157,20 @@ const TiendaPage = () => {
           <h1 className="titulo-productos">Tienda de Productos</h1>
 
           <div className="productos-grid">
-            {productosFiltrados.map((producto) => {
-              const colorGrado = {
-                Básico: 'blue',
-                Avanzado: 'green',
-                Maestro: 'magenta',
-                Legendario: 'purple',
-              }[producto.grado] || 'default';
-
-              return (
-                <div key={producto.id_articulo} className="producto-card">
+            {productosFiltrados.map((producto) => (
+              <div key={producto.id_articulo} className="producto-card">
+                <div className="cardproducto-imagen">
                   <img
                     src={producto.imagen}
                     alt={producto.nombre}
                     className="producto-imagen"
                   />
-                  <h3 className="producto-nombre">{producto.nombre}</h3>
-                  <Tag color={colorGrado} className="producto-grado">
+                </div>
+                <div className="cardproducto-contenido">
+                  <Tag color="blue" className="producto-grado">
                     {producto.grado}
                   </Tag>
+                  <h3 className="producto-nombre">{producto.nombre}</h3>
                   <p className="producto-descripcion-corta">
                     {producto.descripcion.slice(0, 90)}...
                   </p>
@@ -155,8 +180,8 @@ const TiendaPage = () => {
                     <button className="btn-primary btn-naranjo">Agregar al carrito</button>
                   </div>
                 </div>
-              );
-            })}
+              </div>
+            ))}
           </div>
         </div>
       </div>

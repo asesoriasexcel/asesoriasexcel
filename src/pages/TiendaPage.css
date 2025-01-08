@@ -192,3 +192,72 @@
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .menu-hamburguesa {
+    display: none; /* Ocultar por defecto */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-hamburguesa {
+      display: block; /* Mostrar solo en pantallas pequeñas */
+    }
+  
+    .tiendapage-menu {
+      display: none; /* Ocultar el menú lateral en pantallas pequeñas */
+    }
+
+    .tiendapage-contenido {
+      padding-inline: 0;
+      background-color: rgb(254, 254, 254);
+    }
+
+    .tiendapage-contenido-canvas {
+      padding-inline: 12px;
+    }
+
+    .productos-grid {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .producto-card {
+      border-radius: 16px;
+      padding: 22px;
+      background: #fff;
+      border: 2px transparent solid;
+      box-shadow: 0 4px 20px rgba(92, 133, 150, 0.24);
+    }
+
+    .cardproducto-imagen {
+      width: 100%;
+      height: fit-content;
+    }
+
+    .cardproducto-imagen .producto-imagen {
+      margin-bottom: 8px;
+      height: 100px;
+    }
+
+    .cardproducto-contenido .producto-nombre {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .cardproducto-contenido .producto-descripcion-corta {
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    .cardproducto-contenido .producto-precio {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+  }
+  
