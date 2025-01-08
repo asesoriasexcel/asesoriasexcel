@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/asesoriasexcel/static/css/main.84e6f26f.css",
-    "main.js": "/asesoriasexcel/static/js/main.af4f47ee.js",
+    "main.css": "/asesoriasexcel/static/css/main.a9155ab1.css",
+    "main.js": "/asesoriasexcel/static/js/main.a2d90791.js",
     "static/media/primeicons.svg": "/asesoriasexcel/static/media/primeicons.6ed59f962963a4a73af2.svg",
     "static/media/publicacion_1_1.png": "/asesoriasexcel/static/media/publicacion_1_1.d0ac0315514ac265497d.png",
     "static/media/analisis_1_1.png": "/asesoriasexcel/static/media/analisis_1_1.166baf41420d4e3b76e8.png",
@@ -26,11 +26,11 @@
     "static/media/avatar9.png": "/asesoriasexcel/static/media/avatar9.83db35a6aab057ad05a3.png",
     "static/media/avatar6.png": "/asesoriasexcel/static/media/avatar6.ac50fa9bdc88524370f5.png",
     "index.html": "/asesoriasexcel/index.html",
-    "main.84e6f26f.css.map": "/asesoriasexcel/static/css/main.84e6f26f.css.map",
-    "main.af4f47ee.js.map": "/asesoriasexcel/static/js/main.af4f47ee.js.map"
+    "main.a9155ab1.css.map": "/asesoriasexcel/static/css/main.a9155ab1.css.map",
+    "main.a2d90791.js.map": "/asesoriasexcel/static/js/main.a2d90791.js.map"
   },
   "entrypoints": [
-    "static/css/main.84e6f26f.css",
-    "static/js/main.af4f47ee.js"
+    "static/css/main.a9155ab1.css",
+    "static/js/main.a2d90791.js"
   ]
 }
