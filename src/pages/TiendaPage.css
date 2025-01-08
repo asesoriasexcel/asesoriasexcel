@@ -161,6 +161,7 @@
   
   .producto-grado {
     margin-bottom: 8px;
+    font-size: .8rem;
   }
 
   .producto-descripcion-corta {
@@ -281,8 +282,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  color: white;
+  background-color: #fff;
+  color: var(--comentarios_oscuro);
   width: 100%;
   padding: 10px 20px;
   position: fixed;
