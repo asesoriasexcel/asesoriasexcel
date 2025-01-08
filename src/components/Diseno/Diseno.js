@@ -1,6 +1,7 @@
 import React from 'react';
 import { Tag, Typography, List, Button, Row, Col } from 'antd';
 import { CheckCircleOutlined } from '@ant-design/icons'; // Importa el icono
+import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
 import './Diseno.css';
 import disenoImage from '../../images/diseno.jpg';
 
@@ -37,13 +38,14 @@ const Diseno = () => {
               </List.Item>
             )}
           />
-          <Button 
-            type="primary" 
-            className="diseno-button btn-azul"
-            href="/diseno"
-          >
-            Comenzar Ahora
-          </Button>
+          <Link to="/diseno">
+            <Button 
+              type="primary" 
+              className="diseno-button btn-azul"
+            >
+              Comenzar Ahora
+            </Button>
+          </Link>
         </Col>
       </Row>
     </section>

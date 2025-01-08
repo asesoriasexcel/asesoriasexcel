@@ -7,7 +7,6 @@ const ContactoPage = () => {
       <div className="centered-content">
         <h2 className="contacto-title">Contacto</h2>
         <p>Por favor, completa el formulario de abajo para ponerte en contacto con nosotros.</p>
-
         {/* Formulario de Google */}
         <iframe
           src="https://docs.google.com/forms/d/e/1FAIpQLSdB2nd0UMKTPVVTmJH0bwMCBP6mRl-Zw0d7BjBp0arl2xP6HQ/viewform?embedded=true"

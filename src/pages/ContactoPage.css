@@ -30,7 +30,9 @@
     padding-left: 10px;
     margin: 40px 0 30px 50px;
   }
-
+  .contacto-section .centered-content p {
+    margin-left: 50px;
+  }
   iframe {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -61,6 +63,11 @@
     .contacto-section p {
       font-size: 0.9rem;
       margin-left: 20px;
+    }
+
+    .contacto-section .centered-content p {
+      font-size: 0.9rem;
+      margin-left: 20px !important;
     }
   }
   

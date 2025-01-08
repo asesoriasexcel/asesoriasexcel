@@ -14,87 +14,87 @@ import avatar12 from "../images/avatares/avatar12.png";
 const referenciasData = [
   {
     id: 1,
-    quote: "Working with this team was an incredible experience. They understood our needs perfectly and delivered a product that exceeded our expectations.",
+    quote: "Me gustan mucho sus planillas, son muy profesionales.... siempre estoy revisando para ver si lanzan nuevas",
     avatar: avatar1,  
-    name: "Jane Cooper",
-    job: "Product Designer"
+    name: "Catalina Fernández",
+    job: "Psicopedagoga"
   },
   {
     id: 2,
-    quote: "The project was handled professionally from start to finish. The attention to detail was remarkable.",
+    quote: "Me encantó la planilla, funciona perfectamente todo lo que muestra el video. Súper facil de usar",
     avatar: avatar2,  
-    name: "John Doe",
-    job: "Project Manager"
+    name: "Marcela",
+    job: "Docente"
   },
   {
     id: 3,
-    quote: "A fantastic team to work with! They were quick to respond to our needs and always open to feedback. The final result speaks for itself.",
+    quote: "La planilla da justo en el clavo con lo que me piden en el colegio, porque me permite resumir como termina cada uno de mis estudiantes",
     avatar: avatar3,  
-    name: "Sarah Williams",
-    job: "Marketing Specialist"
+    name: "Andrea Pérez",
+    job: "Docente de Físcia"
   },
   {
     id: 4,
-    quote: "Their creativity and dedication to delivering a top-notch product made working with them a true pleasure. We couldn't be happier with the results.",
+    quote: "Me ha ayudado muchísimo, la uso para organizar mis entrevistas y poder tener todo ordenado y me ahorra tiempo",
     avatar: avatar4,  
-    name: "Michael Lee",
-    job: "UX Designer"
+    name: "Roberto Soto",
+    job: "Psicólogo"
   },
   {
     id: 5,
-    quote: "I was impressed by their professionalism and ability to execute complex tasks quickly. The team has a remarkable skill set that brought our ideas to life.",
+    quote: "Excelente planilla me ahorra mucho tiempo en el trabajo con los estudiantes, muy completa",
     avatar: avatar5,  
-    name: "Emily Davis",
-    job: "Lead Developer"
+    name: "Martina Valdés",
+    job: "Educadora Diferencial"
   },
   {
     id: 6,
-    quote: "The attention to detail was second to none, and they truly understood our business needs.",
+    quote: "Estoy muy contento con la planilla me ahorra n tiempo y es muy preciso todo",
     avatar: avatar6,  
-    name: "David Green",
-    job: "Business Analyst"
+    name: "Alejandro",
+    job: "Profesor de Matemáticas"
   },
   {
     id: 7,
-    quote: "Working with this team was a dream. They brought creative solutions to the table and always delivered on time. Highly recommend their services.",
+    quote: "Me encanta como puedo organizar todo, especialmente las entrevistas que realizo super bien.",
     avatar: avatar7,  
-    name: "Jessica Smith",
-    job: "Creative Director"
+    name: "Lorena Castro",
+    job: "Psicóloga"
   },
   {
     id: 8,
-    quote: "From the initial concept to the final product, every step of the process was handled with expertise. I'm thrilled with the outcome.",
-    avatar: avatar8,  
-    name: "Daniel Johnson",
-    job: "Product Owner"
+    quote: "Buena me facilita mucho la pega para la publicación de los informes",
+    avatar: avatar12,  
+    name: "C. Muñoz",
+    job: "Profesora de Lenguaje"
   },
   {
     id: 9,
-    quote: "The team was very responsive and worked tirelessly to ensure the project met all of our requirements. The end result exceeded our expectations.",
-    avatar: avatar9,  
-    name: "Laura Martinez",
-    job: "Quality Assurance"
+    quote: "La planilla para psicólogo la uso para registrar todas mis entrevistas, espero que lancen una versión mejorada pronto :)",
+    avatar: avatar10,  
+    name: "Ana Díaz",
+    job: "Encargada de Convivencia Escolar"
   },
   {
     id: 10,
-    quote: "I’ve had the pleasure of working with many teams, but this one truly stands out. Their collaborative approach and technical expertise were invaluable.",
-    avatar: avatar10,  
-    name: "Robert Thomas",
-    job: "Data Scientist"
+    quote: "Me gustaría que tuviera algunas opciones más para personalizar, pero en general es muy buena y útil.",
+    avatar: avatar9,  
+    name: "Felipe",
+    job: "Psicopedagogo"
   },
   {
     id: 11,
-    quote: "Their ability to take feedback and implement changes quickly was impressive. The team provided a flexible, high-quality solution that met all our needs.",
+    quote: "Me encantan sus productos son lo mejor que he visto en el mercado",
     avatar: avatar11,  
-    name: "Olivia White",
-    job: "Operations Manager"
+    name: "Carolina López",
+    job: "Psicóloga"
   },
   {
     id: 12,
-    quote: "The team was always available to answer questions and provide guidance. I’m extremely pleased with the final product and would love to work with them again.",
+    quote: "",
     avatar: avatar12,  
-    name: "James Brown",
-    job: "Sales Executive"
+    name: "Eduardo Ramírez",
+    job: "Psicólogo Escolar"
   }
 ];
 

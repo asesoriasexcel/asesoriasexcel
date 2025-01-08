@@ -211,6 +211,34 @@ body, html {
   background-color: #1b702f !important;
 }
 
+/* Estilo para el botón de YouTube */
+.btn-youtube {
+  background-color: red; /* Fondo rojo */
+  color: white; /* Texto blanco */
+  border: 1px solid red; /* Borde rojo */
+  padding: 10px 20px;
+  font-size: 14px;
+  display: inline-flex; /* Cambio a flex para mejorar la alineación */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px; /* Opcional: redondear bordes */
+}
+
+.btn-youtube:hover {
+  background-color: darkred; /* Efecto hover con un rojo más oscuro */
+}
+
+/* Espaciado y alineación del icono y el texto */
+.btn-youtube .youtube-icon {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+  font-size: 18px; /* Tamaño del icono */
+  color: white; /* Color blanco para el icono */
+}
+
+
+
 /* Estilos Responsivos */
 @media (max-width: 768px) {
   .centered-content {

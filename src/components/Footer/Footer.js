@@ -44,7 +44,7 @@ const Footer = () => {
         {/* Columna 3 */}
         <div className="footer-column">
           <span className="footer-title contact">Contáctanos</span>
-          <Link className="contactostyle" to="/contacto">
+          <Link className="contactostyle" to=" /contacto">
             <IoMdSend className="footer-mail" />
             Mensaje
           </Link>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Breadcrumb, Tree, Drawer, Button, Tag } from 'antd';
 import { FolderOutlined, FolderOpenOutlined, MenuOutlined } from '@ant-design/icons';
+import { FaYoutube } from 'react-icons/fa'; 
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
@@ -80,13 +81,14 @@ const TiendaPage = () => {
     }
   };
 
+  // Función de filtrado de productos, mostrando todos si no hay filtros
   const productosFiltrados = tiendaProductos.filter((producto) => {
     if (subcategoriaSeleccionada) {
       return producto.id_subcategoria === subcategoriaSeleccionada;
     } else if (categoriaSeleccionada) {
       return producto.id_categoria === categoriaSeleccionada;
     }
-    return true;
+    return true; // Si no hay filtros, mostrar todos los productos
   });
 
   const categoriaNombre = categoriaSeleccionada
@@ -98,15 +100,21 @@ const TiendaPage = () => {
       )?.nombre
     : null;
 
+  // Función para restablecer los filtros cuando se haga clic en "Tienda"
+  const handleClickTienda = () => {
+    setCategoriaSeleccionada(null);  // Restablecer la categoría seleccionada
+    setSubcategoriaSeleccionada(null);  // Restablecer la subcategoría seleccionada
+  };
+
   return (
     <div className="cuerpo-page-container" style={{ display: 'flex' }}>
-      <Button
-        icon={<MenuOutlined />}
-        className="menu-hamburguesa"
-        onClick={() => setIsDrawerVisible(true)}
-      >
-        Menú
-      </Button>
+      <div className="menu-bar">
+        <div className="menu-bar-item" onClick={() => setIsDrawerVisible(true)}>
+          <MenuOutlined className="menu-icon" />
+        </div>
+        <div className="menu-bar-item">Título</div>
+        <div className="menu-bar-item">Carrito</div>
+      </div>
 
       <Drawer
         title="Categorías"
@@ -155,7 +163,7 @@ const TiendaPage = () => {
               <Link to="/">Inicio</Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Link to="/tienda">Tienda</Link>
+              <Link to="/tienda" onClick={handleClickTienda}>Tienda</Link>
             </Breadcrumb.Item>
             {categoriaNombre && (
               <Breadcrumb.Item>{categoriaNombre}</Breadcrumb.Item>
@@ -191,7 +199,9 @@ const TiendaPage = () => {
                   <p className="producto-precio">CLP ${producto.precio}</p>
                   <div className="producto-botones">
                     <button className="btn-primary btn-azul">Comprar ahora</button>
-                    <button className="btn-primary btn-naranjo-claro">Agregar al carrito</button>
+                    <button className="btn-primary btn-youtube">
+                      <FaYoutube className="youtube-icon" /> Demo
+                    </button>
                   </div>
                 </div>
               </div>

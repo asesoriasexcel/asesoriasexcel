@@ -1,7 +1,7 @@
   /* General styles */
   .productos-section {
     background: var(--seccion_destacados_fondo);
-    background-image: linear-gradient(to top, rgba(7, 16, 22, 0.8), hsla(0, 0%, 100%, 0));
+    background-image: linear-gradient(to top, rgba(7, 16, 22, 0.8), rgba(7, 16, 22, 0.3));
   }
   
   .productos-section .header-izq svg {

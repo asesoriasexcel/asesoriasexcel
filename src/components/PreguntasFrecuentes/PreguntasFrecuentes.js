@@ -1,7 +1,7 @@
-// PreguntasFrecuentes.js
 import React from 'react';
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { FaHeadset } from "react-icons/fa";
+import { Link } from 'react-router-dom'; // Importar Link para navegación
 import './PreguntasFrecuentes.css';
 
 const PreguntasFrecuentes = () => {
@@ -37,10 +37,9 @@ const PreguntasFrecuentes = () => {
         </Accordion>
         <Accordion>
           <AccordionTab header="¿Qué pasa si no me sirve el producto?">
-            <p>Puedes revisar el video explicativo antes de comprar. Si necesitas algo especial, puedes solicitar un diseño personalizado en nuestra sección de Diseño y Personalización.</p>
+            <p>Puedes revisar el video explicativo antes de comprar. Si necesitas algo especial, puedes solicitar un diseño personalizado en nuestra sección de <Link to="/diseno" style={{ color: 'var(--especial)', fontWeight: '700', textDecoration: 'none' }}>Diseño y Personalización</Link>.</p>
           </AccordionTab>
         </Accordion>
-        
       </div>
     </section>
   );
