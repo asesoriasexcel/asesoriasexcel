@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, Tree, Drawer, Button, Tag } from 'antd'; // Asegúrate de incluir 'Tag'
+import { Breadcrumb, Tree, Drawer, Button, Tag } from 'antd';
 import { FolderOutlined, FolderOpenOutlined, MenuOutlined } from '@ant-design/icons';
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
 import './TiendaPage.css';
 
+// Función para asignar colores según el grado
+const obtenerColorPorGrado = (grado) => {
+  switch (grado) {
+    case 'Básico':
+      return 'green';
+    case 'Avanzado':
+      return 'blue';
+    case 'Maestro':
+      return 'purple';
+    case 'Legendario':
+      return 'gold';
+    default:
+      return 'gray'; // Color por defecto si no coincide
+  }
+};
 
 // Función para construir el treeData dinámicamente
 const construirTreeData = () => {
@@ -16,7 +31,7 @@ const construirTreeData = () => {
     );
 
     const cantidadArticulosCategoria = tiendaProductos.filter(
-      (producto) => producto.id_categoria === String(categoria.id) // id_categoria como string
+      (producto) => producto.id_categoria === String(categoria.id)
     ).length;
 
     const children = subcategorias.map((subcat) => {
@@ -27,7 +42,7 @@ const construirTreeData = () => {
       return {
         title: `${subcat.nombre} (${cantidadArticulosSubcategoria})`,
         key: `subcategoria-${subcat.id_subcategoria}`,
-        isLeaf: true, // Las subcategorías son nodos hoja
+        isLeaf: true,
       };
     });
 
@@ -45,7 +60,6 @@ const TiendaPage = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
   const [subcategoriaSeleccionada, setSubcategoriaSeleccionada] = useState(null);
 
-  // Estado para el Drawer (menú hamburguesa)
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
   const onSelect = (keys, info) => {
@@ -86,7 +100,6 @@ const TiendaPage = () => {
 
   return (
     <div className="cuerpo-page-container" style={{ display: 'flex' }}>
-      {/* Menú hamburguesa visible solo en pantallas pequeñas */}
       <Button
         icon={<MenuOutlined />}
         className="menu-hamburguesa"
@@ -117,7 +130,6 @@ const TiendaPage = () => {
         />
       </Drawer>
 
-      {/* Menú de categorías a la izquierda */}
       <div className="tiendapage-menu">
         <div className="tiendapage-menu-canvas">
           <Tree
@@ -136,7 +148,6 @@ const TiendaPage = () => {
         </div>
       </div>
 
-      {/* Contenido principal a la derecha */}
       <div className="tiendapage-contenido">
         <div className="tiendapage-contenido-canvas">
           <Breadcrumb>
@@ -167,7 +178,10 @@ const TiendaPage = () => {
                   />
                 </div>
                 <div className="cardproducto-contenido">
-                  <Tag color="blue" className="producto-grado">
+                  <Tag
+                    color={obtenerColorPorGrado(producto.grado)}
+                    className="producto-grado"
+                  >
                     {producto.grado}
                   </Tag>
                   <h3 className="producto-nombre">{producto.nombre}</h3>
