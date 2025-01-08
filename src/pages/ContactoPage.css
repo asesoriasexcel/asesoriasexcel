@@ -16,6 +16,9 @@
   .contacto-section .centered-content iframe {
     border: 1px solid transparent;
     box-shadow: none;
+    width: 100%!important;
+    margin-inline: 0px !important;
+    padding-inline: 0px !important;
   }
 
   .contacto-section .contacto-title {
@@ -27,13 +30,7 @@
     padding-left: 10px;
     margin: 40px 0 30px 50px;
   }
-  
-  .contacto-section .contacto-section p {
-    font-size: 1rem;
-    margin-bottom: 30px;
-    color: #666;
-  }
-  
+
   iframe {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -48,7 +45,7 @@
 
     .contacto-section .centered-content {
       width: 100%;
-      padding: 15px 20px !important;
+      padding: 15px 0px !important;
       margin-top: 70px;
       background-color: #fff;
       border: 1px solid transparent;
@@ -61,8 +58,9 @@
       margin-left: 20px;
     }
 
-    .contacto-section .contacto-section p {
+    .contacto-section p {
       font-size: 0.9rem;
+      margin-left: 20px;
     }
   }
   

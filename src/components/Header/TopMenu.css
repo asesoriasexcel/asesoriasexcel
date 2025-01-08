@@ -34,6 +34,10 @@
   border: 1px solid transparent;
 }
 
+.p-menuitem-content svg {
+  margin-right: 6px;
+}
+
 .p-submenu-list {
   background: rgb(15, 18, 20);
 }
@@ -109,8 +113,8 @@
   text-align: center;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%); /* Centrado del texto */
-  
+  text-decoration: none;
+  transform: translateX(-50%); /* Centrado del texto */ 
 }
 
 .movil-cart-button {

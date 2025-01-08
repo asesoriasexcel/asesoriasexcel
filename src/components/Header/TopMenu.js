@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; // Importamos Link para navegación
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
-import { AiOutlineAppstore } from "react-icons/ai";
-import { AiOutlineHome } from "react-icons/ai";
+import { AiOutlineAppstore, AiOutlineHome } from "react-icons/ai";
 
 import './TopMenu.css';
 
@@ -68,7 +67,7 @@ const TopMenu = () => {
 
   // Detectar el tamaño de la pantalla
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768);  // Consideramos móvil si la pantalla es menor o igual a 768px
+    setIsMobile(window.innerWidth <= 768); // Consideramos móvil si la pantalla es menor o igual a 768px
   };
 
   // Usar el hook useEffect para escuchar el evento resize
@@ -93,10 +92,10 @@ const TopMenu = () => {
             }
             end={
               <div className="movil-menu-right">
-                  <span className="movil-brand-name">
-                    <span className="asesoria">Asesorias</span>
-                    <span className="excel">Excel</span>
-                  </span>
+                <Link to="/" className="movil-brand-name">
+                  <span className="asesoria">Asesorias</span>
+                  <span className="excel">Excel</span>
+                </Link>
                 <Button
                   icon="pi pi-shopping-cart"
                   className="p-button-rounded p-button-text movil-cart-button"
@@ -111,11 +110,9 @@ const TopMenu = () => {
       {/* Menú para escritorio */}
       {!isMobile && (
         <div className="desktop-menu-container">
-          <Link to="/">
-            <span className="desktop-brand-name">
-              <span className="asesoria">Asesorias</span>
-              <span className="excel">Excel</span>
-            </span>
+          <Link to="/" className="desktop-brand-name">
+            <span className="asesoria">Asesorias</span>
+            <span className="excel">Excel</span>
           </Link>
           <Menubar model={items} />
           <Button
