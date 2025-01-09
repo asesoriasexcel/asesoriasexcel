@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, Drawer, Tag, Modal } from 'antd';
+import { Breadcrumb, Drawer, Tag, Modal, message } from 'antd';
 import { FaYoutube } from 'react-icons/fa';
+import { FaCheckCircle } from "react-icons/fa";
 import TreeMenu from './TreeMenu';
 import MenuBar from './MenuBar';
 import tiendaProductos from '../data/tiendaProductos';
@@ -33,6 +34,10 @@ const TiendaPage = () => {
   // Estado para gestionar el modal y el video
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentVideoLink, setCurrentVideoLink] = useState(null);
+
+  // Estado para el modal de confirmación
+  const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
+  const [addedProductName, setAddedProductName] = useState('');
 
   const onMenuClick = () => setIsDrawerVisible(true);
 
@@ -84,6 +89,32 @@ const TiendaPage = () => {
   const handleCloseModal = () => {
     setCurrentVideoLink(null);
     setIsModalVisible(false);
+  };
+
+  // Función para añadir al carrito
+  const handleAddToCart = (producto) => {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const existeEnCarrito = carrito.find((item) => item.id_articulo === producto.id_articulo);
+
+    if (existeEnCarrito) {
+      // Mostrar mensaje de error si el artículo ya está en el carrito
+      message.error('No se puede añadir más de una unidad del mismo artículo.');
+      return;
+    }
+
+    // Añadir el producto al carrito
+    const nuevoArticulo = {
+      id_articulo: producto.id_articulo,
+      cantidad: 1,
+      timestamp: new Date().toISOString(),
+    };
+
+    carrito.push(nuevoArticulo);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+
+    // Mostrar mensaje de confirmación
+    setAddedProductName(producto.nombre);
+    setIsConfirmModalVisible(true);
   };
 
   return (
@@ -146,7 +177,12 @@ const TiendaPage = () => {
                   </p>
                   <p className="producto-precio">CLP ${producto.precio}</p>
                   <div className="producto-botones">
-                    <button className="btn-primary btn-azul">Comprar ahora</button>
+                    <button
+                      className="btn-primary btn-azul"
+                      onClick={() => handleAddToCart(producto)}
+                    >
+                      Añadir al carrito
+                    </button>
                     <button
                       className={`btn-primary btn-youtube ${producto.video_si === 'no' ? 'disabled' : ''}`}
                       onClick={() =>
@@ -166,6 +202,7 @@ const TiendaPage = () => {
 
       {/* Modal para el video */}
       <Modal
+        className="modal-tienda-grid-video" 
         visible={isModalVisible}
         onCancel={handleCloseModal}
         footer={null}
@@ -184,6 +221,19 @@ const TiendaPage = () => {
             title="Video Demo"
           ></iframe>
         )}
+      </Modal>
+
+      {/* Modal de confirmación */}
+      <Modal
+        visible={isConfirmModalVisible}
+        onCancel={() => setIsConfirmModalVisible(false)}
+        footer={null}
+        centered
+      >
+        <div className="confirmar-anadido">
+          <FaCheckCircle />
+          <p>¡Has añadido "{addedProductName}" al carrito exitosamente!</p>
+        </div>
       </Modal>
     </div>
   );
