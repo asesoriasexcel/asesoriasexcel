@@ -139,6 +139,11 @@
     margin-bottom: 30px;
   }
   
+  .btn-youtube.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
   /* Estilo de la lista del Tree */
   .ant-tree-treenode {
     width: 100%;

@@ -1,8 +1,7 @@
-// TiendaPage.js
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, Drawer, Tag } from 'antd';
-import { FaYoutube } from 'react-icons/fa'; 
+import { Breadcrumb, Drawer, Tag, Modal } from 'antd';
+import { FaYoutube } from 'react-icons/fa';
 import TreeMenu from './TreeMenu';
 import MenuBar from './MenuBar';
 import tiendaProductos from '../data/tiendaProductos';
@@ -13,11 +12,16 @@ import './TiendaPage.css';
 // Función para asignar colores según el grado
 const obtenerColorPorGrado = (grado) => {
   switch (grado) {
-    case 'Básico': return 'green';
-    case 'Avanzado': return 'blue';
-    case 'Maestro': return 'purple';
-    case 'Legendario': return 'gold';
-    default: return 'gray';
+    case 'Básico':
+      return 'green';
+    case 'Avanzado':
+      return 'blue';
+    case 'Maestro':
+      return 'purple';
+    case 'Legendario':
+      return 'gold';
+    default:
+      return 'gray';
   }
 };
 
@@ -26,7 +30,12 @@ const TiendaPage = () => {
   const [subcategoriaSeleccionada, setSubcategoriaSeleccionada] = useState(null);
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
 
+  // Estado para gestionar el modal y el video
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [currentVideoLink, setCurrentVideoLink] = useState(null);
+
   const onMenuClick = () => setIsDrawerVisible(true);
+
   const onSelect = (keys, info) => {
     const { node } = info;
 
@@ -54,6 +63,7 @@ const TiendaPage = () => {
   const categoriaNombre = categoriaSeleccionada
     ? tiendaCategorias.find((cat) => String(cat.id) === categoriaSeleccionada)?.nombre
     : null;
+
   const subcategoriaNombre = subcategoriaSeleccionada
     ? tiendaSubcategorias.find(
         (subcat) => String(subcat.id_subcategoria) === subcategoriaSeleccionada
@@ -63,6 +73,17 @@ const TiendaPage = () => {
   const handleClickTienda = () => {
     setCategoriaSeleccionada(null);
     setSubcategoriaSeleccionada(null);
+  };
+
+  // Manejo del modal para el video de YouTube
+  const handleOpenModal = (videoLink) => {
+    setCurrentVideoLink(videoLink);
+    setIsModalVisible(true);
+  };
+
+  const handleCloseModal = () => {
+    setCurrentVideoLink(null);
+    setIsModalVisible(false);
   };
 
   return (
@@ -81,7 +102,6 @@ const TiendaPage = () => {
 
       <div className="tiendapage-menu">
         <div className="tiendapage-menu-canvas">
-
           <TreeMenu onSelect={onSelect} onMostrarTodo={handleClickTienda} />
         </div>
       </div>
@@ -93,7 +113,9 @@ const TiendaPage = () => {
               <Link to="/">Inicio</Link>
             </Breadcrumb.Item>
             <Breadcrumb.Item>
-              <Link to="/tienda" onClick={handleClickTienda}>Tienda</Link>
+              <Link to="/tienda" onClick={handleClickTienda}>
+                Tienda
+              </Link>
             </Breadcrumb.Item>
             {categoriaNombre && <Breadcrumb.Item>{categoriaNombre}</Breadcrumb.Item>}
             {subcategoriaNombre && <Breadcrumb.Item>{subcategoriaNombre}</Breadcrumb.Item>}
@@ -125,7 +147,13 @@ const TiendaPage = () => {
                   <p className="producto-precio">CLP ${producto.precio}</p>
                   <div className="producto-botones">
                     <button className="btn-primary btn-azul">Comprar ahora</button>
-                    <button className="btn-primary btn-youtube">
+                    <button
+                      className={`btn-primary btn-youtube ${producto.video_si === 'no' ? 'disabled' : ''}`}
+                      onClick={() =>
+                        producto.video_si === 'si' && handleOpenModal(producto.video_link)
+                      }
+                      disabled={producto.video_si === 'no'}
+                    >
                       <FaYoutube className="youtube-icon" /> Demo
                     </button>
                   </div>
@@ -135,6 +163,28 @@ const TiendaPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal para el video */}
+      <Modal
+        visible={isModalVisible}
+        onCancel={handleCloseModal}
+        footer={null}
+        centered
+        width="80%"
+        bodyStyle={{ padding: 0 }}
+      >
+        {currentVideoLink && (
+          <iframe
+            width="100%"
+            height="500px"
+            src={currentVideoLink}
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            title="Video Demo"
+          ></iframe>
+        )}
+      </Modal>
     </div>
   );
 };
