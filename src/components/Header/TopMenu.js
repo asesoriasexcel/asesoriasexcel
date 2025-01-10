@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Importamos Link para navegación
+import { Link } from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
 import { AiOutlineAppstore, AiOutlineHome } from "react-icons/ai";
 import { PiCompassTool } from "react-icons/pi";
-
+import { Badge } from 'antd'; // Importamos Badge de Ant Design
 import './TopMenu.css';
 
 const logo = require('../../images/logo/logo4.png');
@@ -12,11 +12,14 @@ const logo = require('../../images/logo/logo4.png');
 const TopMenu = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  // Obtener la cantidad de artículos en el carrito
+  const carritoCount = (JSON.parse(localStorage.getItem('carrito')) || []).length;
+
   // Función para desplazar a la sección del footer
   const scrollToFooter = () => {
     const footerElement = document.getElementById('footer');
     if (footerElement) {
-      footerElement.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave
+      footerElement.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -70,22 +73,20 @@ const TopMenu = () => {
     {
       label: 'Contacto',
       icon: 'pi pi-envelope',
-      command: scrollToFooter // Llamar a la función de desplazamiento
+      command: scrollToFooter
     }
   ];
 
   // Detectar el tamaño de la pantalla
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768); // Consideramos móvil si la pantalla es menor o igual a 768px
+    setIsMobile(window.innerWidth <= 768);
   };
 
-  // Usar el hook useEffect para escuchar el evento resize
   useEffect(() => {
-    handleResize(); // Establece el estado inicial
-    window.addEventListener('resize', handleResize); // Escuchar cambios en el tamaño de la pantalla
-
+    handleResize();
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize); // Limpiar el evento al desmontar el componente
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -96,19 +97,23 @@ const TopMenu = () => {
         <div className="movil-menu-container">
           <Menubar
             model={items}
-            start={
-              <div className="movil-menu-left"></div>
-            }
+            start={<div className="movil-menu-left"></div>}
             end={
               <div className="movil-menu-right">
                 <Link to="/" className="movil-brand-name">
                   <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
                 </Link>
-                <Button
-                  icon="pi pi-shopping-cart"
-                  className="p-button-rounded p-button-text movil-cart-button"
-                  onClick={() => alert('Carrito de compras clickeado')}
-                />
+                <Badge
+                  count={carritoCount}
+                  overflowCount={99}
+                  style={{ backgroundColor: '#ff4d4f' }}
+                >
+                  <Button
+                    icon="pi pi-shopping-cart"
+                    className="p-button-rounded p-button-text movil-cart-button"
+                    onClick={() => (window.location.href = '/carrito')}
+                  />
+                </Badge>
               </div>
             }
           />
@@ -122,11 +127,17 @@ const TopMenu = () => {
             <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
           </Link>
           <Menubar model={items} />
-          <Button
-            icon="pi pi-shopping-cart"
-            className="p-button-rounded p-button-text desktop-cart-button"
-            onClick={() => alert('Carrito de compras clickeado')}
-          />
+          <Badge
+            count={carritoCount}
+            overflowCount={99}
+            style={{ backgroundColor: '#ff4d4f' }}
+          >
+            <Button
+              icon="pi pi-shopping-cart"
+              className="p-button-rounded p-button-text desktop-cart-button"
+              onClick={() => (window.location.href = '/carrito')}
+            />
+          </Badge>
         </div>
       )}
     </>
