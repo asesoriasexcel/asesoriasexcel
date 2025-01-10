@@ -7,7 +7,7 @@ import { PiCompassTool } from "react-icons/pi";
 import { Badge } from 'antd'; // Importamos Badge de Ant Design
 import './TopMenu.css';
 
-const logo = require('../../images/logo/logo4.png');
+const logo = require('../../../images/logo/logo4.png');
 
 const TopMenu = () => {
   const [isMobile, setIsMobile] = useState(false);
