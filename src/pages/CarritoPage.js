@@ -82,8 +82,8 @@ const CarritoPage = () => {
                     </div>
                   </div>
                   <div className="carrito-acciones">
-                    <p>Ver info</p>
-                    <p>Eliminar</p>
+                    <p className="ver-info">Ver info</p>
+                    <p className="eliminar">Eliminar</p>
                   </div>
                 </Card>
               </List.Item>

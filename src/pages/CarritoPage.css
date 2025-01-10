@@ -32,8 +32,9 @@
   flex-direction: row;
   justify-content:space-between;
   font-size: 1rem;
+  font-weight: 300;
   width: 100%;
-  padding: 4px 0 4px 10px;
+  padding: 10px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 
@@ -107,10 +108,24 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 0px 20%;
+  padding: 10px 20%;
   border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
 }
 
 .carrito-acciones p {
   margin: 0px;
+}
+
+.carrito-acciones .ver-info {
+  color: var(--lh_mo);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: .9rem;
+}
+
+.carrito-acciones .eliminar {
+  color: var(--lh_warning);
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: .9rem;
 }
