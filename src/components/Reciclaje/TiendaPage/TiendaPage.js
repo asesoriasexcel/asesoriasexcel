@@ -1,5 +1,5 @@
 import React from 'react';
-import productosDestacados from '../../data/productosDestacados';
+import productosDestacados from '../../../data/productosDestacados';
 import { MdAddBusiness } from "react-icons/md";
 import { Link } from 'react-router-dom';  // Usamos Link para navegación en React Router
 import { Breadcrumb } from 'antd';  // Importamos el componente Breadcrumb de Ant Design

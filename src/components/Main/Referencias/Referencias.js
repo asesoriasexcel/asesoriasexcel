@@ -1,5 +1,5 @@
 import React from 'react';
-import referenciasData from '../../data/referenciasData';  // Importamos los datos
+import referenciasData from '../../../data/referenciasData';  // Importamos los datos
 import { FaQuoteLeft } from "react-icons/fa";
 import './Referencias.css';
 

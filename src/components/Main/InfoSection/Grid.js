@@ -1,7 +1,7 @@
 // Grid.js
 import React from 'react';
 import './Grid.css';
-import { cardInfo } from '../../data/infoseccion';
+import { cardInfo } from '../../../data/infoseccion';
 
 const Grid = () => {
   return (

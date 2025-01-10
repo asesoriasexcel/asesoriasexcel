@@ -4,11 +4,11 @@ import { FolderOutlined, FolderOpenOutlined } from '@ant-design/icons';
 import { AiOutlineHome } from "react-icons/ai";
 import { TbFilter, TbFilterX } from "react-icons/tb";
 import { Link } from 'react-router-dom'; // Importar Link de react-router-dom
-import tiendaCategorias from '../data/tiendaCategorias';
-import tiendaSubcategorias from '../data/tiendaSubcategorias';
-import tiendaProductos from '../data/tiendaProductos';
+import tiendaCategorias from '../../data/tiendaCategorias';
+import tiendaSubcategorias from '../../data/tiendaSubcategorias';
+import tiendaProductos from '../../data/tiendaProductos';
 
-const logo = require('../images/logo/logo4.png');
+const logo = require('../../images/logo/logo4.png');
 
 // Función para construir el treeData dinámicamente
 const construirTreeData = () => {

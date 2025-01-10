@@ -3,7 +3,7 @@ import { Tag, Typography, List, Button, Row, Col } from 'antd';
 import { CheckCircleOutlined } from '@ant-design/icons'; // Importa el icono
 import { Link } from 'react-router-dom'; // Importa Link de react-router-dom
 import './Diseno.css';
-import disenoImage from '../../images/diseno.jpg';
+import disenoImage from '../../../images/diseno.jpg';
 
 const { Title, Text } = Typography;
 

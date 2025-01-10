@@ -4,7 +4,7 @@
     justify-content: center;
     align-items:flex-start;
     background: linear-gradient(to right, rgba(255, 255, 255, .5) 18%, rgba(255, 255, 255, 0) 50%), 
-                url('../../images/bg-1.jpg');
+                url('../../../images/bg-1.jpg');
     background-size: cover;
     background-position: center 75%;
     background-repeat: no-repeat;

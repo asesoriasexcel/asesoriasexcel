@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { Breadcrumb, Drawer, Modal, Button, Badge } from 'antd';  // Importamos Button de Ant Design
 import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa"; // Icono de carrito
 import { FiShoppingCart } from 'react-icons/fi';
-import TreeMenu from './TreeMenu';
-import MenuBar from './MenuBar';
-import ProductosGrid from './ProductosGrid'; // Importamos el nuevo componente
+import TreeMenu from '../components/Tienda/TreeMenu';
+import MenuBar from '../components/Tienda/MenuBar';
+import ProductosGrid from '../components/Tienda/ProductosGrid'; // Importamos el nuevo componente
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
@@ -80,7 +80,7 @@ const TiendaPage = () => {
   };
 
   const handleAddToCart = (producto) => {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const carrito = JSON.parse(localStorage.getItem('ae-carrito')) || [];
     const existeEnCarrito = carrito.find((item) => item.id_articulo === producto.id_articulo);
 
     if (existeEnCarrito) {
@@ -97,7 +97,7 @@ const TiendaPage = () => {
     };
 
     carrito.push(nuevoArticulo);
-    localStorage.setItem('carrito', JSON.stringify(carrito));
+    localStorage.setItem('ae-carrito', JSON.stringify(carrito));
     setAddedProductName(producto.nombre);
     setIsConfirmModalVisible(true);
   };
@@ -147,7 +147,7 @@ const TiendaPage = () => {
             <h1 className="titulo-productos">Tienda de Productos</h1>
             <div className="tienda-cabezal-badge">
               <Badge
-                count={(JSON.parse(localStorage.getItem('carrito')) || []).length} // Obtiene el total de artículos del carrito
+                count={(JSON.parse(localStorage.getItem('ae-carrito')) || []).length} // Obtiene el total de artículos del carrito
                 overflowCount={99} // Límite para mostrar "99+"
                 style={{ backgroundColor: 'var(--especial)' }} // Color personalizado del badge
               >

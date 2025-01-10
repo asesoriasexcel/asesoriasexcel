@@ -3,7 +3,7 @@ import './Categorias.css';
 import { MdOutlineStorefront } from "react-icons/md";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { Button } from 'antd'; // Importa el componente Button de Ant Design
-import categorias from '../../data/categorias'; // Importar los datos
+import categorias from '../../../data/categorias'; // Importar los datos
 
 import LlamadaAccion from './LlamadaAccion';
 

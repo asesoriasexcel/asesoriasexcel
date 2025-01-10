@@ -4,7 +4,7 @@ import { FiShoppingCart } from 'react-icons/fi';
 import { Badge } from 'antd';
 
 // Importar la imagen usando require
-const logo = require('../images/logo/logo4.png');
+const logo = require('../../images/logo/logo4.png');
 
 const MenuBar = ({ onMenuClick }) => {
   // Obtener la cantidad de productos en el carrito

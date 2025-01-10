@@ -2,7 +2,7 @@ import React from 'react';
 import { Tag } from 'antd';
 import './ProductoDestacado.css'; // Aquí importamos los estilos para el componente Productos
 import { PiMedalLight } from "react-icons/pi";
-import productosDestacados from '../../data/productosDestacados'; // Archivo de datos
+import productosDestacados from '../../../data/productosDestacados'; // Archivo de datos
 
 const ProductoDestacado = () => {
   // Función para convertir enlaces de YouTube al formato embebido
