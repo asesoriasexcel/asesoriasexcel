@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { List, Card, Image, Tag, Typography } from 'antd'; // Importamos componentes de Ant Design
-import tiendaProductos from '../data/tiendaProductos'; // Importamos los productos
+import { List, Card, Image, Tag, Typography } from 'antd';
+import tiendaProductos from '../data/tiendaProductos';
+import tiendaCategorias from '../data/tiendaCategorias';
+import tiendaSubcategorias from '../data/tiendaSubcategorias';
+
+import './CarritoPage.css';
 
 const { Title, Text } = Typography;
 
@@ -8,70 +12,83 @@ const CarritoPage = () => {
   const [productosCarrito, setProductosCarrito] = useState([]);
 
   useEffect(() => {
-    // Obtener el carrito desde el localStorage
     const carrito = JSON.parse(localStorage.getItem('ae-carrito')) || [];
 
-    // Buscar los productos completos usando los id_articulo de los artículos en el carrito
     const productos = carrito.map((item) => {
       const producto = tiendaProductos.find(p => p.id_articulo === item.id_articulo);
-      return { ...producto, cantidad: item.cantidad }; // Añadir la cantidad del carrito
+      return { ...producto, cantidad: item.cantidad };
     });
 
-    setProductosCarrito(productos); // Establecer los productos encontrados en el estado
+    setProductosCarrito(productos);
   }, []);
 
   return (
-    <div style={{ padding: '20px' }}>
-      <Title level={2} style={{ textAlign: 'center', marginBottom: '20px' }}>
-        Carrito de Compras
+    <div className="carrito-container">
+      <Title level={2} className="carrito-title">
+        ...
       </Title>
 
       {productosCarrito.length === 0 ? (
-        <Text type="secondary" style={{ textAlign: 'center', display: 'block' }}>
+        <Text className="carrito-empty-text">
           No tienes productos en tu carrito.
         </Text>
       ) : (
         <List
-          grid={{ gutter: 16, column: 1 }} // Grid con una columna por fila
+          className="carrito-list"
+          grid={{ gutter: 16, column: 1 }}
           dataSource={productosCarrito}
-          renderItem={(producto) => (
-            <List.Item>
-              <Card bordered hoverable>
-                <div style={{ display: 'flex', alignItems: 'center' }}>
-                  {/* Imagen del producto */}
-                  <div style={{ flex: '0 0 100px', marginRight: '16px' }}>
-                    <Image
-                      src={producto.imagen}
-                      alt={producto.nombre}
-                      width={100}
-                      height={100}
-                      style={{ objectFit: 'cover', borderRadius: '8px' }}
-                      preview={false} // Desactiva el modal de preview
-                    />
-                  </div>
+          renderItem={(producto) => {
+            const categoria = tiendaCategorias.find(
+              cat => cat.id === parseInt(producto.id_categoria, 10)
+            )?.nombre || 'Sin categoría';
 
-                  {/* Información del producto */}
-                  <div style={{ flex: 1 }}>
-                    <Title level={4} style={{ margin: 0 }}>
-                      {producto.nombre}
-                    </Title>
-                    <div style={{ marginTop: '8px', marginBottom: '8px' }}>
-                      {/* Mostrar el grado en un Tag */}
-                      <Tag color="blue">{producto.grado}</Tag>
+            const subcategoria = tiendaSubcategorias.find(
+              sub => sub.id=== parseInt(producto.id_subcategoria, 10)
+            )?.nombre || 'Sin subcategoría';
 
-                      {/* Mostrar el Tag "Video" si tiene video */}
-                      {producto.video_si === 'si' && (
-                        <Tag color="red" style={{ marginLeft: '8px' }}>Video</Tag>
-                      )}
+            return (
+              <List.Item className="carrito-list-item">
+                <Card className="carrito-card" bordered hoverable>
+                  <h4 className="carrito-categoria">
+                    Categoría {categoria}
+                    <Tag color="blue">{producto.grado}</Tag>
+                  </h4>
+
+                  <div className="carrito-producto">
+                    <div className="carrito-imagen-container">
+                      <Image
+                        className="carrito-imagen"
+                        src={producto.imagen}
+                        alt={producto.nombre}
+                        preview={false}
+                      />
                     </div>
-                    <Text strong>Precio:</Text> ${producto.precio}
-                    <br />
-                    <Text strong>Cantidad:</Text> {producto.cantidad}
+
+                    <div className="carrito-info">
+                      <h4 className="carrito-subcategoria">
+                        {subcategoria}
+                      </h4>
+                      <p className="carrito-nombre">
+                        Planilla {producto.nombre}
+                      </p>
+                      <div className="carrito-detalles">
+                        <span>
+                          CLP ${producto.precio}
+                        </span>
+                        <p>
+                          Cant. {producto.cantidad}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            </List.Item>
-          )}
+                  <div className="carrito-acciones">
+                    <p>Ver info</p>
+                    <p>Eliminar</p>
+                  </div>
+                </Card>
+              </List.Item>
+            );
+          }}
         />
       )}
     </div>

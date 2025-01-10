@@ -45,7 +45,7 @@ const ProductoDestacado = () => {
             <div className="productos-column">
               <div className="tag-container">
                 {producto.video_si && (
-                  <Tag color="blue" className="tag-label">Video Explicativo</Tag>
+                  <Tag color="blue" className="tag-label">Video Demostrativo</Tag>
                 )}
               </div>
               {producto.video_si ? (
