@@ -3,55 +3,57 @@ import { Link } from 'react-router-dom'; // Importamos Link para navegación
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
 import { AiOutlineAppstore, AiOutlineHome } from "react-icons/ai";
+import { PiCompassTool } from "react-icons/pi";
 
 import './TopMenu.css';
+
+const logo = require('../../images/logo/logo4.png');
 
 const TopMenu = () => {
   const [isMobile, setIsMobile] = useState(false);
 
+  // Función para desplazar a la sección del footer
+  const scrollToFooter = () => {
+    const footerElement = document.getElementById('footer');
+    if (footerElement) {
+      footerElement.scrollIntoView({ behavior: 'smooth' }); // Desplazamiento suave
+    }
+  };
+
   // Lista de elementos del menú
   const items = [
     {
-      label: 'Inicio',
-      icon: <AiOutlineHome className="icon-menuapp" />,
-      command: () => alert('Home clicked')
+      label: (
+        <Link to="/" className="menu-link">
+          <AiOutlineHome className="icon-menuapp" /> Inicio
+        </Link>
+      )
     },
     {
       label: 'Tienda de productos',
       icon: <AiOutlineAppstore className="icon-menuapp" />,
-      command: () => alert('Features clicked')
-    },
-    {
-      label: 'Projects',
-      icon: 'pi pi-search',
       items: [
         {
           label: 'Components',
-          icon: 'pi pi-bolt',
           command: () => alert('Components clicked')
         },
         {
           label: 'Blocks',
-          icon: 'pi pi-server',
           command: () => alert('Blocks clicked')
         },
         {
           label: 'UI Kit',
-          icon: 'pi pi-pencil',
           command: () => alert('UI Kit clicked')
         },
         {
           label: 'Templates',
-          icon: 'pi pi-palette',
           items: [
             {
               label: 'Apollo',
-              icon: 'pi pi-palette',
               command: () => alert('Apollo clicked')
             },
             {
               label: 'Ultima',
-              icon: 'pi pi-palette',
               command: () => alert('Ultima clicked')
             }
           ]
@@ -59,9 +61,16 @@ const TopMenu = () => {
       ]
     },
     {
-      label: 'Contact',
+      label: (
+        <Link to="/diseno" className="menu-link">
+          <PiCompassTool className="icon-menuapp" /> Diseño y Personalización
+        </Link>
+      )
+    },
+    {
+      label: 'Contacto',
       icon: 'pi pi-envelope',
-      command: () => alert('Contact clicked')
+      command: scrollToFooter // Llamar a la función de desplazamiento
     }
   ];
 
@@ -93,8 +102,7 @@ const TopMenu = () => {
             end={
               <div className="movil-menu-right">
                 <Link to="/" className="movil-brand-name">
-                  <span className="asesoria">Asesorias</span>
-                  <span className="excel">Excel</span>
+                  <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
                 </Link>
                 <Button
                   icon="pi pi-shopping-cart"
@@ -111,8 +119,7 @@ const TopMenu = () => {
       {!isMobile && (
         <div className="desktop-menu-container">
           <Link to="/" className="desktop-brand-name">
-            <span className="asesoria">Asesorias</span>
-            <span className="excel">Excel</span>
+            <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
           </Link>
           <Menubar model={items} />
           <Button

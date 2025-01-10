@@ -216,6 +216,7 @@ main,
   background-color: #1b702f !important;
 }
 
+
 /* Estilo para el botón de YouTube */
 .btn-youtube {
   background-color: red; /* Fondo rojo */
@@ -242,7 +243,33 @@ main,
   color: white; /* Color blanco para el icono */
 }
 
+/* Estilo para el botón de YouTube */
+.btn-naranjoicon {
+  background-color: #e86e2f; /* Fondo rojo */
+  color: #fff; /* Texto blanco */
+  border: 1px solid transparent;
+  padding: 0px 10px;
+  font-size: 14px;
+  display: inline-flex; /* Cambio a flex para mejorar la alineación */
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 4px; /* Opcional: redondear bordes */
+}
 
+.btn-naranjoicon:hover {
+  color: #fff !important;
+  border: 1px solid transparent !important;
+  background-color: #cf2e2e !important; /* Efecto hover con un rojo más oscuro */
+}
+
+/* Espaciado y alineación del icono y el texto */
+.btn-naranjoicon .btnnaranjoicon-icon {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+  font-size: 14px; /* Tamaño del icono */
+  color: white; /* Color blanco para el icono */
+}
 
 /* Estilos Responsivos */
 @media (max-width: 768px) {
@@ -309,6 +336,6 @@ main,
 @media (max-width: 768px) {
   .cuerpo-page-container {
     min-height: calc(100vh - 250px);
-    margin-top: 74px;
+    margin-top: 45px;
   }
 }

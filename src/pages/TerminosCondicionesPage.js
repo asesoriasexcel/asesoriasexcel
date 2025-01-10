@@ -11,58 +11,58 @@ const TerminosCondicionesPage = () => {
           {/* Introducción */}
           <h2>1. Introducción</h2>
           <p>
-            Bienvenido a AsesoríasExcel. Al adquirir nuestros productos o utilizar nuestros servicios, aceptas estar sujeto a los siguientes Términos y Condiciones. Te recomendamos leerlos detenidamente antes de realizar una compra.
+            Bienvenido a <b>AsesoríasExcel</b>. Al adquirir nuestros productos o utilizar nuestros servicios, aceptas estar sujeto a los siguientes <b>Términos y Condiciones</b>. Te recomendamos leerlos detenidamente antes de realizar una compra.
           </p>
 
           {/* Uso del Producto */}
           <h2>2. Uso de los Productos</h2>
           <p>
-            Nuestras planillas están diseñadas para funcionar exclusivamente en Excel para Windows, versión 2010 en adelante, y están optimizadas para computadores de escritorio o laptops. No garantizamos el correcto funcionamiento en dispositivos móviles, sistemas operativos diferentes a Windows, o versiones de Office anteriores a 2010.
+            Nuestras planillas están diseñadas para funcionar exclusivamente en <b>Excel para Windows, versión 2010 en adelante</b>, y están optimizadas para <b>computadores de escritorio</b> o <b>laptops</b>. No garantizamos el correcto funcionamiento en <b>dispositivos móviles</b>, <b>sistemas operativos diferentes a Windows</b>, o <b>versiones de Office anteriores a 2010</b>.
           </p>
           <p>
-            Además, cada planilla incluye una llave de uso que permite activarla únicamente en un máximo de 2 computadores. El uso no autorizado o la distribución de la llave está estrictamente prohibido.
+            Además, cada planilla incluye un máximo de <b>dos llaves de activación</b>, que permiten instalarla y usarla en <b>dos computadores diferentes</b>. Está <b>estrictamente prohibido</b> compartir o distribuir estas llaves de activación.
           </p>
 
           {/* Proceso de Compra */}
           <h2>3. Proceso de Compra</h2>
           <p>
-            Para realizar una compra, deberás completar el pedido en nuestro sitio web. Actualmente, aceptamos únicamente transferencias electrónicas. Una vez confirmado el pago, recibirás el producto en tu correo electrónico dentro de un plazo máximo de 24 horas, junto con una guía de uso y un video explicativo.
+            Para realizar una compra, deberás completar el pedido en nuestro sitio web. Actualmente, aceptamos únicamente <b>transferencias electrónicas</b>. Una vez confirmado el pago, recibirás el producto en tu correo electrónico dentro de un plazo máximo de <b>24 horas</b>, junto con una <b>guía de uso</b> y un <b>video explicativo</b>.
           </p>
 
           {/* Política de Reembolsos */}
           <h2>4. Cambios y Devoluciones</h2>
           <p>
-            Al tratarse de archivos digitales, no aceptamos cambios ni devoluciones. Por este motivo, te invitamos a revisar detalladamente la ficha del producto y el video explicativo antes de realizar la compra. Si tienes dudas, contáctanos para recibir orientación personalizada.
+            Al tratarse de <b>archivos digitales</b>, no aceptamos <b>cambios ni devoluciones</b>. Por este motivo, te invitamos a revisar detalladamente la <b>ficha del producto</b> y el <b>video explicativo</b> antes de realizar la compra. Si tienes dudas, <b>contáctanos</b> para recibir orientación personalizada.
           </p>
 
           {/* Personalización */}
           <h2>5. Diseño y Personalización</h2>
           <p>
-            Si necesitas un producto con características específicas, puedes solicitar un diseño personalizado en nuestra sección de Diseño y Personalización. Este servicio tiene un costo adicional y está sujeto a nuestras políticas de tiempo y entrega.
+            Si necesitas un producto con características específicas, puedes solicitar un <b>diseño personalizado</b> en nuestra sección de <b>Diseño y Personalización</b>. Este servicio tiene un <b>costo adicional</b> y está sujeto a nuestras políticas de <b>tiempo</b> y <b>entrega</b>.
           </p>
 
           {/* Propiedad Intelectual */}
           <h2>6. Propiedad Intelectual</h2>
           <p>
-            Todos los productos, contenidos, y herramientas desarrolladas por AsesoríasExcel están protegidos por derechos de autor. Está estrictamente prohibida la distribución, copia o modificación no autorizada de nuestras planillas.
+            Todos los productos, contenidos, y herramientas desarrolladas por <b>AsesoríasExcel</b> están protegidos por <b>derechos de autor</b>. Está <b>estrictamente prohibida</b> la distribución, copia o modificación no autorizada de nuestras planillas.
           </p>
 
           {/* Limitación de Responsabilidad */}
           <h2>7. Limitación de Responsabilidad</h2>
           <p>
-            No nos hacemos responsables por el uso incorrecto de nuestras planillas ni por incompatibilidades técnicas derivadas de su uso en sistemas no especificados en estos términos. El cliente es responsable de asegurarse de cumplir con los requisitos técnicos antes de la compra.
+            No nos hacemos responsables por el <b>uso incorrecto</b> de nuestras planillas ni por incompatibilidades técnicas derivadas de su uso en <b>sistemas no especificados</b> en estos términos. El cliente es responsable de asegurarse de cumplir con los <b>requisitos técnicos</b> antes de la compra.
           </p>
 
           {/* Ley Aplicable */}
           <h2>8. Ley Aplicable</h2>
           <p>
-            Estos Términos y Condiciones se rigen por las leyes vigentes en Chile. Cualquier disputa será resuelta en los tribunales de la jurisdicción correspondiente.
+            Estos <b>Términos y Condiciones</b> se rigen por las <b>leyes vigentes en Chile</b>. Cualquier disputa será resuelta en los <b>tribunales de la jurisdicción correspondiente</b>.
           </p>
 
           {/* Contacto */}
           <h2>9. Contacto</h2>
           <p>
-            Para consultas adicionales, puedes escribirnos a nuestro correo electrónico: soporte@asesoriasexcel.com.
+            Para consultas adicionales, puedes escribirnos a nuestro correo electrónico: <b>aloasesoriasexcel@gmail.com</b>.
           </p>
         </div>
       </div>

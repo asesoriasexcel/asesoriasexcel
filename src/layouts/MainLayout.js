@@ -7,9 +7,9 @@ const MainLayout = () => {
   return (
     <>
       <TopMenu />
-      <main>
+      <>
         <Outlet /> {/* Aquí se renderizarán LandingPage, TerminosCondicionesPage, etc. */}
-      </main>
+      </>
       <Footer />
     </>
   );

@@ -1,11 +1,15 @@
 import React from 'react';
 import { MenuOutlined } from '@ant-design/icons';
 import { FiShoppingCart } from 'react-icons/fi';
+import { Badge } from 'antd';
 
 // Importar la imagen usando require
 const logo = require('../images/logo/logo4.png');
 
 const MenuBar = ({ onMenuClick }) => {
+  // Obtener la cantidad de productos en el carrito
+  const carritoCount = (JSON.parse(localStorage.getItem('carrito')) || []).length;
+
   return (
     <div className="menu-bar">
       <div className="menu-bar-item" onClick={onMenuClick}>
@@ -13,10 +17,23 @@ const MenuBar = ({ onMenuClick }) => {
       </div>
       <div className="menu-bar-item">
         {/* Mostrar la imagen importada */}
-        <img src={logo} alt="Logo" style={{ height: '30px', width: 'auto' }} />
+        <img src={logo} alt="Logo" style={{ height: '35px', width: 'auto' }} />
       </div>
       <div className="menu-bar-item">
-        <FiShoppingCart className="menu-icon" />
+        <Badge
+          count={carritoCount} // Total de productos en el carrito
+          overflowCount={99} // Límite para mostrar "99+"
+          style={{ backgroundColor: 'var(--especial)' }} // Color personalizado del badge
+        >
+          <FiShoppingCart
+            className="menu-icon"
+            style={{
+              fontSize: '1.1rem',
+              cursor: 'pointer',
+            }}
+            onClick={() => (window.location.href = '/carrito')} // Redirige al carrito al hacer clic
+          />
+        </Badge>
       </div>
     </div>
   );

@@ -60,7 +60,9 @@ const TreeMenu = ({ onSelect, onMostrarTodo }) => {
   return (
     <div className='TreeMenu-container'>
       <div className='TreeMenu-container-img'>
-        <img src={logo} alt="Logo" />
+        <Link to="/">
+          <img src={logo} alt="Logo" />
+        </Link>
       </div>
       <div className='TreeMenu-container-volver'>
         <Link to="/"> {/* Usar Link para navegar al inicio */}

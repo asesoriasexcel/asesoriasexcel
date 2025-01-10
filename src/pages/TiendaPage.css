@@ -154,21 +154,46 @@
     padding: 40px !important;
   }
 
-  .confirmar-anadido {
+  .confirmar-anadido,
+  .error-anadido {
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
     padding: 20px 20px 0px 20px;
   }
   .confirmar-anadido svg,
-  .confirmar-anadido p {
+  .confirmar-anadido p,
+  .error-anadido svg,
+  .error-anadido p {
     width: 100%;
     text-align: center;
   }
+
   .confirmar-anadido svg {
     color: rgb(2, 201, 2);
     font-size: 2.5rem;
     margin-bottom: 20px;
+  }
+
+  .error-anadido svg {
+    color: red;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .TiendaPage-modal-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    width: 50%;
+    margin-inline: auto;
+    gap: 20px;
+  }
+  .TiendaPage-modal-icons .btn-naranjo{
+    width: 200px !important;
+  }
+  .TiendaPage-modal-icons svg {
+    margin-bottom: 0;
   }
   /* Estilo de la lista del Tree */
   .ant-tree-treenode {
@@ -220,6 +245,21 @@
     padding-left: 0;
   }
   
+
+  /* */
+  .tienda-cabezal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding-right: 20px;
+    cursor: pointer;
+  }
+
+  .tienda-cabezal .ant-badge svg {
+    font-size: 1.4rem;
+  }
+
   .productos-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Cuatro columnas por defecto */
@@ -422,6 +462,10 @@
     margin: 15px 25px 0 25px;
   }
   .TreeMenu-container-img{
+    display: none;
+  }
+
+  .tienda-cabezal-badge {
     display: none;
   }
 }

@@ -8,7 +8,7 @@ import { IoIosMail } from "react-icons/io";
 
 const Footer = () => {
   return (
-    <footer className="footer">
+    <footer id="footer" className="footer">
       <div className="footer-content">
         {/* Columna 1 */}
         <div className="footer-column">
@@ -38,13 +38,15 @@ const Footer = () => {
         {/* Columna 2 */}
         <div className="footer-column">
           <span className="footer-title important">IMPORTANTE</span>
-          <span>Términos y Condiciones</span>
+          <Link to="/terminoscondiciones" className="contactostyle" >
+            <span>Términos y Condiciones</span>
+          </Link>
         </div>
 
         {/* Columna 3 */}
         <div className="footer-column">
           <span className="footer-title contact">Contáctanos</span>
-          <Link className="contactostyle" to=" /contacto">
+          <Link className="contactostyle" to="/contacto">
             <IoMdSend className="footer-mail" />
             Mensaje
           </Link>

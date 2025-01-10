@@ -1,30 +1,15 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Breadcrumb, Drawer, Tag, Modal, message } from 'antd';
-import { FaYoutube } from 'react-icons/fa';
-import { FaCheckCircle } from "react-icons/fa";
+import { Breadcrumb, Drawer, Modal, Button, Badge } from 'antd';  // Importamos Button de Ant Design
+import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa"; // Icono de carrito
+import { FiShoppingCart } from 'react-icons/fi';
 import TreeMenu from './TreeMenu';
 import MenuBar from './MenuBar';
+import ProductosGrid from './ProductosGrid'; // Importamos el nuevo componente
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
 import './TiendaPage.css';
-
-// Función para asignar colores según el grado
-const obtenerColorPorGrado = (grado) => {
-  switch (grado) {
-    case 'Básico':
-      return 'green';
-    case 'Avanzado':
-      return 'blue';
-    case 'Maestro':
-      return 'purple';
-    case 'Legendario':
-      return 'gold';
-    default:
-      return 'gray';
-  }
-};
 
 const TiendaPage = () => {
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
@@ -35,9 +20,13 @@ const TiendaPage = () => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentVideoLink, setCurrentVideoLink] = useState(null);
 
-  // Estado para el modal de confirmación
+  // Estado para el modal de confirmación de éxito
   const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
   const [addedProductName, setAddedProductName] = useState('');
+
+  // Estado para el modal de error
+  const [isErrorModalVisible, setIsErrorModalVisible] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const onMenuClick = () => setIsDrawerVisible(true);
 
@@ -80,7 +69,6 @@ const TiendaPage = () => {
     setSubcategoriaSeleccionada(null);
   };
 
-  // Manejo del modal para el video de YouTube
   const handleOpenModal = (videoLink) => {
     setCurrentVideoLink(videoLink);
     setIsModalVisible(true);
@@ -91,18 +79,17 @@ const TiendaPage = () => {
     setIsModalVisible(false);
   };
 
-  // Función para añadir al carrito
   const handleAddToCart = (producto) => {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const existeEnCarrito = carrito.find((item) => item.id_articulo === producto.id_articulo);
 
     if (existeEnCarrito) {
-      // Mostrar mensaje de error si el artículo ya está en el carrito
-      message.error('No se puede añadir más de una unidad del mismo artículo.');
+      // Mostrar modal de error
+      setErrorMessage('No se puede añadir más de una unidad del mismo artículo.');
+      setIsErrorModalVisible(true);
       return;
     }
 
-    // Añadir el producto al carrito
     const nuevoArticulo = {
       id_articulo: producto.id_articulo,
       cantidad: 1,
@@ -111,10 +98,14 @@ const TiendaPage = () => {
 
     carrito.push(nuevoArticulo);
     localStorage.setItem('carrito', JSON.stringify(carrito));
-
-    // Mostrar mensaje de confirmación
     setAddedProductName(producto.nombre);
     setIsConfirmModalVisible(true);
+  };
+
+  // Función para redirigir al carrito
+  const handleGoToCart = () => {
+    // Redirigir al carrito
+    window.location.href = "/carrito"; // Suponiendo que tienes una ruta de carrito configurada
   };
 
   return (
@@ -152,57 +143,32 @@ const TiendaPage = () => {
             {subcategoriaNombre && <Breadcrumb.Item>{subcategoriaNombre}</Breadcrumb.Item>}
           </Breadcrumb>
 
-          <h1 className="titulo-productos">Tienda de Productos</h1>
-
-          <div className="productos-grid">
-            {productosFiltrados.map((producto) => (
-              <div key={producto.id_articulo} className="producto-card">
-                <div className="cardproducto-imagen">
-                  <img
-                    src={producto.imagen}
-                    alt={producto.nombre}
-                    className="producto-imagen"
-                  />
-                </div>
-                <div className="cardproducto-contenido">
-                  <Tag
-                    color={obtenerColorPorGrado(producto.grado)}
-                    className="producto-grado"
-                  >
-                    {producto.grado}
-                  </Tag>
-                  <h3 className="producto-nombre">{producto.nombre}</h3>
-                  <p className="producto-descripcion-corta">
-                    {producto.descripcion.slice(0, 90)}...
-                  </p>
-                  <p className="producto-precio">CLP ${producto.precio}</p>
-                  <div className="producto-botones">
-                    <button
-                      className="btn-primary btn-azul"
-                      onClick={() => handleAddToCart(producto)}
-                    >
-                      Añadir al carrito
-                    </button>
-                    <button
-                      className={`btn-primary btn-youtube ${producto.video_si === 'no' ? 'disabled' : ''}`}
-                      onClick={() =>
-                        producto.video_si === 'si' && handleOpenModal(producto.video_link)
-                      }
-                      disabled={producto.video_si === 'no'}
-                    >
-                      <FaYoutube className="youtube-icon" /> Demo
-                    </button>
-                  </div>
-                </div>
-              </div>
-            ))}
+          <div className="tienda-cabezal">
+            <h1 className="titulo-productos">Tienda de Productos</h1>
+            <div className="tienda-cabezal-badge">
+              <Badge
+                count={(JSON.parse(localStorage.getItem('carrito')) || []).length} // Obtiene el total de artículos del carrito
+                overflowCount={99} // Límite para mostrar "99+"
+                style={{ backgroundColor: 'var(--especial)' }} // Color personalizado del badge
+              >
+                <FiShoppingCart
+                  className="icono-carrito"
+                  onClick={handleGoToCart} // Redirige al carrito al hacer clic
+                />
+              </Badge>
+            </div>
           </div>
+
+          <ProductosGrid
+            productos={productosFiltrados}
+            onAddToCart={handleAddToCart}
+            onOpenModal={handleOpenModal}
+          />
         </div>
       </div>
 
-      {/* Modal para el video */}
       <Modal
-        className="modal-tienda-grid-video" 
+        className="modal-tienda-grid-video"
         visible={isModalVisible}
         onCancel={handleCloseModal}
         footer={null}
@@ -223,7 +189,6 @@ const TiendaPage = () => {
         )}
       </Modal>
 
-      {/* Modal de confirmación */}
       <Modal
         visible={isConfirmModalVisible}
         onCancel={() => setIsConfirmModalVisible(false)}
@@ -233,6 +198,34 @@ const TiendaPage = () => {
         <div className="confirmar-anadido">
           <FaCheckCircle />
           <p>¡Has añadido "{addedProductName}" al carrito exitosamente!</p>
+          <div className="TiendaPage-modal-icons">
+          <Button type="default" onClick={() => setIsConfirmModalVisible(false)}>
+            Aceptar
+          </Button>
+          <Button className="btn-naranjoicon" icon={<FiShoppingCart className="btnnaranjoicon-icon" />} onClick={handleGoToCart}>
+            Ir al carrito
+          </Button>
+          </div>
+        </div>
+      </Modal>
+
+      <Modal
+        visible={isErrorModalVisible}
+        onCancel={() => setIsErrorModalVisible(false)}
+        footer={null}
+        centered
+      >
+        <div className="error-anadido">
+          <FaExclamationCircle />
+          <p>{errorMessage}</p>
+          <div className="TiendaPage-modal-icons">
+          <Button type="default" onClick={() => setIsErrorModalVisible(false)}>
+            Aceptar
+          </Button>
+          <Button className="btn-naranjoicon" icon={<FiShoppingCart className="btnnaranjoicon-icon" />} onClick={handleGoToCart}>
+            Ir al carrito
+          </Button>
+          </div>
         </div>
       </Modal>
     </div>

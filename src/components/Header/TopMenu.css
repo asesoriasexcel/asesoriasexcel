@@ -96,6 +96,10 @@
   border-bottom: 1px solid rgba(146, 146, 146, 0.1);
 }
 
+.p-menuitem-link {
+  padding-bottom: 5px;
+}
+
 .movil-menu-left, .movil-menu-right {
   display: flex;
   align-items: center;
@@ -213,9 +217,9 @@
   }
 
   .p-menubar-root-list {
-    width: 107.2% !important;
+    width: 109.6% !important;
     top: 56px;
-    left: -4.5%;
+    left: -4.9%;
     padding-left: 3%;
     background: var(--blanco) !important;
     box-shadow: none;
