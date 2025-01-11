@@ -9,6 +9,7 @@
   border-bottom: 1px solid rgba(146, 146, 146, 0.1);
   background: #fff;
   padding-inline: 10%;
+  height: 70px;
   width: 100%;
 }
 
@@ -170,6 +171,13 @@
 
 /* === Media Queries === */
 @media (max-width: 768px) {
+  .ant-scroll-number .ant-scroll-number-only-unit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .9rem !important;
+  }
+  
   .movil-desktop-menu {
     display: none; /* Oculto en pantallas pequeñas */
   }

@@ -34,7 +34,7 @@ const ProductoDestacado = () => {
             key={producto.id}
           >
             <div className="productos-column">
-              <h2>{producto.nombre}</h2>
+              <h2>Planilla {producto.nombre}</h2>
               <p>{producto.descripcion}</p>
 
               <div className="button-group">

@@ -2,11 +2,14 @@ import React from 'react';
 import { MenuOutlined } from '@ant-design/icons';
 import { FiShoppingCart } from 'react-icons/fi';
 import { Badge } from 'antd';
+import { useNavigate } from 'react-router-dom'; // Importar useNavigate
 
 // Importar la imagen usando require
 const logo = require('../../images/logo/logo4.png');
 
 const MenuBar = ({ onMenuClick }) => {
+  const navigate = useNavigate(); // Hook de navegación
+
   // Obtener la cantidad de productos en el carrito
   const carritoCount = (JSON.parse(localStorage.getItem('carrito')) || []).length;
 
@@ -31,7 +34,7 @@ const MenuBar = ({ onMenuClick }) => {
               fontSize: '1.1rem',
               cursor: 'pointer',
             }}
-            onClick={() => (window.location.href = '/carrito')} // Redirige al carrito al hacer clic
+            onClick={() => navigate('/carrito')} // Navega al carrito al hacer clic
           />
         </Badge>
       </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Breadcrumb, Drawer, Modal, Button, Badge } from 'antd';  // Importamos Button de Ant Design
 import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa"; // Icono de carrito
 import { FiShoppingCart } from 'react-icons/fi';
@@ -12,6 +13,8 @@ import tiendaSubcategorias from '../data/tiendaSubcategorias';
 import './TiendaPage.css';
 
 const TiendaPage = () => {
+  const navigate = useNavigate();
+
   const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
   const [subcategoriaSeleccionada, setSubcategoriaSeleccionada] = useState(null);
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
@@ -105,7 +108,7 @@ const TiendaPage = () => {
   // Función para redirigir al carrito
   const handleGoToCart = () => {
     // Redirigir al carrito
-    window.location.href = "/carrito"; // Suponiendo que tienes una ruta de carrito configurada
+    navigate('/carrito'); // Suponiendo que tienes una ruta de carrito configurada
   };
 
   return (
@@ -221,9 +224,6 @@ const TiendaPage = () => {
           <div className="TiendaPage-modal-icons">
           <Button type="default" onClick={() => setIsErrorModalVisible(false)}>
             Aceptar
-          </Button>
-          <Button className="btn-naranjoicon" icon={<FiShoppingCart className="btnnaranjoicon-icon" />} onClick={handleGoToCart}>
-            Ir al carrito
           </Button>
           </div>
         </div>

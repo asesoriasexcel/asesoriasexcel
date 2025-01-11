@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Menubar } from 'primereact/menubar';
 import { Button } from 'primereact/button';
@@ -10,6 +11,7 @@ import './TopMenu.css';
 const logo = require('../../../images/logo/logo4.png');
 
 const TopMenu = () => {
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(false);
 
   // Obtener la cantidad de artículos en el carrito
@@ -111,7 +113,7 @@ const TopMenu = () => {
                   <Button
                     icon="pi pi-shopping-cart"
                     className="p-button-rounded p-button-text movil-cart-button"
-                    onClick={() => (window.location.href = '/carrito')}
+                    onClick={() => navigate('/carrito')}
                   />
                 </Badge>
               </div>
@@ -135,7 +137,7 @@ const TopMenu = () => {
             <Button
               icon="pi pi-shopping-cart"
               className="p-button-rounded p-button-text desktop-cart-button"
-              onClick={() => (window.location.href = '/carrito')}
+              onClick={() => navigate('/carrito')}
             />
           </Badge>
         </div>

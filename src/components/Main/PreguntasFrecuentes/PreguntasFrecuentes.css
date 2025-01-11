@@ -79,3 +79,13 @@
     border-top: none;
     margin-top: -1px; /* Evita cualquier separación visible */
 }
+
+.p-accordion-header-link {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.p-accordion-header-link svg {
+    margin-top: 8px;
+}
