@@ -7,7 +7,7 @@ import tiendaSubcategorias from '../data/tiendaSubcategorias';
 
 import './CarritoPage.css';
 
-const { Title, Text } = Typography;
+const { Text } = Typography;
 
 const CarritoPage = () => {
   const [productosCarrito, setProductosCarrito] = useState([]);
