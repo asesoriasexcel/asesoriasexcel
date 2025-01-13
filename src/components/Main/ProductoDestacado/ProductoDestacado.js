@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Tag } from 'antd';
 import './ProductoDestacado.css'; // Aquí importamos los estilos para el componente Productos
 import { PiMedalLight } from "react-icons/pi";
@@ -28,15 +28,14 @@ const ProductoDestacado = () => {
         <div className="contenido productos-sheet">
         {productosDestacados.map((producto, index) => (
           <div
-            className={`productos-content ${
-              index === productosDestacados.length - 1 ? 'ultimo-producto' : ''
-            }`}
+            className={`productos-content ${index === productosDestacados.length - 1 ? 'ultimo-producto' : ''}`}
             key={producto.id}
           >
             <div className="productos-column">
               <h2>Planilla {producto.nombre}</h2>
               <p>{producto.descripcion}</p>
-
+              <p>El producto cuenta con 2 licencias de uso para diferentes equipos.</p>
+              <DescripcionLarga descripcion_larga={producto.descripcion_larga} />
               <div className="button-group">
                 <button className="action-button btn-primary btn-azul">Comprar</button>
                 <p className="precio">${producto.precio.toLocaleString('es-CL')} CLP</p>
@@ -74,5 +73,21 @@ const ProductoDestacado = () => {
   );
 };
 
-export default ProductoDestacado;
+// Componente para manejar la descripción larga
+const DescripcionLarga = ({ descripcion_larga }) => {
+  const [mostrarDescripcion, setMostrarDescripcion] = useState(false);
 
+  return (
+    <div className="btn-vermas">
+      {mostrarDescripcion && <p>{descripcion_larga}</p>}
+      <button 
+        onClick={() => setMostrarDescripcion(!mostrarDescripcion)} 
+        className="ver-mas-btn"
+      >
+        {mostrarDescripcion ? "Ver menos" : "Leer más"}
+      </button>
+    </div>
+  );
+};
+
+export default ProductoDestacado;

@@ -101,6 +101,25 @@
     align-items: end;
   }
    
+  .btn-vermas {
+    text-align: left;
+    
+  }
+
+  .ver-mas-btn {
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--comentarios);
+    text-decoration: underline;
+    cursor: pointer;
+    padding-inline: 0px;
+    margin-bottom: 1em;
+  }
+  
+  .ver-mas-btn:hover {
+    text-decoration: underline;
+  }
   
   /* Estilo de la imagen */
   .productos-image {
