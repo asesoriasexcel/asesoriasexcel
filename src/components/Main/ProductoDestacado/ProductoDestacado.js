@@ -34,7 +34,7 @@ const ProductoDestacado = () => {
             <div className="productos-column">
               <h2>Planilla {producto.nombre}</h2>
               <p>{producto.descripcion}</p>
-              <p>El producto cuenta con 2 licencias de uso para diferentes equipos.</p>
+              <p style={{ color: 'var(--happy)' }}>El producto cuenta con 2 licencias de uso para diferentes equipos.</p>
               <DescripcionLarga descripcion_larga={producto.descripcion_larga} />
               <div className="button-group">
                 <button className="action-button btn-primary btn-azul">Comprar</button>

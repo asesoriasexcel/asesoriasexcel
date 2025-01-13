@@ -107,6 +107,7 @@
   }
 
   .ver-mas-btn {
+    display: none;
     font-size: 1rem;
     background-color: transparent;
     border: none;
@@ -115,10 +116,6 @@
     cursor: pointer;
     padding-inline: 0px;
     margin-bottom: 1em;
-  }
-  
-  .ver-mas-btn:hover {
-    text-decoration: underline;
   }
   
   /* Estilo de la imagen */
@@ -141,6 +138,9 @@
 /* Responsive styles */
 @media (max-width: 768px) {
 
+  .ver-mas-btn {
+    display: block;
+  }
 
   .productos-content {
     flex-direction: column;
