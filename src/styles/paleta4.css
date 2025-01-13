@@ -21,6 +21,15 @@
     --especial: #e86e2f;
     --especial-danger: #b1341e;
 
+    /* Clasicos */
+    --primary-clasico: #1890ff;
+    --secundary-clasico: #6c757d;
+    --danger-clasico: #dc3545;
+    --primary-clasico-hover: #0069d9;
+    --secundary-clasico-hover: #5a6268;
+    --danger-clasico-hover: #c82333;
+
+
     /* Aplicación en HEADER */
 --seccion_header_fondo: var(--lh_c); /* claro */
 --seccion_header_titulo_1: rgb(32, 32, 32); /* oscuro */

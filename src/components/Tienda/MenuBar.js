@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
 import { FiShoppingCart } from 'react-icons/fi';
 import { Badge } from 'antd';
@@ -19,8 +20,9 @@ const MenuBar = ({ onMenuClick }) => {
         <MenuOutlined className="menu-icon" />
       </div>
       <div className="menu-bar-item">
-        {/* Mostrar la imagen importada */}
-        <img src={logo} alt="Logo" style={{ height: '35px', width: 'auto' }} />
+        <Link to="/">
+          <img src={logo} alt="Logo" style={{ height: '35px', width: 'auto' }} />
+        </Link>
       </div>
       <div className="menu-bar-item">
         <Badge

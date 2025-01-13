@@ -63,7 +63,7 @@ const CarritoPage = () => {
                 <List.Item className="carrito-list-item">
                   <Card className="carrito-card" bordered hoverable>
                     <h4 className="carrito-categoria">
-                      Categoría {categoria}
+                      Categoría: {categoria}
                       <Tag color="blue">{producto.grado}</Tag>
                     </h4>
 
@@ -82,7 +82,7 @@ const CarritoPage = () => {
                           {subcategoria}
                         </h4>
                         <p className="carrito-nombre">
-                          Planilla {producto.nombre}
+                          Planilla: <span>{producto.nombre}</span>
                         </p>
                         <div className="carrito-detalles">
                           <span>
