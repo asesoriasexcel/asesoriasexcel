@@ -5,6 +5,7 @@ import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import LandingPage from './pages/LandingPage';
 import TiendaPage from './pages/TiendaPage';
 import CarritoPage from './pages/CarritoPage';
+import ConfirmarCompraPage from './pages/ConfirmarCompraPage';
 import ContactoPage from './pages/ContactoPage';
 import DisenoPage from './pages/DisenoPage';
 import TerminosCondicionesPage from './pages/TerminosCondicionesPage';
@@ -34,6 +35,7 @@ const App = () => {
           <Route element={<TiendaLayout />}>
             <Route path="/tienda" element={<TiendaPage />} />
             <Route path="/carrito" element={<CarritoPage />} />
+            <Route path="/confirmacompra" element={<ConfirmarCompraPage />} />
           </Route>
 
           {/* Redirección 404 */}

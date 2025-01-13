@@ -5,14 +5,12 @@ import { FaYoutube } from 'react-icons/fa';
 
 const obtenerColorPorGrado = (grado) => {
   switch (grado) {
-    case 'Básico':
+    case 'Estándar':
       return 'green';
     case 'Avanzado':
       return 'blue';
     case 'Maestro':
-      return 'purple';
-    case 'Legendario':
-      return 'gold';
+      return 'red';
     default:
       return 'gray';
   }

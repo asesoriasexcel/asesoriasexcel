@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
-
 import './CarritoPage.css';
 
 const { Text } = Typography;
@@ -30,6 +29,14 @@ const CarritoPage = () => {
   };
 
   const resumen = calcularResumen();
+
+  // Función para formatear el monto a pesos chilenos (CLP)
+  const formatearMonto = (monto) => {
+    return new Intl.NumberFormat('es-CL', {
+      style: 'currency',
+      currency: 'CLP',
+    }).format(monto);
+  };
 
   return (
     <div className="carrito-container">
@@ -86,7 +93,7 @@ const CarritoPage = () => {
                         </p>
                         <div className="carrito-detalles">
                           <span>
-                            CLP ${producto.precio}
+                            {formatearMonto(producto.precio)}
                           </span>
                           <p>
                             Cant. {producto.cantidad}
@@ -112,11 +119,14 @@ const CarritoPage = () => {
               </div>
               <div className="resumen-infodetalle">
                 <p>Total:</p>
-                <p>CLP ${resumen.precioTotal}</p>
+                <p>{formatearMonto(resumen.precioTotal)}</p>
               </div>
-              <Button type="primary" className="boton-comprar">
-                Comprar
-              </Button>
+              {/* Botón para redirigir a la página de confirmación */}
+              <Link to="/confirmacompra">
+                <Button type="primary" className="boton-comprar">
+                  Comprar
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
