@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/asesoriasexcel/static/css/main.a7841e14.css",
-    "main.js": "/asesoriasexcel/static/js/main.2a6b44e1.js",
+    "main.css": "/asesoriasexcel/static/css/main.7fef8417.css",
+    "main.js": "/asesoriasexcel/static/js/main.552e0992.js",
     "static/media/primeicons.svg": "/asesoriasexcel/static/media/primeicons.6ed59f962963a4a73af2.svg",
     "static/media/publicacion_1_1.png": "/asesoriasexcel/static/media/publicacion_1_1.d0ac0315514ac265497d.png",
     "static/media/analisis_1_1.png": "/asesoriasexcel/static/media/analisis_1_1.166baf41420d4e3b76e8.png",
+    "static/media/bg_nuevo_5.avif": "/asesoriasexcel/static/media/bg_nuevo_5.7798bed3571a9846cbd3.avif",
     "static/media/docente_1_2.png": "/asesoriasexcel/static/media/docente_1_2.25fc262f9f76957703b6.png",
+    "static/media/bg_nuevo_2.avif": "/asesoriasexcel/static/media/bg_nuevo_2.b76dac11ee449a7d7565.avif",
     "static/media/primeicons.eot": "/asesoriasexcel/static/media/primeicons.ff0c4cd79b2ffca2de54.eot",
     "static/media/primeicons.woff": "/asesoriasexcel/static/media/primeicons.8931fda1930c3bd21e96.woff",
     "static/media/primeicons.ttf": "/asesoriasexcel/static/media/primeicons.a5c2a53d1ff7a9ff5933.ttf",
@@ -14,7 +16,6 @@
     "static/media/primeicons.woff2": "/asesoriasexcel/static/media/primeicons.024b32cc7bf399b1a847.woff2",
     "static/media/avatar12.png": "/asesoriasexcel/static/media/avatar12.c328d4e61a52ce8ccb8a.png",
     "static/media/avatar3.png": "/asesoriasexcel/static/media/avatar3.56ba798956907d5521eb.png",
-    "static/media/bg-2.jpg": "/asesoriasexcel/static/media/bg-2.7ade67fbf6d0a4b5694e.jpg",
     "static/media/avatar8.png": "/asesoriasexcel/static/media/avatar8.2d5c6cd6dfa08f4d6c16.png",
     "static/media/avatar11.png": "/asesoriasexcel/static/media/avatar11.f535623680a9e697ea4e.png",
     "static/media/avatar5.png": "/asesoriasexcel/static/media/avatar5.935f61a2e26b89991c96.png",
@@ -26,11 +27,11 @@
     "static/media/avatar9.png": "/asesoriasexcel/static/media/avatar9.83db35a6aab057ad05a3.png",
     "static/media/avatar6.png": "/asesoriasexcel/static/media/avatar6.ac50fa9bdc88524370f5.png",
     "index.html": "/asesoriasexcel/index.html",
-    "main.a7841e14.css.map": "/asesoriasexcel/static/css/main.a7841e14.css.map",
-    "main.2a6b44e1.js.map": "/asesoriasexcel/static/js/main.2a6b44e1.js.map"
+    "main.7fef8417.css.map": "/asesoriasexcel/static/css/main.7fef8417.css.map",
+    "main.552e0992.js.map": "/asesoriasexcel/static/js/main.552e0992.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7841e14.css",
-    "static/js/main.2a6b44e1.js"
+    "static/css/main.7fef8417.css",
+    "static/js/main.552e0992.js"
   ]
 }
