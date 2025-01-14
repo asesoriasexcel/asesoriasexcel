@@ -10,7 +10,7 @@ import LlamadaAccion from './LlamadaAccion';
 const Categorias = () => {
   return (
     <section className="categoria-grid-section seccion">
-      <div id="lp-tienda">hola</div>
+      <div id="lp-tienda"></div>
       <div className="centered-content"> 
 
         <div className="seccion-encabezado-izq">
