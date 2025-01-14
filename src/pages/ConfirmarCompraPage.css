@@ -1,8 +1,8 @@
 /* Estilos generales */
-.confirmarcompra-container {
+  .confirmarcompra-container {
     padding: 20px;
   }
-  
+
   .confirmarcompra-title {
     text-align: left;
     font-size: 24px;
@@ -13,10 +13,17 @@
   .confirmacompra-contenido {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
+    width: 40%;
     margin-top: 30px;
+    margin-left: 10%;
+    margin-bottom: 30px;
   }
   
+  .confirmacompra-contenido .instrucciones {
+    width: 50%;
+  }
+
   h3 {
     font-size: 18px;
     margin-bottom: 15px;
@@ -31,6 +38,14 @@
     margin-top: 20px;
   }
   
+  .confirmacompra-contenido a {
+    width: 200px !important;
+  }
+  
+  .confirmacompra-contenido .ant-card-head {
+    background-color: var(--blanco);
+  }
+
   /* Estilo de la tabla de transferencia */
   .ant-table-thead > tr > th {
     background-color: #f4f4f4;
@@ -82,7 +97,40 @@
     font-weight: bold;
     margin-top: 30px;
   }
+
+  .confirmacompra-contenido .ant-card-body {
+    padding-top: 5px !important;
+  }
+
+  .confirmacompra-contenido .ant-card-head {
+    background-color: #fafafa;
+  }
+
+  .confirmacompra-contenido .ant-card-head .ant-card-head-title {
+    font-weight: 600;
+  }
   
+  .confirmacompra-contenido td {
+    padding: 10px !important;
+  }
+
+  .confirmacompra-contenido .ant-card {
+    margin-bottom: 15px;
+  }
+
+  .confirmacompra-contenido .ant-card .ant-card-head-title {
+    white-space: normal;
+    padding: 10px 0;
+  }
+
+  .confirmacompra-contenido .ant-card .ant-table-cell button {
+    margin-top: 0px;
+  }
+
+  .confirmacompra-contenido .ant-card .ant-table-cell button svg {
+    color: var(--lh_mo);
+  }
+
   /* Estilos para móvil (max-width: 768px) */
   @media (max-width: 768px) {
     .confirmarcompra-container {
@@ -96,7 +144,9 @@
     .confirmacompra-contenido {
       width: 100%;
       padding: 0 10px;
+      margin-inline: 0px;
       box-sizing: border-box;
+      margin-bottom: 30px;
     }
   
     .instrucciones, .total-compra {

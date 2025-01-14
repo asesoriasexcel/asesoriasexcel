@@ -26,7 +26,7 @@ const TerminosCondicionesPage = () => {
           {/* Proceso de Compra */}
           <h2>3. Proceso de Compra</h2>
           <p>
-            Para realizar una compra, deberás completar el pedido en nuestro sitio web. Actualmente, aceptamos únicamente <b>transferencias electrónicas</b>. Una vez confirmado el pago, recibirás el producto en tu correo electrónico dentro de un plazo máximo de <b>24 horas</b>, junto con una <b>guía de uso</b> y un <b>video explicativo</b>.
+            Para realizar una compra, deberás completar el pedido en nuestro sitio web. Actualmente, aceptamos únicamente <b>transferencias electrónicas</b>. Una vez confirmado el pago, recibirás el producto en tu correo electrónico dentro de un plazo aproximado de <b>1 hora</b>, junto con una <b>guía de uso</b> y un <b>video explicativo</b>.
           </p>
 
           {/* Política de Reembolsos */}

@@ -191,7 +191,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 0;
+  padding: 30px 30px;
   background-color: #fff;
   border-top: 1px solid #eaeaea;
   margin-top: 0px;
@@ -209,11 +209,15 @@
   display: flex;
   flex-direction: row;
   justify-content:space-between;
-  padding-inline: 20px;
+  padding-inline: 0px;
 }
 
 .resumen-infodetalle p {
-  font-weight: 600;
+  font-weight: 400;
+}
+
+.resumen-infodetalle p {
+  margin-bottom: 10px;
 }
 
 .carrito-resumen .resumen-info .boton-comprar {
@@ -229,13 +233,28 @@
 }
 
 .resumen-info a {
-  width: 90%;
+  width: 100%;
   margin-inline: auto;
 }
 
 .resumen-info a .btn-azul{
   font-size: 1rem;
   width: 100% !important;
+}
+
+.resumen-info .detalle-carrito h4 {
+  margin-bottom: 15px;
+}
+
+.resumen-info th,
+.resumen-info td {
+  font-size: .9rem !important;
+  padding: 10px !important;
+}
+
+.resumen-total {
+  text-align: right;
+  margin-bottom: 15px;
 }
 
 @media (max-width: 768px) {

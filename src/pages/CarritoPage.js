@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { List, Card, Image, Tag, Typography, Button } from 'antd';
+import { List, Card, Image, Tag, Typography, Button, Checkbox, Alert, Table } from 'antd';
 import { Link } from 'react-router-dom';
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
@@ -10,6 +10,7 @@ const { Text } = Typography;
 
 const CarritoPage = () => {
   const [productosCarrito, setProductosCarrito] = useState([]);
+  const [terminosAceptados, setTerminosAceptados] = useState(false);
 
   useEffect(() => {
     const carrito = JSON.parse(localStorage.getItem('ae-carrito')) || [];
@@ -30,7 +31,6 @@ const CarritoPage = () => {
 
   const resumen = calcularResumen();
 
-  // Función para formatear el monto a pesos chilenos (CLP)
   const formatearMonto = (monto) => {
     return new Intl.NumberFormat('es-CL', {
       style: 'currency',
@@ -38,11 +38,35 @@ const CarritoPage = () => {
     }).format(monto);
   };
 
+  const handleCheckboxChange = (e) => {
+    setTerminosAceptados(e.target.checked);
+  };
+
+  // Configuración de la tabla del resumen
+  const columns = [
+    {
+      title: 'Producto',
+      dataIndex: 'producto',
+      key: 'producto',
+    },
+    {
+      title: 'Subtotal',
+      dataIndex: 'subtotal',
+      key: 'subtotal',
+      align: 'right',
+    },
+  ];
+
+  const dataSource = productosCarrito.map((producto) => ({
+    key: producto.id_articulo,
+    producto: `${producto.nombre} x ${producto.cantidad}`,
+    subtotal: formatearMonto(producto.precio * producto.cantidad),
+  }));
+
   return (
     <div className="carrito-container">
-      {/* Enlace para volver a la tienda */}
       <div className="volver-tienda">
-        <Link to="/tienda" className="volver-tienda-link" >
+        <Link to="/tienda" className="volver-tienda-link">
           &larr; Volver a la tienda
         </Link>
       </div>
@@ -113,17 +137,45 @@ const CarritoPage = () => {
           {/* Resumen del carrito */}
           <div className="carrito-resumen">
             <div className="resumen-info">
-              <div className="resumen-infodetalle">
-                <p>Cantidad de productos: </p>
-                <p>{resumen.cantidadTotal}</p>
+              {/* Detalle de los productos con tabla */}
+              <h4>Detalle de la compra</h4>
+              <Table
+                dataSource={dataSource}
+                columns={columns}
+                pagination={false}
+                className="carrito-resumen-tabla"
+              />
+              <hr />
+              <div className="resumen-total">
+                <Text strong>Total:</Text>
+                <Text>{formatearMonto(resumen.precioTotal)}</Text>
               </div>
-              <div className="resumen-infodetalle">
-                <p>Total:</p>
-                <p>{formatearMonto(resumen.precioTotal)}</p>
+
+              {/* Checkbox para aceptar los términos */}
+              <div className="terminos-condiciones">
+                <Checkbox onChange={handleCheckboxChange}>
+                  He leído y acepto los{' '}
+                  <Link to="/terminoscondiciones" target="_blank">
+                    términos y condiciones
+                  </Link>.
+                </Checkbox>
+                {!terminosAceptados && (
+                  <Alert
+                    message="Debes aceptar los términos y condiciones para continuar."
+                    type="warning"
+                    showIcon
+                    style={{ marginTop: '10px' }}
+                  />
+                )}
               </div>
+
               {/* Botón para redirigir a la página de confirmación */}
               <Link to="/confirmacompra">
-                <Button type="primary" className="btn-azul">
+                <Button
+                  type="primary"
+                  className="btn-azul"
+                  disabled={!terminosAceptados}
+                >
                   Comprar
                 </Button>
               </Link>
