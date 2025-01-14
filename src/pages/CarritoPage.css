@@ -228,6 +228,16 @@
   text-decoration: none;
 }
 
+.resumen-info a {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.resumen-info a .btn-azul{
+  font-size: 1rem;
+  width: 100% !important;
+}
+
 @media (max-width: 768px) {
   .menu-bar-item {
     padding: 4px;
@@ -392,7 +402,13 @@
   font-weight: 600;
 }
 
+.resumen-info a {
+  width: 90%;
+  margin-inline: auto;
+}
+
 .resumen-info a .btn-azul{
+  font-size: 1.1rem;
   height: 40px;
   width: 100% !important;
 }

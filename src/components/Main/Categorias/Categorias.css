@@ -1,7 +1,7 @@
 /* Categorias.css */
 #lp-tienda {
   color: red;
-  transform: translateY(-80px);
+  transform: translateY(-70px);
 }
 .categoria-grid-section {
   background: var(--seccion_categorias_fondo);
