@@ -42,7 +42,7 @@ const CarritoPage = () => {
     <div className="carrito-container">
       {/* Enlace para volver a la tienda */}
       <div className="volver-tienda">
-        <Link to="/tienda" className="volver-tienda-link">
+        <Link to="/tienda" className="volver-tienda-link" >
           &larr; Volver a la tienda
         </Link>
       </div>
@@ -123,7 +123,7 @@ const CarritoPage = () => {
               </div>
               {/* Botón para redirigir a la página de confirmación */}
               <Link to="/confirmacompra">
-                <Button type="primary" className="boton-comprar">
+                <Button type="primary" className="btn-azul">
                   Comprar
                 </Button>
               </Link>

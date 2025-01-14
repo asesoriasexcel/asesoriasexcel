@@ -23,8 +23,11 @@
   color: var(--comentarios);
   text-decoration: none;
   font-weight: 500;
+  align-items: flex-end;
+  padding: 10px;
   margin-left: 0px;
-  margin-bottom: 10px;
+  width: 80%;
+  margin-inline: auto ;
 }
 
 .volver-tienda-link:hover {
@@ -241,6 +244,10 @@
   margin-bottom: 20px;
 }
 
+.volver-tienda-link {
+  width: 100%;
+  margin-left: 0px;
+}
 /* Carrito */
 .carrito-container {
   width: 100%;
@@ -385,8 +392,9 @@
   font-weight: 600;
 }
 
-.resumen-infodetalle Button{
-  width: 100%
+.resumen-info a .btn-azul{
+  height: 40px;
+  width: 100% !important;
 }
 
 }
