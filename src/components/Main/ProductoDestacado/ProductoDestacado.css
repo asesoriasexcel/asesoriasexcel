@@ -106,13 +106,16 @@
     
   }
 
+  .productos-section .ver-mas-btn {
+    display: none;
+  }
+
   .ver-mas-btn {
     display: none;
     font-size: 1rem;
     background-color: transparent;
     border: none;
     color: var(--comentarios);
-    text-decoration: underline;
     cursor: pointer;
     padding-inline: 0px;
     margin-bottom: 1em;
@@ -134,11 +137,36 @@
     margin-top: 0px;
   }
 
+@media (min-width: 769px) {
+  .ver-mas-btn {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--comentarios);
+    cursor: pointer;
+    padding-inline: 25%;
+    margin-bottom: 1em;
+  }
   
+  .ver-mas-btn button {
+    min-width: 157px;
+    width: 100%;
+  }
+}
 /* Responsive styles */
 @media (max-width: 768px) {
 
   .ver-mas-btn {
+    display: block;
+  }
+
+  .ver-mas-btn button {
+    width: 100%;
+  }
+
+  .productos-section .ver-mas-btn {
     display: block;
   }
 
