@@ -23,7 +23,7 @@ const Header = () => {
       <div className="header-sheet">
         <div className="header-content">
           <div className="column">
-            <h1>Aló! AsesoriasExcel: Soluciones en Excel y Otras Tecnologías</h1>
+            <h1>Aló! AsesoriasExcel Soluciones en Excel y Otras Tecnologías</h1>
             <div className="button-group">
               {/* Botón de ver productos que redirige a la página de la tienda */}
               <button

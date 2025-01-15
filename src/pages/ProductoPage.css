@@ -4,6 +4,8 @@
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
+    width: 80%;
+    margin-inline: auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: 1px solid red;
   }
@@ -12,20 +14,34 @@
     display: flex;
     flex-direction: row;
     gap: 20px;
+    min-height: 500px;
+    max-height: 500px;
     border: 1px solid red;
   }
   
   .producto-container .producto-card .p-info1 .p-tira-imagenes {
-    width: 10%;
+    min-width: 100px;
+    max-width: 100px;
     border: 1px solid red;
   }
   
-  .producto-container .producto-card .p-info1 .p-imagen {
-    width: 30%;
+  .producto-container .producto-card .p-info1 .p-galeria-imagen {
+    display: flex;
+    flex-direction: row;
+    min-width: 600px;
+    max-width: 600px;
+    padding: 0px;
     border: 1px solid red;
   }
   
-  .producto-container .producto-card .p-info1 .p-imagen .producto-imagen {
+  .producto-container .producto-card .p-info1 .p-galeria-imagen .p-imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .producto-container .producto-card .p-info1 .p-galeria-imagen .producto-imagen {
     width: 100%;
     border-radius: 8px;
     border: 1px solid red;
@@ -51,3 +67,9 @@
     border: 1px solid red;
   }
   
+
+  @media (max-width: 768px) {
+    .producto-container .producto-card .p-info1 {
+      flex-direction: column;
+  }
+}

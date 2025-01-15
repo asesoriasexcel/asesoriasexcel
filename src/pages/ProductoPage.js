@@ -61,28 +61,29 @@ const ProductoPage = () => {
       <div className="producto-card">
         {/* Sección superior (imagen y detalles del producto) */}
         <div className="p-info1">
-          {/* Tira de imágenes */}
-          <div className="p-tira-imagenes">
-            {imagenes.map((img) => (
-              <Image
-                key={img.id_imagen}
-                src={img.url}
-                alt={`Miniatura de ${producto.nombre}`}
-                className="miniatura-imagen"
-                preview={false}
-                onClick={() => setImagenSeleccionada(img.url)} // Actualiza la imagen principal
-              />
-            ))}
-          </div>
-
           {/* Imagen principal */}
-          <div className="p-imagen">
-            <Image
-              alt={producto.nombre}
-              src={imagenSeleccionada}
-              className="producto-imagen"
-              preview={false}
-            />
+          <div className="p-galeria-imagen">
+            {/* Tira de imágenes */}
+            <div className="p-tira-imagenes">
+              {imagenes.map((img) => (
+                <Image
+                  key={img.id_imagen}
+                  src={img.url}
+                  alt={`Miniatura de ${producto.nombre}`}
+                  className="miniatura-imagen"
+                  preview={false}
+                  onClick={() => setImagenSeleccionada(img.url)} // Actualiza la imagen principal
+                />
+              ))}
+            </div>
+            <div className="p-imagen">
+              <Image
+                  alt={producto.nombre}
+                  src={imagenSeleccionada}
+                  className="producto-imagen"
+                  preview={false}
+                />
+            </div>
           </div>
 
           {/* Detalles del producto */}
