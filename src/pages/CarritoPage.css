@@ -257,6 +257,16 @@
   margin-bottom: 15px;
 }
 
+.resumen-total span {
+  color: var(--lh_po);
+  font-size: 1rem;
+  font-weight: 600 !important;
+}
+
+.resumen-info h4 {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .menu-bar-item {
     padding: 4px;
@@ -410,6 +420,10 @@
   gap: 5px;
 }
 
+.resumen-info h4 {
+  text-align: center;
+}
+
 .resumen-infodetalle {
   display: flex;
   flex-direction: row;
@@ -422,7 +436,7 @@
 }
 
 .resumen-info a {
-  width: 90%;
+  width: 100%;
   margin-inline: auto;
 }
 

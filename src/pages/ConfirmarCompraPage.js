@@ -120,7 +120,7 @@ const ConfirmarCompraPage = () => {
             type="primary"
             href={formularioGoogleUrl}
             target="_blank"
-            className='btn-azul'
+            className='confirmacompraform btn-azul'
             block
           >
             Ir al formulario

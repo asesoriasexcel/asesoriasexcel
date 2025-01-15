@@ -149,17 +149,17 @@ const TiendaPage = () => {
           <div className="tienda-cabezal">
             <h1 className="titulo-productos">Tienda de Productos</h1>
             <div className="tienda-cabezal-badge">
-              <Badge
-                count={(JSON.parse(localStorage.getItem('ae-carrito')) || []).length} // Obtiene el total de artículos del carrito
-                overflowCount={99} // Límite para mostrar "99+"
-                style={{ backgroundColor: 'var(--especial)' }} // Color personalizado del badge
-              >
-                <FiShoppingCart
-                  className="icono-carrito"
-                  onClick={handleGoToCart} // Redirige al carrito al hacer clic
-                />
-              </Badge>
+              <Link to="/carrito">
+                <Badge
+                  count={(JSON.parse(localStorage.getItem('ae-carrito')) || []).length} // Obtiene el total de artículos del carrito
+                  overflowCount={99} // Límite para mostrar "99+"
+                  style={{ backgroundColor: 'var(--especial)' }} // Color personalizado del badge
+                >
+                  <FiShoppingCart className="icono-carrito" />
+                </Badge>
+              </Link>
             </div>
+
           </div>
 
           <ProductosGrid

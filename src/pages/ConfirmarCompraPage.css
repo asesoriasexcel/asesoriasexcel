@@ -40,6 +40,7 @@
   
   .confirmacompra-contenido a {
     width: 200px !important;
+    height: 40px;
   }
   
   .confirmacompra-contenido .ant-card-head {
@@ -84,11 +85,7 @@
     font-size: 16px;
   }
   
-  /* Estilo de los tags */
-  .ant-tag {
-    font-size: 14px;
-    padding: 5px 10px;
-  }
+
   
   /* Estilo del total de la compra */
   .total-compra {
@@ -100,10 +97,6 @@
 
   .confirmacompra-contenido .ant-card-body {
     padding-top: 5px !important;
-  }
-
-  .confirmacompra-contenido .ant-card-head {
-    background-color: #fafafa;
   }
 
   .confirmacompra-contenido .ant-card-head .ant-card-head-title {
@@ -129,6 +122,16 @@
 
   .confirmacompra-contenido .ant-card .ant-table-cell button svg {
     color: var(--lh_mo);
+  }
+
+  .confirmacompra-contenido span,
+  .confirmacompra-contenido .ant-typography {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .confirmacompra-contenido .ant-table-tbody tr td {
+    padding-left: 0px !important;
   }
 
   /* Estilos para móvil (max-width: 768px) */

@@ -146,8 +146,8 @@ const CarritoPage = () => {
                 className="carrito-resumen-tabla"
               />
               <hr />
-              <div className="resumen-total">
-                <Text strong>Total:</Text>
+              <div className="resumen-total" >
+                <Text>Total: </Text>
                 <Text>{formatearMonto(resumen.precioTotal)}</Text>
               </div>
 
