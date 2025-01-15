@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Typography, Button, Tag, Image } from 'antd';
+import { Carousel } from 'primereact/carousel';  // Importa el componente Carousel
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
 import tiendaImagenes from '../data/tiendaImagenes'; // Importa la data de imágenes
+import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Estilo para PrimeReact
+import 'primereact/resources/primereact.min.css';  // Estilo principal
+import 'primeicons/primeicons.css';  // Íconos de PrimeReact
 import './ProductoPage.css';
 
 const { Title, Paragraph, Text } = Typography;
@@ -48,6 +52,20 @@ const ProductoPage = () => {
     (img) => img.id_producto === producto.id
   );
 
+  // Función de "item" para el carrusel
+  const itemTemplate = (img) => {
+    return (
+      <div key={img.id_imagen}>
+        <Image
+          alt={producto.nombre}
+          src={img.url}
+          className="producto-imagen"
+          preview={false}
+        />
+      </div>
+    );
+  };
+
   return (
     <div className="producto-container">
       {/* Enlace para volver a la tienda */}
@@ -78,11 +96,21 @@ const ProductoPage = () => {
             </div>
             <div className="p-imagen">
               <Image
-                  alt={producto.nombre}
-                  src={imagenSeleccionada}
-                  className="producto-imagen"
-                  preview={false}
-                />
+                alt={producto.nombre}
+                src={imagenSeleccionada}
+                className="producto-imagen"
+                preview={false}
+              />
+            </div>
+            {/* Carrusel de imágenes al final */}
+            <div className="p-carrousel">
+              <Carousel
+                value={imagenes}
+                itemTemplate={itemTemplate}
+                numVisible={1}
+                circular
+                autoplayInterval={3000} // Intervalo entre cada imagen
+              />
             </div>
           </div>
 
