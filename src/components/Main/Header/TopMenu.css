@@ -168,7 +168,15 @@
   text-decoration: none;
 }
 
+.desktop-menu-container .ant-badge-count,
+.movil-menu-container .ant-badge-count {
+  transform: translate(20%, -20%) !important;
+}
 
+.desktop-menu-container .p-button.p-button-icon-only {
+  height: 2.5rem;
+  width: 2.5rem;
+}
 /* === Media Queries === */
 @media (max-width: 768px) {
   .ant-scroll-number .ant-scroll-number-only-unit {

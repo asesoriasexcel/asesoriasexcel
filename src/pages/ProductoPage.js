@@ -1,38 +1,52 @@
 import React, { useState } from 'react'; 
 import { useParams, Link } from 'react-router-dom';
-import { Typography, Button, Tag, Image, Alert } from 'antd'; // Importa el componente Alert
-import { Carousel } from 'primereact/carousel'; // Importa el componente Carousel
+import { Typography, Button, Tag, Image, Alert } from 'antd';
+import { Carousel } from 'primereact/carousel';
 import { RiFileExcel2Line } from "react-icons/ri";
 import { FaYoutube } from 'react-icons/fa';
+import { FiShoppingCart } from 'react-icons/fi';
+import { Badge } from 'antd'; 
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
-import tiendaImagenes from '../data/tiendaImagenes'; // Importa la data de imágenes
-import 'primereact/resources/themes/lara-light-indigo/theme.css'; // Estilo para PrimeReact
-import 'primereact/resources/primereact.min.css'; // Estilo principal
-import 'primeicons/primeicons.css'; // Íconos de PrimeReact
+import tiendaImagenes from '../data/tiendaImagenes'; 
+import 'primereact/resources/themes/lara-light-indigo/theme.css';
+import 'primereact/resources/primereact.min.css'; 
+import 'primeicons/primeicons.css'; 
 import './ProductoPage.css';
 
-const { Title, Paragraph, Text } = Typography;
+const { Title, Text } = Typography;
+
+const obtenerColorPorGrado = (grado) => {
+  switch (grado) {
+    case 'Estándar':
+      return 'green';
+    case 'Avanzado':
+      return 'blue';
+    case 'Maestro':
+      return 'red';
+    default:
+      return 'gray';
+  }
+};
 
 const ProductoPage = () => {
-  const { id } = useParams(); // Extrae el parámetro dinámico ":id" de la URL
+  const { id } = useParams();
   const producto = tiendaProductos.find(
     (p) => p.id_articulo === parseInt(id, 10)
-  ); // Busca el producto correspondiente
-
-  // Filtra las imágenes asociadas al producto
-  const imagenes = tiendaImagenes.filter(
-    (img) => img.id_producto === producto?.id
   );
 
-  // Estado para la imagen actualmente seleccionada (inicializa con la primera imagen del producto)
+  const imagenes = tiendaImagenes.filter(
+    (img) => img.id_producto === producto?.id_articulo
+  );
+
   const [imagenSeleccionada, setImagenSeleccionada] = useState(
     imagenes.length > 0 ? imagenes[0].url : ''
   );
 
+  const carritoCount = (JSON.parse(localStorage.getItem('ae-carrito')) || []).length;
+
   if (!producto) {
-    // Renderiza un mensaje si no se encuentra el producto
     return (
       <div className="producto-container">
         <div className="volver-tienda">
@@ -45,7 +59,6 @@ const ProductoPage = () => {
     );
   }
 
-  // Obtén el nombre de la categoría y subcategoría
   const categoria = tiendaCategorias.find(
     (cat) => cat.id_categoria === producto.id
   )?.nombre;
@@ -54,7 +67,6 @@ const ProductoPage = () => {
     (subcat) => subcat.id_subcategoria === producto.id
   )?.nombre;
 
-  // Función de "item" para el carrusel
   const itemTemplate = (img) => (
     <div key={img.id_imagen}>
       <Image
@@ -66,7 +78,6 @@ const ProductoPage = () => {
     </div>
   );
 
-  // Función para formatear precio en formato CLP
   const formatearPrecio = (precio) => {
     return new Intl.NumberFormat('es-CL', {
       style: 'currency',
@@ -74,44 +85,52 @@ const ProductoPage = () => {
     }).format(precio);
   };
 
-  // Función para convertir enlaces de YouTube al formato embebido
   const convertirEnlaceEmbed = (link) => {
     if (link.includes("youtube.com/watch?v=")) {
       const videoId = link.split("v=")[1];
       return `https://www.youtube.com/embed/${videoId}`;
     }
-    return link; // Si no es un enlace estándar de YouTube, lo deja como está
+    return link;
   };
 
   return (
     <div className="producto-container">
-      {/* Enlace para volver a la tienda */}
       <div className="volver-tienda">
         <Link to="/tienda" className="volver-tienda-link">
           &larr; Volver a la tienda
         </Link>
+        <Link to="/carrito" className="carrito-link">
+          <Badge
+            count={carritoCount}
+            overflowCount={99}
+            style={{ backgroundColor: 'var(--especial)' }}
+          >
+            <FiShoppingCart
+              style={{
+                fontSize: '1.5rem',
+                cursor: 'pointer',
+                marginLeft: '10px',
+              }}
+            />
+          </Badge>
+        </Link>
       </div>
 
-      {/* Contenedor principal del producto */}
       <div className="producto-card">
-        {/* Sección superior (imagen y detalles del producto) */}
         <div className="p-nombre titulo-cabezal">
           <RiFileExcel2Line />
           <h2>Planilla {producto.nombre}</h2>
         </div>
 
-        {/* Mensaje de advertencia con el componente Alert */}
         <Alert
           message="Este producto cuenta con 2 licencias de uso para diferentes equipos."
           type="warning"
           showIcon
-          style={{ marginBottom: '20px' }} // Estilo para agregar espacio debajo del mensaje
+          style={{ marginBottom: '20px' }}
         />
 
         <div className="p-info1">
-          {/* Imagen principal */}
           <div className="p-galeria-imagen">
-            {/* Tira de imágenes */}
             <div className="p-tira-imagenes">
               {imagenes.map((img) => (
                 <Image
@@ -120,7 +139,7 @@ const ProductoPage = () => {
                   alt={`Miniatura de ${producto.nombre}`}
                   className="miniatura-imagen"
                   preview={false}
-                  onClick={() => setImagenSeleccionada(img.url)} // Actualiza la imagen principal
+                  onClick={() => setImagenSeleccionada(img.url)}
                 />
               ))}
             </div>
@@ -132,22 +151,23 @@ const ProductoPage = () => {
                 preview={false}
               />
             </div>
-            {/* Carrusel de imágenes al final */}
             <div className="p-carrousel">
               <Carousel
                 value={imagenes}
                 itemTemplate={itemTemplate}
                 numVisible={1}
                 circular
-                autoplayInterval={3000} // Intervalo entre cada imagen
+                autoplayInterval={3000}
               />
             </div>
           </div>
 
-          {/* Detalles del producto */}
           <div className="p-info">
             <div className="p-tag">
-              <span>Versión:</span><Tag color="blue" style={{ marginLeft:'8px' }} >{producto.grado}</Tag>
+              <span>Versión:</span>
+              <Tag color={obtenerColorPorGrado(producto.grado)} style={{ marginLeft: '8px' }}>
+                {producto.grado}
+              </Tag>
             </div>
             <div className="p-nombre titulo-central">
               <RiFileExcel2Line />
@@ -187,7 +207,6 @@ const ProductoPage = () => {
           </div>
         </div>
 
-        {/* Sección inferior (video) */}
         <div className="p-info2">
           <hr></hr>
           <div className="p-titulovideo">
@@ -198,7 +217,7 @@ const ProductoPage = () => {
               <iframe
                 width="100%"
                 height="600"
-                src={convertirEnlaceEmbed(producto.video_link)} // Usamos la función para convertir el enlace
+                src={convertirEnlaceEmbed(producto.video_link)}
                 title="Video demostrativo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -10,7 +10,7 @@ const logo = require('../../images/logo/logo4.png');
 
 const MenuBar = ({ onMenuClick }) => {
   // Obtener la cantidad de productos en el carrito
-  const carritoCount = (JSON.parse(localStorage.getItem('carrito')) || []).length;
+  const carritoCount = (JSON.parse(localStorage.getItem('ae-carrito')) || []).length;
 
   return (
     <div className="menu-bar">

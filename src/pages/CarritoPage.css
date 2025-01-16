@@ -170,19 +170,21 @@
   cursor: pointer;
 }
 
-.carrito-acciones .ver-info {
+.carrito-acciones .ver-info span{
+  font-weight: 600;
   color: var(--primary-clasico);
 }
 
-.carrito-acciones .ver-info:hover {
+.carrito-acciones .ver-info span:hover {
   color: var(--primary-clasico-hover);
 }
 
-.carrito-acciones .eliminar {
+.carrito-acciones .eliminar span {
+  font-weight: 600;
   color: var(--danger-clasico);
 }
 
-.carrito-acciones .eliminar:hover {
+.carrito-acciones .eliminar span:hover {
   color: var(--danger-clasico-hover);
 }
 
@@ -265,6 +267,15 @@
 
 .resumen-info h4 {
   text-align: center;
+}
+
+.carrito-empty-text {
+  padding-left: 5%;
+}
+
+
+.carrito-info .c-tag {
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {

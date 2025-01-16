@@ -1,6 +1,11 @@
-.producto-container .volver-tienda-link {
-  width: 90%;  
-  margin-inline: auto;
+.producto-container .volver-tienda {
+  width: 100%;
+  padding-inline: 5%;
+}
+
+.producto-container .volver-tienda .volver-tienda-link {
+  width: 100%;
+  margin-inline: 0px;
 }
 
 .producto-container .producto-card {
@@ -34,7 +39,7 @@
   overflow-y: auto; /* Agrega scroll vertical si hay muchas imágenes */
   padding-right: 0px;
   box-sizing: border-box;
-  
+  cursor: pointer;
 }
 
 .producto-container .producto-card .p-info1 .p-galeria-imagen {
@@ -183,7 +188,14 @@
   margin-bottom: 0px;
 }
 
+
 @media (max-width: 768px) {
+
+  .producto-container .volver-tienda {
+    padding-left: 2%;
+    padding-right: 8%;
+  }
+
   .producto-container .producto-card {
     width: 100%;
     padding: 15px;
@@ -242,6 +254,13 @@
 
   .producto-container .p-botones {
     margin-top: 15px;
+    width: 100%;
+  }
+
+  .producto-container .p-botones button{
+    font-size: 1rem;
+    height: 40px;
+    width: 100%;
   }
 
   .producto-container .p-info2 .p-video iframe {

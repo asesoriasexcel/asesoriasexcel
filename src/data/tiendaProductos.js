@@ -25,7 +25,7 @@ const tiendaProductos = [
     video_si: 'no',
     video_link: '',
     imagen: require('../images/productos/publicacion_1_1.png'),
-    disponible: 'no',
+    disponible: 'si',
     },
     {
     id_articulo: 3,

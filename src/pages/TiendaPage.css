@@ -140,6 +140,7 @@
   }
   
   .btn-youtube.disabled {
+    border: 1px solid #bbb;
     background-color: #ccc;
     cursor: not-allowed;
   }
@@ -339,6 +340,7 @@
     flex-direction: row;
     justify-content: center;
     font-size: 1rem !important;
+    height: 34px;
     margin: 2px 0px;
     padding: 8px 10px;
     border: none;
@@ -354,6 +356,40 @@
     z-index: 1000;
   }
   
+  .cardproducto-contenido .cp-infotag .cp-tag .ant-tag{
+    font-size: .8rem;
+    margin-bottom: 0px;
+  }
+
+  .cardproducto-contenido .cp-infotag,
+  .cardproducto-contenido .cp-infotag .cp-tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .cardproducto-contenido .cp-infotag {
+    justify-content:space-between;
+    margin: 4px 0;
+  }
+
+  .cardproducto-contenido .cp-infotag .btn-youtube {
+    font-size: .8rem;
+    border-radius: 32px;
+    padding: 2px 6px;
+  }
+
+  .cardproducto-contenido .cp-infotag .btn-youtube svg {
+    font-size: .8rem;
+    margin-right: 4px;
+  }
+
+  .cardproducto-contenido .cp-infotag .cp-tagversion {
+    font-size: .9rem;
+    color: var(--comentarios);
+    margin-right: 8px;
+  }
+
   @media (max-width: 768px) {
     .menu-hamburguesa {
       display: block; /* Mostrar solo en pantallas pequeñas */
@@ -398,6 +434,33 @@
       height: 200px;
     }
 
+    .cardproducto-contenido .cp-infotag .cp-tag .ant-tag{
+      margin-bottom: 0px;
+    }
+
+    .cardproducto-contenido .cp-infotag,
+    .cardproducto-contenido .cp-infotag .cp-tag {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .cardproducto-contenido .cp-infotag {
+      justify-content:space-between;
+    }
+
+    .cardproducto-contenido .cp-infotag .btn-youtube {
+      border-radius: 32px;
+      margin-right: 10px;
+      padding: 6px 12px;
+    }
+
+    .cardproducto-contenido .cp-infotag .cp-tagversion {
+      font-size: .9rem;
+      color: var(--comentarios);
+      margin-right: 8px;
+    }
+
     .cardproducto-contenido .producto-nombre {
       font-size: 1rem;
       font-weight: 600;
@@ -415,10 +478,14 @@
 
     .cardproducto-contenido .producto-botones {
       flex-direction: row;
-      justify-content:space-between;
+      width: 100%;
+      gap: 10px;
     }
 
     .cardproducto-contenido .producto-botones button {
+      height: 40px;
+      font-size: 1rem;
+      align-items: center;
       width: 48%;
     }
 

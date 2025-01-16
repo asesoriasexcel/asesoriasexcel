@@ -15,7 +15,7 @@ const TopMenu = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   // Obtener la cantidad de artículos en el carrito
-  const carritoCount = (JSON.parse(localStorage.getItem('carrito')) || []).length;
+  const carritoCount = (JSON.parse(localStorage.getItem('ae-carrito')) || []).length;
 
   // Función para desplazar a la sección del footer
   const scrollToFooter = () => {

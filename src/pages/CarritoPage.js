@@ -1,27 +1,44 @@
 import React, { useState, useEffect } from 'react';
-import { List, Card, Image, Tag, Typography, Button, Checkbox, Alert, Table } from 'antd';
-import { Link } from 'react-router-dom';
+import { List, Card, Image, Tag, Typography, Button, Checkbox, Alert, Table, Modal } from 'antd';
+import { Link, useNavigate } from 'react-router-dom';
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
 import './CarritoPage.css';
 
 const { Text } = Typography;
+const { confirm } = Modal;
+
+const obtenerColorPorGrado = (grado) => {
+  switch (grado) {
+    case 'Estándar':
+      return 'green';
+    case 'Avanzado':
+      return 'blue';
+    case 'Maestro':
+      return 'red';
+    default:
+      return 'gray';
+  }
+};
 
 const CarritoPage = () => {
   const [productosCarrito, setProductosCarrito] = useState([]);
   const [terminosAceptados, setTerminosAceptados] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const carrito = JSON.parse(localStorage.getItem('ae-carrito')) || [];
+    cargarCarrito();
+  }, []);
 
+  const cargarCarrito = () => {
+    const carrito = JSON.parse(localStorage.getItem('ae-carrito')) || [];
     const productos = carrito.map((item) => {
       const producto = tiendaProductos.find(p => p.id_articulo === item.id_articulo);
       return { ...producto, cantidad: item.cantidad };
     });
-
     setProductosCarrito(productos);
-  }, []);
+  };
 
   const calcularResumen = () => {
     const cantidadTotal = productosCarrito.reduce((acc, producto) => acc + producto.cantidad, 0);
@@ -42,7 +59,30 @@ const CarritoPage = () => {
     setTerminosAceptados(e.target.checked);
   };
 
-  // Configuración de la tabla del resumen
+  const mostrarConfirmacionEliminar = (id_articulo) => {
+    confirm({
+      title: '¿Estás seguro de que deseas eliminar este artículo?',
+      content: 'Una vez eliminado, no podrás recuperarlo.',
+      okText: 'Sí, eliminar',
+      okType: 'danger',
+      cancelText: 'Cancelar',
+      onOk() {
+        eliminarArticulo(id_articulo);
+      },
+    });
+  };
+
+  const eliminarArticulo = (id_articulo) => {
+    const carritoActualizado = productosCarrito.filter(producto => producto.id_articulo !== id_articulo);
+    localStorage.setItem('ae-carrito', JSON.stringify(carritoActualizado.map(({ id_articulo, cantidad }) => ({ id_articulo, cantidad }))));
+
+    setProductosCarrito(carritoActualizado);
+  };
+
+  const handleVerInfo = (id_articulo) => {
+    navigate(`/producto/${id_articulo}`);
+  };
+
   const columns = [
     {
       title: 'Producto',
@@ -95,7 +135,6 @@ const CarritoPage = () => {
                   <Card className="carrito-card" bordered hoverable>
                     <h4 className="carrito-categoria">
                       Categoría: {categoria}
-                      <Tag color="blue">{producto.grado}</Tag>
                     </h4>
 
                     <div className="carrito-producto">
@@ -115,6 +154,10 @@ const CarritoPage = () => {
                         <p className="carrito-nombre">
                           Planilla: <span>{producto.nombre}</span>
                         </p>
+                        <div className="c-tag">
+                          <span className="c-tagversion">Version: </span>
+                          <Tag color={obtenerColorPorGrado(producto.grado)}>{producto.grado}</Tag>
+                        </div>
                         <div className="carrito-detalles">
                           <span>
                             {formatearMonto(producto.precio)}
@@ -126,18 +169,29 @@ const CarritoPage = () => {
                       </div>
                     </div>
                     <div className="carrito-acciones">
-                      <p className="ver-info">Ver info</p>
-                      <p className="eliminar">Eliminar</p>
+                      <Button
+                        type="link"
+                        className="ver-info"
+                        onClick={() => handleVerInfo(producto.id_articulo)}
+                      >
+                        Ver info
+                      </Button>
+                      <Button
+                        type="link"
+                        danger
+                        className="eliminar"
+                        onClick={() => mostrarConfirmacionEliminar(producto.id_articulo)}
+                      >
+                        Eliminar
+                      </Button>
                     </div>
                   </Card>
                 </List.Item>
               );
             }}
           />
-          {/* Resumen del carrito */}
           <div className="carrito-resumen">
             <div className="resumen-info">
-              {/* Detalle de los productos con tabla */}
               <h4>Detalle de la compra</h4>
               <Table
                 dataSource={dataSource}
@@ -151,7 +205,6 @@ const CarritoPage = () => {
                 <Text>{formatearMonto(resumen.precioTotal)}</Text>
               </div>
 
-              {/* Checkbox para aceptar los términos */}
               <div className="terminos-condiciones">
                 <Checkbox onChange={handleCheckboxChange}>
                   He leído y acepto los{' '}
@@ -169,7 +222,6 @@ const CarritoPage = () => {
                 )}
               </div>
 
-              {/* Botón para redirigir a la página de confirmación */}
               <Link to="/confirmacompra">
                 <Button
                   type="primary"
