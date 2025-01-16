@@ -9,7 +9,7 @@ const tiendaProductos = [
     id_subcategoria: '2',
     precio: 8000,
     video_si: 'si',
-    video_link: 'https://www.youtube.com/watch?v=a9VTSJEzqh4',
+    video_link: "https://www.youtube.com/watch?v=a9VTSJEzqh4",
     imagen: require('../images/productos/docente_1_2.png'),
     disponible: 'si',
     },

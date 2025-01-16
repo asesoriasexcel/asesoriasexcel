@@ -171,7 +171,21 @@ main,
 }
 
 .btn-azul:hover {
-  background-color: #4169e1 !important;
+  background-color: #097186 !important;
+}
+
+.btn-azulsecundario {
+  text-align: center;
+  color: #fff;
+  background-color: #7fa4ac;
+  border-radius: 8px;
+  padding: .6rem 1.5rem;
+  white-space: break-spaces;
+  text-decoration: none;
+}
+
+.btn-azulsecundario:hover {
+  background-color: #526b70 !important;
 }
 
 .btn-naranjo {

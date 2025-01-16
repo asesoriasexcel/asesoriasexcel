@@ -1,14 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; 
 import { useParams, Link } from 'react-router-dom';
-import { Typography, Button, Tag, Image } from 'antd';
-import { Carousel } from 'primereact/carousel';  // Importa el componente Carousel
+import { Typography, Button, Tag, Image, Alert } from 'antd'; // Importa el componente Alert
+import { Carousel } from 'primereact/carousel'; // Importa el componente Carousel
+import { RiFileExcel2Line } from "react-icons/ri";
+import { FaYoutube } from 'react-icons/fa';
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
 import tiendaImagenes from '../data/tiendaImagenes'; // Importa la data de imágenes
-import 'primereact/resources/themes/lara-light-indigo/theme.css';  // Estilo para PrimeReact
-import 'primereact/resources/primereact.min.css';  // Estilo principal
-import 'primeicons/primeicons.css';  // Íconos de PrimeReact
+import 'primereact/resources/themes/lara-light-indigo/theme.css'; // Estilo para PrimeReact
+import 'primereact/resources/primereact.min.css'; // Estilo principal
+import 'primeicons/primeicons.css'; // Íconos de PrimeReact
 import './ProductoPage.css';
 
 const { Title, Paragraph, Text } = Typography;
@@ -19,9 +21,14 @@ const ProductoPage = () => {
     (p) => p.id_articulo === parseInt(id, 10)
   ); // Busca el producto correspondiente
 
-  // Estado para la imagen actualmente seleccionada
+  // Filtra las imágenes asociadas al producto
+  const imagenes = tiendaImagenes.filter(
+    (img) => img.id_producto === producto?.id
+  );
+
+  // Estado para la imagen actualmente seleccionada (inicializa con la primera imagen del producto)
   const [imagenSeleccionada, setImagenSeleccionada] = useState(
-    producto?.imagen || ''
+    imagenes.length > 0 ? imagenes[0].url : ''
   );
 
   if (!producto) {
@@ -47,23 +54,33 @@ const ProductoPage = () => {
     (subcat) => subcat.id_subcategoria === producto.id
   )?.nombre;
 
-  // Filtra las imágenes asociadas al producto
-  const imagenes = tiendaImagenes.filter(
-    (img) => img.id_producto === producto.id
+  // Función de "item" para el carrusel
+  const itemTemplate = (img) => (
+    <div key={img.id_imagen}>
+      <Image
+        alt={producto.nombre}
+        src={img.url}
+        className="producto-imagen"
+        preview={false}
+      />
+    </div>
   );
 
-  // Función de "item" para el carrusel
-  const itemTemplate = (img) => {
-    return (
-      <div key={img.id_imagen}>
-        <Image
-          alt={producto.nombre}
-          src={img.url}
-          className="producto-imagen"
-          preview={false}
-        />
-      </div>
-    );
+  // Función para formatear precio en formato CLP
+  const formatearPrecio = (precio) => {
+    return new Intl.NumberFormat('es-CL', {
+      style: 'currency',
+      currency: 'CLP',
+    }).format(precio);
+  };
+
+  // Función para convertir enlaces de YouTube al formato embebido
+  const convertirEnlaceEmbed = (link) => {
+    if (link.includes("youtube.com/watch?v=")) {
+      const videoId = link.split("v=")[1];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    return link; // Si no es un enlace estándar de YouTube, lo deja como está
   };
 
   return (
@@ -78,6 +95,19 @@ const ProductoPage = () => {
       {/* Contenedor principal del producto */}
       <div className="producto-card">
         {/* Sección superior (imagen y detalles del producto) */}
+        <div className="p-nombre titulo-cabezal">
+          <RiFileExcel2Line />
+          <h2>Planilla {producto.nombre}</h2>
+        </div>
+
+        {/* Mensaje de advertencia con el componente Alert */}
+        <Alert
+          message="Este producto cuenta con 2 licencias de uso para diferentes equipos."
+          type="warning"
+          showIcon
+          style={{ marginBottom: '20px' }} // Estilo para agregar espacio debajo del mensaje
+        />
+
         <div className="p-info1">
           {/* Imagen principal */}
           <div className="p-galeria-imagen">
@@ -117,13 +147,17 @@ const ProductoPage = () => {
           {/* Detalles del producto */}
           <div className="p-info">
             <div className="p-tag">
-              <Tag color="blue">{producto.grado}</Tag>
+              <span>Versión:</span><Tag color="blue" style={{ marginLeft:'8px' }} >{producto.grado}</Tag>
             </div>
-            <div className="p-nombre">
-              <Title level={3}>{producto.nombre}</Title>
+            <div className="p-nombre titulo-central">
+              <RiFileExcel2Line />
+              <h2>Planilla {producto.nombre}</h2>
             </div>
             <div className="p-descripcion_larga">
-              <Paragraph>{producto.descripcion_larga}</Paragraph>
+              <p>{producto.descripcion_larga}</p>
+            </div>
+            <div className="p-precio">
+              <p>{formatearPrecio(producto.precio)}</p>
             </div>
             <div className="p-categoria">
               <Text>
@@ -142,18 +176,29 @@ const ProductoPage = () => {
               >
                 {producto.disponible === 'si' ? 'Comprar' : 'No disponible'}
               </Button>
+              <Button
+                type="primary"
+                disabled={producto.disponible !== 'si'}
+                className="btn-azulsecundario"
+              >
+                {producto.disponible === 'si' ? 'Añadir al carrito' : 'No disponible'}
+              </Button>
             </div>
           </div>
         </div>
 
         {/* Sección inferior (video) */}
         <div className="p-info2">
+          <hr></hr>
+          <div className="p-titulovideo">
+            <FaYoutube /><h2>Video demostrativo</h2>
+          </div>
           {producto.video_si === 'si' && producto.video_link && (
-            <div className="video">
+            <div className="p-video">
               <iframe
                 width="100%"
-                height="315"
-                src={producto.video_link}
+                height="600"
+                src={convertirEnlaceEmbed(producto.video_link)} // Usamos la función para convertir el enlace
                 title="Video demostrativo"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
