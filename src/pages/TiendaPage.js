@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import { Breadcrumb, Drawer, Modal, Button, Badge } from 'antd';  // Importamos Button de Ant Design
-import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa"; // Icono de carrito
+import React, { useState, useEffect } from 'react';
+import { Link, useParams, useNavigate, useLocation } from 'react-router-dom';
+import { Breadcrumb, Drawer, Modal, Button, Badge } from 'antd';
+import { FaCheckCircle, FaExclamationCircle } from "react-icons/fa"; 
 import { FiShoppingCart } from 'react-icons/fi';
 import TreeMenu from '../components/Tienda/TreeMenu';
 import MenuBar from '../components/Tienda/MenuBar';
-import ProductosGrid from '../components/Tienda/ProductosGrid'; // Importamos el nuevo componente
+import ProductosGrid from '../components/Tienda/ProductosGrid';
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
@@ -14,28 +13,32 @@ import './TiendaPage.css';
 
 const TiendaPage = () => {
   const navigate = useNavigate();
+  const { id_categoria, id_subcategoria } = useParams();
+  const location = useLocation(); // Para obtener la ruta actual
 
-  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(null);
-  const [subcategoriaSeleccionada, setSubcategoriaSeleccionada] = useState(null);
+  const [categoriaSeleccionada, setCategoriaSeleccionada] = useState(id_categoria || null);
+  const [subcategoriaSeleccionada, setSubcategoriaSeleccionada] = useState(id_subcategoria || null);
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
-
-  // Estado para gestionar el modal y el video
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentVideoLink, setCurrentVideoLink] = useState(null);
-
-  // Estado para el modal de confirmación de éxito
   const [isConfirmModalVisible, setIsConfirmModalVisible] = useState(false);
   const [addedProductName, setAddedProductName] = useState('');
-
-  // Estado para el modal de error
   const [isErrorModalVisible, setIsErrorModalVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    if (id_categoria) {
+      setCategoriaSeleccionada(id_categoria);
+    }
+    if (id_subcategoria) {
+      setSubcategoriaSeleccionada(id_subcategoria);
+    }
+  }, [id_categoria, id_subcategoria]);
 
   const onMenuClick = () => setIsDrawerVisible(true);
 
   const onSelect = (keys, info) => {
     const { node } = info;
-
     if (node.key.startsWith('categoria-')) {
       const idCategoria = node.key.split('-')[1];
       setCategoriaSeleccionada(idCategoria);
@@ -45,13 +48,16 @@ const TiendaPage = () => {
       const idCategoria = tiendaSubcategorias.find(
         (subcat) => String(subcat.id_subcategoria) === idSubcategoria
       )?.id_categoria;
-
       setCategoriaSeleccionada(idCategoria);
       setSubcategoriaSeleccionada(idSubcategoria);
     }
   };
 
+  // Filtrar productos dependiendo de la ruta
   const productosFiltrados = tiendaProductos.filter((producto) => {
+    if (location.pathname === '/tienda/liberados') {
+      return producto.liberado === 'si'; // Filtrar solo los productos liberados
+    }
     if (subcategoriaSeleccionada) return producto.id_subcategoria === subcategoriaSeleccionada;
     if (categoriaSeleccionada) return producto.id_categoria === categoriaSeleccionada;
     return true;
@@ -70,6 +76,7 @@ const TiendaPage = () => {
   const handleClickTienda = () => {
     setCategoriaSeleccionada(null);
     setSubcategoriaSeleccionada(null);
+    navigate('/tienda'); // Esto redirige a la ruta "/tienda"
   };
 
   const handleOpenModal = (videoLink) => {
@@ -87,7 +94,6 @@ const TiendaPage = () => {
     const existeEnCarrito = carrito.find((item) => item.id_articulo === producto.id_articulo);
 
     if (existeEnCarrito) {
-      // Mostrar modal de error
       setErrorMessage('No se puede añadir más de una unidad del mismo artículo.');
       setIsErrorModalVisible(true);
       return;
@@ -105,10 +111,8 @@ const TiendaPage = () => {
     setIsConfirmModalVisible(true);
   };
 
-  // Función para redirigir al carrito
   const handleGoToCart = () => {
-    // Redirigir al carrito
-    navigate('/carrito'); // Suponiendo que tienes una ruta de carrito configurada
+    navigate('/carrito');
   };
 
   return (
@@ -144,22 +148,22 @@ const TiendaPage = () => {
             </Breadcrumb.Item>
             {categoriaNombre && <Breadcrumb.Item>{categoriaNombre}</Breadcrumb.Item>}
             {subcategoriaNombre && <Breadcrumb.Item>{subcategoriaNombre}</Breadcrumb.Item>}
+            {location.pathname === '/tienda/liberados' && <Breadcrumb.Item>Liberados</Breadcrumb.Item>}
           </Breadcrumb>
 
           <div className="tienda-cabezal">
-            <h1 className="titulo-productos">Tienda de Productos</h1>
+            <h1 className="titulo-productos">{location.pathname === '/tienda/liberados' ? 'Productos Liberados' : 'Tienda de Productos'}</h1>
             <div className="tienda-cabezal-badge">
               <Link to="/carrito">
                 <Badge
-                  count={(JSON.parse(localStorage.getItem('ae-carrito')) || []).length} // Obtiene el total de artículos del carrito
-                  overflowCount={99} // Límite para mostrar "99+"
-                  style={{ backgroundColor: 'var(--especial)' }} // Color personalizado del badge
+                  count={(JSON.parse(localStorage.getItem('ae-carrito')) || []).length}
+                  overflowCount={99}
+                  style={{ backgroundColor: 'var(--especial)' }}
                 >
                   <FiShoppingCart className="icono-carrito" />
                 </Badge>
               </Link>
             </div>
-
           </div>
 
           <ProductosGrid
@@ -202,12 +206,12 @@ const TiendaPage = () => {
           <FaCheckCircle />
           <p>¡Has añadido "{addedProductName}" al carrito exitosamente!</p>
           <div className="TiendaPage-modal-icons">
-          <Button type="default" onClick={() => setIsConfirmModalVisible(false)}>
-            Aceptar
-          </Button>
-          <Button className="btn-naranjoicon" icon={<FiShoppingCart className="btnnaranjoicon-icon" />} onClick={handleGoToCart}>
-            Ir al carrito
-          </Button>
+            <Button type="default" onClick={() => setIsConfirmModalVisible(false)}>
+              Aceptar
+            </Button>
+            <Button className="btn-naranjoicon" icon={<FiShoppingCart className="btnnaranjoicon-icon" />} onClick={handleGoToCart}>
+              Ir al carrito
+            </Button>
           </div>
         </div>
       </Modal>
@@ -222,9 +226,9 @@ const TiendaPage = () => {
           <FaExclamationCircle />
           <p>{errorMessage}</p>
           <div className="TiendaPage-modal-icons">
-          <Button type="default" onClick={() => setIsErrorModalVisible(false)}>
-            Aceptar
-          </Button>
+            <Button type="default" onClick={() => setIsErrorModalVisible(false)}>
+              Aceptar
+            </Button>
           </div>
         </div>
       </Modal>

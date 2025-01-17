@@ -35,6 +35,9 @@ const App = () => {
           {/* Rutas con elementos comunes para el interior del sitio */}
           <Route element={<TiendaLayout />}>
             <Route path="/tienda" element={<TiendaPage />} />
+            <Route path="/tienda/categoria/:id_categoria" element={<TiendaPage />} />
+            <Route path="/tienda/subcategoria/:id_subcategoria" element={<TiendaPage />} />
+            <Route path="/tienda/liberados" element={<TiendaPage />} />
             <Route path="/producto/:id" element={<ProductoPage />} />
             <Route path="/carrito" element={<CarritoPage />} />
             <Route path="/confirmacompra" element={<ConfirmarCompraPage />} />

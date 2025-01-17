@@ -284,4 +284,9 @@
   .icon-menuapp{
     margin-right: 6px;
   }
+
+  .p-menubar .p-button-rounded {
+    width: 2.7rem;
+    height: 2.7rem;
+  }
 }
