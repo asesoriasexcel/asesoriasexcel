@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { MenuOutlined } from '@ant-design/icons';
 import { FiShoppingCart } from 'react-icons/fi';
 import { Badge } from 'antd';
-import { useNavigate } from 'react-router-dom';
+
 
 // Importar la imagen usando require
 const logo = require('../../images/logo/logo4.png');

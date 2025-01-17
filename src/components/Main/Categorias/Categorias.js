@@ -7,7 +7,18 @@ import categorias from '../../../data/categorias'; // Importar los datos
 
 import LlamadaAccion from './LlamadaAccion';
 
+// Importa useNavigate de react-router-dom
+import { useNavigate } from 'react-router-dom';
+
 const Categorias = () => {
+  // Usa useNavigate para redirigir al usuario
+  const navigate = useNavigate();
+
+  // Función para manejar el clic en el botón
+  const handleVerMas = (id) => {
+    navigate(`/tienda/categoria/${id}`);
+  };
+
   return (
     <section className="categoria-grid-section seccion">
       <div id="lp-tienda"></div>
@@ -35,13 +46,17 @@ const Categorias = () => {
               <h3>{categoria.titulo}</h3>
               <p>{categoria.descripcion}</p>
               <div className="ver-mas-btn">
-                <Button type="primary" className="btn-azul">Ver más</Button>
+                <Button 
+                  type="primary" 
+                  className="btn-azul" 
+                  onClick={() => handleVerMas(categoria.id)} // Llama a handleVerMas con el id de la categoría
+                >
+                  Ver más
+                </Button>
               </div>
             </div>
           ))}
         </div>
-
-
       </div>
     </section>
   );
