@@ -89,7 +89,7 @@ const TopMenu = () => {
     <>
       {/* Menú para móvil */}
       {isMobile && (
-        <div className="movil-menu-container">
+        <div id="main-menu" className="movil-menu-container">
           <AnnouncementBanner />
           <Menubar
             model={items}
@@ -120,7 +120,7 @@ const TopMenu = () => {
       {!isMobile && (
         <>
           <AnnouncementBanner />
-          <div className="desktop-menu-container">
+          <div id="main-menu" className="desktop-menu-container">
             <Link to="/" className="desktop-brand-name">
               <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
             </Link>

@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './ContactoPage.css'; // Asegúrate de tener estos estilos en el archivo CSS correspondiente
 
 const ContactoPage = () => {
+  useEffect(() => {
+    // Seleccionar el div con el id "main-menu"
+    const targetElement = document.getElementById('main-menu');
+
+    // Realizar el scroll hacia el elemento encontrado, si existe
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []); // El array vacío asegura que se ejecute una sola vez después de que el componente se renderice
+
   return (
     <section className="contacto-section">
       <div className="centered-content">
