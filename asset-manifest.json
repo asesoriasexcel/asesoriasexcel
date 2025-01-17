@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/asesoriasexcel/static/css/main.b9b847b4.css",
-    "main.js": "/asesoriasexcel/static/js/main.bfe4fb39.js",
+    "main.js": "/asesoriasexcel/static/js/main.d1210355.js",
     "static/media/imagen2.png": "/asesoriasexcel/static/media/imagen2.4082cff8b4638300574a.png",
     "static/media/InterVariable-Italic.woff2": "/asesoriasexcel/static/media/InterVariable-Italic.e295f70fe3e2df296c7b.woff2",
     "static/media/InterVariable.woff2": "/asesoriasexcel/static/media/InterVariable.a0e477f2f1f9d2376fde.woff2",
@@ -34,10 +34,10 @@
     "static/media/avatar6.png": "/asesoriasexcel/static/media/avatar6.ac50fa9bdc88524370f5.png",
     "index.html": "/asesoriasexcel/index.html",
     "main.b9b847b4.css.map": "/asesoriasexcel/static/css/main.b9b847b4.css.map",
-    "main.bfe4fb39.js.map": "/asesoriasexcel/static/js/main.bfe4fb39.js.map"
+    "main.d1210355.js.map": "/asesoriasexcel/static/js/main.d1210355.js.map"
   },
   "entrypoints": [
     "static/css/main.b9b847b4.css",
-    "static/js/main.bfe4fb39.js"
+    "static/js/main.d1210355.js"
   ]
 }
