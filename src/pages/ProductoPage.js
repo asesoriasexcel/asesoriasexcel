@@ -1,11 +1,11 @@
 import React, { useState } from 'react'; 
 import { useParams, Link } from 'react-router-dom';
-import { Typography, Button, Tag, Image, Alert } from 'antd';
+import { Typography, Button, Tag, Image, Alert, Badge } from 'antd';  // Importamos Image de Ant Design
 import { Carousel } from 'primereact/carousel';
 import { RiFileExcel2Line } from "react-icons/ri";
 import { FaYoutube } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
-import { Badge } from 'antd'; 
+import { HiOutlineSearch } from "react-icons/hi";
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';
@@ -43,7 +43,7 @@ const ProductoPage = () => {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(
     imagenes.length > 0 ? imagenes[0].url : ''
   );
-
+  
   const carritoCount = (JSON.parse(localStorage.getItem('ae-carrito')) || []).length;
 
   if (!producto) {
@@ -144,11 +144,12 @@ const ProductoPage = () => {
               ))}
             </div>
             <div className="p-imagen">
+              {/* Aquí eliminamos el modal y habilitamos el preview directamente en la imagen */}
               <Image
                 alt={producto.nombre}
                 src={imagenSeleccionada}
                 className="producto-imagen"
-                preview={false}
+                preview={{ src: imagenSeleccionada }} // Esta propiedad muestra la imagen en pantalla completa cuando se hace clic
               />
             </div>
             <div className="p-carrousel">
@@ -208,7 +209,7 @@ const ProductoPage = () => {
         </div>
 
         <div className="p-info2">
-          <hr></hr>
+          <hr />
           <div className="p-titulovideo">
             <FaYoutube /><h2>Video demostrativo</h2>
           </div>

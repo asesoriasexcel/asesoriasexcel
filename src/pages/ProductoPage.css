@@ -27,6 +27,7 @@
   flex-direction: row;
   gap: 20px;
   flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+  border: 1px solid transparent;
 }
 
 .producto-container .producto-card .p-info1 .p-tira-imagenes {
@@ -40,6 +41,7 @@
   padding-right: 0px;
   box-sizing: border-box;
   cursor: pointer;
+  border: 1px solid transparent;
 }
 
 .producto-container .producto-card .p-info1 .p-galeria-imagen {
@@ -47,7 +49,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  
+  border: 1px solid transparent;
 }
 
 .producto-container .producto-card .p-info1 .p-galeria-imagen .p-imagen {
@@ -56,6 +58,7 @@
   justify-content: center;
   align-items: center;
   padding: 10px;
+  border: 1px solid transparent;
 }
 
 .producto-container .producto-card .p-info1 .p-galeria-imagen .producto-imagen {
@@ -187,7 +190,6 @@
 .producto-container .p-titulovideo h2 {
   margin-bottom: 0px;
 }
-
 
 @media (max-width: 768px) {
 

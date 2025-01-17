@@ -27,7 +27,7 @@ const MenuBar = ({ onMenuClick }) => {
           <Badge
             count={carritoCount} // Total de productos en el carrito
             overflowCount={99} // Límite para mostrar "99+"
-            style={{ backgroundColor: 'var(--especial)' }} // Color personalizado del badge
+            style={{ backgroundColor: '#ff4d4f' }} // Color personalizado del badge
           >
             <FiShoppingCart
               className="menu-icon"
