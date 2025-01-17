@@ -6,9 +6,9 @@ const ContactoPage = () => {
     // Seleccionar el div con el id "main-menu"
     const targetElement = document.getElementById('main-menu');
 
-    // Realizar el scroll hacia el elemento encontrado, si existe
+    // Realizar el scroll hacia el elemento encontrado de manera instantánea
     if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
+      targetElement.scrollIntoView({ behavior: 'auto' }); // 'auto' hace que el scroll sea instantáneo
     }
   }, []); // El array vacío asegura que se ejecute una sola vez después de que el componente se renderice
 
