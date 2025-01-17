@@ -18,7 +18,7 @@ const AnnouncementBanner = () => {
         <span className="text">
           Planillas de Lanzamiento
           <HiMiniRocketLaunch />
-          <Link to="/liberadas" className="liberadas">
+          <Link to="/tienda/liberados" className="liberadas"> {/* Cambio aquí */}
             <strong>Ver Liberadas</strong>
           </Link>
         </span>

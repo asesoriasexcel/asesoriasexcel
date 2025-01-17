@@ -10,6 +10,9 @@ import './TopMenu.css';
 
 import AnnouncementBanner from '../Anuncio/AnnouncementBanner';
 
+// Importa la data de tiendaCategorias correctamente
+import tiendaCategorias from '../../../data/tiendaCategorias'; // Usamos import por defecto
+
 const logo = require('../../../images/logo/logo4.png');
 
 const TopMenu = () => {
@@ -27,6 +30,15 @@ const TopMenu = () => {
     }
   };
 
+  // Crear los items dinámicamente a partir de la data de tiendaCategorias
+  const tiendaItems = tiendaCategorias.map(categoria => ({
+    label: (
+      <Link to={`/tienda/categoria/${categoria.id}`} className="menu-link">
+        {categoria.nombre}  {/* Usamos el nombre de cada categoría */}
+      </Link>
+    ),
+  }));
+
   // Lista de elementos del menú
   const items = [
     {
@@ -39,33 +51,7 @@ const TopMenu = () => {
     {
       label: 'Tienda de productos',
       icon: <AiOutlineAppstore className="icon-menuapp" />,
-      items: [
-        {
-          label: 'Components',
-          command: () => alert('Components clicked')
-        },
-        {
-          label: 'Blocks',
-          command: () => alert('Blocks clicked')
-        },
-        {
-          label: 'UI Kit',
-          command: () => alert('UI Kit clicked')
-        },
-        {
-          label: 'Templates',
-          items: [
-            {
-              label: 'Apollo',
-              command: () => alert('Apollo clicked')
-            },
-            {
-              label: 'Ultima',
-              command: () => alert('Ultima clicked')
-            }
-          ]
-        }
-      ]
+      items: tiendaItems,  // Insertamos los items dinámicamente
     },
     {
       label: (
@@ -73,6 +59,11 @@ const TopMenu = () => {
           <PiCompassTool className="icon-menuapp" /> Diseño y Personalización
         </Link>
       )
+    },
+    {
+      label: 'Terminos y Condiciones',
+      icon: 'pi pi-envelope',
+      command: scrollToFooter
     },
     {
       label: 'Contacto',
@@ -96,7 +87,6 @@ const TopMenu = () => {
 
   return (
     <>
-    
       {/* Menú para móvil */}
       {isMobile && (
         <div className="movil-menu-container">
@@ -129,25 +119,26 @@ const TopMenu = () => {
       {/* Menú para escritorio */}
       {!isMobile && (
         <>
-        <AnnouncementBanner />
-        <div className="desktop-menu-container">
-          <Link to="/" className="desktop-brand-name">
-            <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
-          </Link>
-          <Menubar model={items} />
-          <Badge
-            count={carritoCount}
-            overflowCount={99}
-            style={{ backgroundColor: '#ff4d4f' }}
-          >
-            <Button
-              icon="pi pi-shopping-cart"
-              className="p-button-rounded p-button-text desktop-cart-button"
-              onClick={() => navigate('/carrito')}
-            />
-          </Badge>
-        </div>
-      </>)}
+          <AnnouncementBanner />
+          <div className="desktop-menu-container">
+            <Link to="/" className="desktop-brand-name">
+              <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
+            </Link>
+            <Menubar model={items} />
+            <Badge
+              count={carritoCount}
+              overflowCount={99}
+              style={{ backgroundColor: '#ff4d4f' }}
+            >
+              <Button
+                icon="pi pi-shopping-cart"
+                className="p-button-rounded p-button-text desktop-cart-button"
+                onClick={() => navigate('/carrito')}
+              />
+            </Badge>
+          </div>
+        </>
+      )}
     </>
   );
 };
