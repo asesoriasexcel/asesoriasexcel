@@ -52,6 +52,11 @@
   
   /* Adaptación para móviles */
   @media (max-width: 768px) {
+
+    .terminos-section {
+      margin-top: 80px;
+    }
+
     .terminos-section .terminos-title {
       font-size: 1.8rem;
     }

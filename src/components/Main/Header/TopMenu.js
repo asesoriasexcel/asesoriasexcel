@@ -22,14 +22,6 @@ const TopMenu = () => {
   // Obtener la cantidad de artículos en el carrito
   const carritoCount = (JSON.parse(localStorage.getItem('ae-carrito')) || []).length;
 
-  // Función para desplazar a la sección del footer
-  const scrollToFooter = () => {
-    const footerElement = document.getElementById('footer');
-    if (footerElement) {
-      footerElement.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   // Crear los items dinámicamente a partir de la data de tiendaCategorias
   const tiendaItems = tiendaCategorias.map(categoria => ({
     label: (
@@ -61,14 +53,14 @@ const TopMenu = () => {
       )
     },
     {
-      label: 'Terminos y Condiciones',
-      icon: 'pi pi-envelope',
-      command: scrollToFooter
+      label: 'Términos y Condiciones',
+      icon: 'pi pi-file',
+      command: () => navigate('/terminoscondiciones') // Redirige a la ruta /terminoscondiciones
     },
     {
       label: 'Contacto',
       icon: 'pi pi-envelope',
-      command: scrollToFooter
+      command: () => navigate('/contacto') // Redirige a la ruta /contacto
     }
   ];
 

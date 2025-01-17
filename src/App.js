@@ -1,6 +1,8 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
+import ScrollToTop from './ScrollToTop';
+
 // Páginas
 import LandingPage from './pages/LandingPage';
 import TiendaPage from './pages/TiendaPage';
@@ -20,6 +22,7 @@ import './App.css';
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         {/* Rutas */}
         <Routes>
