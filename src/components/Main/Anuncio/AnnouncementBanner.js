@@ -13,7 +13,8 @@ const AnnouncementBanner = () => {
   return (
     isVisible && (
       <div className="banner">
-        <span className="text">Descarga gratis nuestras <strong style={{fontWeight: '600' }}>Planillas de Lanzamiento</strong><HiMiniRocketLaunch /></span>
+        <div>.</div>
+        <span className="text">Planillas Gratis de Lanzamiento<HiMiniRocketLaunch /></span>
         <button className="closeButton" onClick={handleClose}>
           <IoCloseOutline />
         </button>
