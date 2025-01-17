@@ -391,6 +391,19 @@
     margin-right: 8px;
   }
 
+  .producto-liberado-banner {
+    background-color: #fff382;
+    color: var(--lh_mo);
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
+    margin-bottom: 10px;
+    z-index: 1;
+    font-size: 14px;
+  }
+  
+
   @media (max-width: 768px) {
     .menu-hamburguesa {
       display: block; /* Mostrar solo en pantallas pequeñas */

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Tag } from 'antd';
-import { FaYoutube } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 
 const obtenerColorPorGrado = (grado) => {
@@ -37,6 +36,11 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
     navigate('/carrito');
   };
 
+  const handleDescargar = (producto) => {
+    // Lógica para descargar el producto
+    console.log(`Descargando el producto: ${producto.nombre}`);
+  };
+
   return (
     <div className="productos-grid">
       {productos.map((producto) => (
@@ -46,6 +50,12 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
           onClick={() => navigate(`/producto/${producto.id_articulo}`)}
           style={{ cursor: 'pointer' }} // Cambia el cursor para que sea claro que es clicable
         >
+          {/* Faja superior para producto liberado */}
+          {producto.liberado === 'si' && (
+            <div className="producto-liberado-banner">
+              Producto Liberado
+            </div>
+          )}
           <div className="cardproducto-imagen">
             <img
               src={producto.imagen}
@@ -64,43 +74,66 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
                   {producto.grado}
                 </Tag>
               </div>
-              <button
-                className={`btn-primary btn-youtube ${
-                  producto.video_si === 'no' ? 'disabled' : ''
-                }`}
-                onClick={(e) => {
-                  e.stopPropagation(); // Evita que el clic en este botón active la navegación
-                  producto.video_si === 'si' && onOpenModal(producto.video_link);
-                }}
-                disabled={producto.video_si === 'no'}
-              >
-                <FaYoutube className="youtube-icon" /> Demo
-              </button>
+              {/* Ocultar botón Demo si el producto está liberado */}
+              {producto.liberado !== 'si' && (
+                <button
+                  className={`btn-primary btn-youtube ${
+                    producto.video_si === 'no' ? 'disabled' : ''
+                  }`}
+                  onClick={(e) => {
+                    e.stopPropagation(); // Evita que el clic en este botón active la navegación
+                    producto.video_si === 'si' && onOpenModal(producto.video_link);
+                  }}
+                  disabled={producto.video_si === 'no'}
+                >
+                  Demo
+                </button>
+              )}
             </div>
             <h3 className="producto-nombre">{producto.nombre}</h3>
             <p className="producto-descripcion-corta">
               {producto.descripcion.slice(0, 90)}...
             </p>
-            <p className="producto-precio">CLP ${producto.precio}</p>
+            {/* Mostrar precio tachado si el producto está liberado */}
+            {/* Mostrar el precio solo si el producto no está liberado */}
+            {producto.liberado !== 'si' && (
+              <p className="producto-precio">CLP ${producto.precio}</p>
+            )}
+
             <div className="producto-botones">
-              <button
-                className="btn-primary btn-azul"
-                onClick={(e) => {
-                  e.stopPropagation(); // Evita navegación al hacer clic
-                  handleComprar(producto); // Llama a la nueva lógica para "Comprar"
-                }}
-              >
-                Comprar
-              </button>
-              <button
-                className="btn-primary btn-azulsecundario"
-                onClick={(e) => {
-                  e.stopPropagation(); // Evita navegación al hacer clic
-                  onAddToCart(producto);
-                }}
-              >
-                Añadir al carrito
-              </button>
+              {/* Cambiar botones según el estado de liberado */}
+              {producto.liberado === 'si' ? (
+                <button
+                  className="btn-primary btn-verde"
+                  onClick={(e) => {
+                    e.stopPropagation(); // Evita navegación al hacer clic
+                    handleDescargar(producto);
+                  }}
+                >
+                  Descargar
+                </button>
+              ) : (
+                <>
+                  <button
+                    className="btn-primary btn-azul"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Evita navegación al hacer clic
+                      handleComprar(producto); // Llama a la nueva lógica para "Comprar"
+                    }}
+                  >
+                    Comprar
+                  </button>
+                  <button
+                    className="btn-primary btn-azulsecundario"
+                    onClick={(e) => {
+                      e.stopPropagation(); // Evita navegación al hacer clic
+                      onAddToCart(producto);
+                    }}
+                  >
+                    Añadir al carrito
+                  </button>
+                </>
+              )}
             </div>
           </div>
         </div>
