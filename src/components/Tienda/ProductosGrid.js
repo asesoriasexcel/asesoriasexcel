@@ -47,9 +47,17 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
         <div
           key={producto.id_articulo}
           className="producto-card"
-          onClick={() => navigate(`/producto/${producto.id_articulo}`)}
-          style={{ cursor: 'pointer' }} // Cambia el cursor para que sea claro que es clicable
+          onClick={() => {
+            if (producto.liberado !== 'si') {
+              navigate(`/producto/${producto.id_articulo}`);
+            }
+          }}
+          style={{
+            cursor: producto.liberado === 'si' ? 'default' : 'pointer', // Cambiar cursor según el estado
+            pointerEvents: producto.liberado === 'si' ? 'none' : 'auto', // Desactivar clic si está liberado
+          }}
         >
+
           {/* Faja superior para producto liberado */}
           {producto.liberado === 'si' && (
             <div className="producto-liberado-banner">

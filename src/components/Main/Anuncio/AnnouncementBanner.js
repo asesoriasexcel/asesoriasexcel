@@ -19,7 +19,7 @@ const AnnouncementBanner = () => {
           Planillas de Lanzamiento
           <HiMiniRocketLaunch />
           <Link to="/liberadas" className="liberadas">
-            <strong>Sección Liberadas</strong>
+            <strong>Ver Liberadas</strong>
           </Link>
         </span>
         <button className="closeButton" onClick={handleClose}>
