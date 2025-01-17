@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Tree } from 'antd';
-import { FolderOutlined, FolderOpenOutlined } from '@ant-design/icons';
 import { AiOutlineHome } from "react-icons/ai";
 import { TbFilter, TbFilterX } from "react-icons/tb";
 import { Link } from 'react-router-dom'; // Importar Link de react-router-dom
@@ -23,12 +22,12 @@ const construirTreeData = () => {
 
     const children = subcategorias.map((subcat) => {
       const cantidadArticulosSubcategoria = tiendaProductos.filter(
-        (producto) => producto.id_subcategoria === String(subcat.id_subcategoria)
+        (producto) => producto.id_subcategoria === String(subcat.id)
       ).length;
 
       return {
         title: `${subcat.nombre} (${cantidadArticulosSubcategoria})`,
-        key: `subcategoria-${subcat.id_subcategoria}`,
+        key: `subcategoria-${subcat.id}`,
         isLeaf: true,
       };
     });
@@ -75,7 +74,7 @@ const TreeMenu = ({ onSelect, onMostrarTodo }) => {
             <TbFilterX /> // Icono para filtro activado
           ) : (
             <TbFilter /> // Icono para filtro desactivado
-          )} 
+          )}
           {filtroAplicado ? " Ocultar filtro" : " Mostrar todo"}
         </span>
       </div>
@@ -85,9 +84,19 @@ const TreeMenu = ({ onSelect, onMostrarTodo }) => {
           onSelect={handleSelect}
           treeData={treeData}
           showIcon={true}
-          switcherIcon={(props) =>
-            props.expanded ? <FolderOpenOutlined /> : <FolderOutlined />
-          }
+          // Aquí eliminamos el switcherIcon para no mostrar los íconos de apertura/cierre
+          icon={({ title }) => (
+            <span
+              style={{
+                fontSize: 16,
+                color: '#4b8e8d',
+                fontWeight: 'bold',
+                marginRight: 8
+              }}
+            >
+              {title.includes('(') ? '📂' : '📁'} {/* Mantenemos los íconos de carpeta amarilla */}
+            </span>
+          )}
         />
       </div>
     </div>

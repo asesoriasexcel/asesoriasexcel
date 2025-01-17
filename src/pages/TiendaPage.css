@@ -197,57 +197,7 @@
   .TiendaPage-modal-icons svg {
     margin-bottom: 0;
   }
-  /* Estilo de la lista del Tree */
-  .ant-tree-treenode {
-    width: 100%;
-    margin-bottom: 0px;
-    border-radius: 4px;
-    padding-inline: 6px;
-  }
-
-  .ant-tree .ant-tree-node-content-wrapper,
-  .ant-tree .ant-tree-switcher {
-    transition: 0.3s ease;
-  }
-
-  .ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
-    color: #fff;
-    background-color: var(--primary);
-  }
-
-  .ant-tree-treenode:hover,
-  .ant-tree-treenode span:hover {
-    color: #fff;
-    background-color: var(--primary);
-  }
-
-  .ant-tree-switcher,
-  .ant-tree-node-content-wrapper span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 0px;
-  }
-
-  .ant-tree-switcher.ant-tree-switcher_open {
-    width: fit-content !important;
-  }
-
-  .ant-tree-node-content-wrapper {
-    font-size: .9rem;
-  }
   
-  /* Añadir efectos al Tree */
-  .ant-tree-switcher-icon {
-    font-size: .95rem;
-    transition: transform 0.3s ease;
-  }
-  
-  .ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-open {
-    padding-left: 0;
-  }
-  
-
   /* */
   .tienda-cabezal {
     display: flex;
