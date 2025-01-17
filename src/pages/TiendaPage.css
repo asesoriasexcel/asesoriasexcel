@@ -25,6 +25,7 @@
     background-color: #ffffff;
     box-sizing: border-box;
     position: relative;
+    border-right: 1px solid #d4d5d8;
   }
   
   /* Ajustes al canvas del menú */

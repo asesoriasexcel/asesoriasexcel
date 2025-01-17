@@ -8,6 +8,8 @@ import { PiCompassTool } from "react-icons/pi";
 import { Badge } from 'antd'; // Importamos Badge de Ant Design
 import './TopMenu.css';
 
+import AnnouncementBanner from '../Anuncio/AnnouncementBanner';
+
 const logo = require('../../../images/logo/logo4.png');
 
 const TopMenu = () => {
@@ -94,9 +96,11 @@ const TopMenu = () => {
 
   return (
     <>
+    
       {/* Menú para móvil */}
       {isMobile && (
         <div className="movil-menu-container">
+          <AnnouncementBanner />
           <Menubar
             model={items}
             start={<div className="movil-menu-left"></div>}
@@ -124,6 +128,8 @@ const TopMenu = () => {
 
       {/* Menú para escritorio */}
       {!isMobile && (
+        <>
+        <AnnouncementBanner />
         <div className="desktop-menu-container">
           <Link to="/" className="desktop-brand-name">
             <img src={logo} alt="Logo" style={{ height: '40px', width: 'auto' }} />
@@ -141,7 +147,7 @@ const TopMenu = () => {
             />
           </Badge>
         </div>
-      )}
+      </>)}
     </>
   );
 };

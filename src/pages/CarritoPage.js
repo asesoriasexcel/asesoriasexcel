@@ -61,7 +61,7 @@ const CarritoPage = () => {
 
   const mostrarConfirmacionEliminar = (id_articulo) => {
     confirm({
-      title: '¿Estás seguro de que deseas eliminar este artículo?',
+      title: '¿Estás seguro de que deseas eliminar este producto?',
       content: 'Una vez eliminado, no podrás recuperarlo.',
       okText: 'Sí, eliminar',
       okType: 'danger',

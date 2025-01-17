@@ -198,20 +198,25 @@
 
   .movil-menu-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     position: fixed;
     top: 0;
     width: 100%;
+    height: fit-content;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    gap: 4px;
     z-index: 1000;
     backdrop-filter: blur(10px);
   }
 
-  .p-menubar {
+  .movil-menu-container .p-menubar {
     width: 100%;
-    height: 40px;
+    height: 50px;
     display: flex;
     justify-content: center;
+    padding-top: 10px;
     align-items: center;
     border-radius: 5px;
     border: 1px solid;

@@ -1,0 +1,48 @@
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary);
+    color: #333;
+    padding: 10px 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: .9rem;
+    height: 27px;
+    position: relative;
+  }
+  
+  .banner span {
+    line-height: 1.5;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    min-width: 0;
+    font-weight: 300;
+    color: #fff;
+  }
+
+  .banner .text {
+    flex: 1;
+    align-items: center;
+  }
+  
+  .banner .text svg {
+    margin-left: 8px;
+  }
+
+  .closeButton {
+    color: #fff;
+    display: flex;
+    height: 27px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    align-items: center;
+  }
+
+  .closeButton svg {
+    font-size: 1rem;
+  }
