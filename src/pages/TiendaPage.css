@@ -103,10 +103,10 @@
     position: relative;
     padding-left: 20px;
     background-color: #f6f7f9;
-    max-width: 100%; /* Limita el ancho al 100% del contenedor padre */
-    max-height: 100%; /* Limita el alto al 100% del contenedor padre */
-    overflow: auto; /* Agrega barras de desplazamiento si el contenido es demasiado grande */
-    box-sizing: border-box; /* Incluye padding y bordes en las dimensiones */
+    max-width: 100%; 
+    max-height: 100%; 
+    overflow: auto; 
+    box-sizing: border-box; 
   }
   
   /* Ajustes al canvas del contenido */
@@ -133,7 +133,7 @@
   .titulo-productos {
     font-size: 1.75rem;
     font-weight: 400;
-    color: #333;
+    color: var(--lh_mo);
     margin-bottom: 20px;
     text-align: left;
     width: 100%;
@@ -224,7 +224,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: fit-content !important;
+    height: 100% !important;
     background: #fff;
     border: 2px transparent solid;
     border-radius: 2px;
@@ -306,6 +306,13 @@
     left: 10px;
     z-index: 1000;
   }
+
+  .cardproducto-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    height: 100%;
+  }
   
   .cardproducto-contenido .cp-infotag .cp-tag .ant-tag{
     font-size: .8rem;
@@ -342,17 +349,19 @@
   }
 
   .producto-liberado-banner {
-    background-color: #ffe600;
-    color: var(--lh_o);
+    color: #968705;
     font-weight: 400;
     text-align: center;
     width: 100%;
     padding: 5px 0;
-    border-radius: 16px;
-    border: 1px solid var(--lh_o);
-    margin-bottom: 10px;
+    border-radius: 4px;
     z-index: 1;
-    font-size: 14px;
+    font-size: 1rem;
+    height: fit-content;
+    margin: 4px 0px;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
   }
   
 

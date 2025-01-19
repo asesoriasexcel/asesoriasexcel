@@ -8,6 +8,10 @@
   margin-inline: 0px;
 }
 
+.producto-container .volver-tienda .carrito-link {
+  padding-right: 30px;
+}
+
 .producto-container .producto-card {
   display: flex;
   flex-direction: column;
@@ -100,6 +104,12 @@
   color: var(--lh_mo);
   margin-bottom: 0px;
 }
+
+.producto-container .p-titulovideo h2 {
+  color: var(--lh_mo);
+
+}
+
 
 .producto-container .p-nombre.titulo-central {
   margin-bottom: 15px;
@@ -218,6 +228,8 @@
 .producto-container .p-info .btn-youtube {
   display: none;
 }
+
+
 @media (max-width: 768px) {
 
   .producto-container .volver-tienda {

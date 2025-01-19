@@ -50,7 +50,7 @@
   margin-inline: 10px !important;
 }
 
-.carrito-container .carrito-list-item h1, h2, h3, h4, p {
+.carrito-container .carrito-list-item h1, h3, h4, p {
   color: var(--lh_po);
 }
 .carrito-list-item .ant-card-body {

@@ -46,7 +46,7 @@ const TiendaPage = () => {
     } else if (node.key.startsWith('subcategoria-')) {
       const idSubcategoria = node.key.split('-')[1];
       const idCategoria = tiendaSubcategorias.find(
-        (subcat) => String(subcat.id_subcategoria) === idSubcategoria
+        (subcat) => String(subcat.id) === idSubcategoria
       )?.id_categoria;
       setCategoriaSeleccionada(idCategoria);
       setSubcategoriaSeleccionada(idSubcategoria);
@@ -69,7 +69,7 @@ const TiendaPage = () => {
 
   const subcategoriaNombre = subcategoriaSeleccionada
     ? tiendaSubcategorias.find(
-        (subcat) => String(subcat.id_subcategoria) === subcategoriaSeleccionada
+        (subcat) => String(subcat.id) === subcategoriaSeleccionada
       )?.nombre
     : null;
 
@@ -126,7 +126,7 @@ const TiendaPage = () => {
         visible={isDrawerVisible}
         bodyStyle={{ padding: 0 }}
       >
-        <TreeMenu onSelect={onSelect} />
+        <TreeMenu onSelect={onSelect} onMostrarTodo={handleClickTienda} />
       </Drawer>
 
       <div className="tiendapage-menu">

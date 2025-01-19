@@ -58,12 +58,6 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
           }}
         >
 
-          {/* Faja superior para producto liberado */}
-          {producto.liberado === 'si' && (
-            <div className="producto-liberado-banner">
-              Producto Liberado
-            </div>
-          )}
           <div className="cardproducto-imagen">
             <img
               src={producto.imagen}
@@ -109,6 +103,11 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
             )}
 
             <div className="producto-botones">
+            {producto.liberado === 'si' && (
+            <div className="producto-liberado-banner">
+              ¡Producto Liberado!
+            </div>
+          )}
               {/* Cambiar botones según el estado de liberado */}
               {producto.liberado === 'si' ? (
                 <button

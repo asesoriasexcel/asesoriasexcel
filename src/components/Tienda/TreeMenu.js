@@ -2,12 +2,16 @@ import React, { useState } from 'react';
 import { Tree } from 'antd';
 import { AiOutlineHome } from "react-icons/ai";
 import { TbFilter, TbFilterX } from "react-icons/tb";
+import { IoGridOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom'; // Importar Link de react-router-dom
 import tiendaCategorias from '../../data/tiendaCategorias';
 import tiendaSubcategorias from '../../data/tiendaSubcategorias';
 import tiendaProductos from '../../data/tiendaProductos';
 
+import './TreeMenu.css';
+
 const logo = require('../../images/logo/logo4.png');
+
 
 // Función para construir el treeData dinámicamente
 const construirTreeData = () => {
@@ -64,19 +68,14 @@ const TreeMenu = ({ onSelect, onMostrarTodo }) => {
         </Link>
       </div>
       <div className='TreeMenu-container-volver'>
-        <Link to="/"> {/* Usar Link para navegar al inicio */}
-          <AiOutlineHome /> Volver al inicio
+        <Link to="/">
+          <AiOutlineHome /> 
+          <span>Volver al inicio</span>
         </Link>
       </div>
-      <div className="TreeMenu-container-mostrar">
-        <span onClick={handleMostrarTodo}>
-          {filtroAplicado ? (
-            <TbFilterX /> // Icono para filtro activado
-          ) : (
-            <TbFilter /> // Icono para filtro desactivado
-          )}
-          {filtroAplicado ? " Ocultar filtro" : " Mostrar todo"}
-        </span>
+      <div className="TreeMenu-container-mostrar" onClick={handleMostrarTodo} >
+        <IoGridOutline />
+        <span>Mostrar todo</span>
       </div>
       <div className='TreeMenu-container-tree'>
         <Tree
