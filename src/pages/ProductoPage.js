@@ -68,15 +68,16 @@ const ProductoPage = () => {
   )?.nombre;
 
   const itemTemplate = (img) => (
-    <div key={img.id_imagen}>
+    <div key={img.id_imagen} className="carousel-item">
       <Image
         alt={producto.nombre}
         src={img.url}
         className="producto-imagen"
-        preview={false}
+        preview={{ src: img.url }}
       />
     </div>
   );
+  
 
   const formatearPrecio = (precio) => {
     return new Intl.NumberFormat('es-CL', {
@@ -144,12 +145,11 @@ const ProductoPage = () => {
               ))}
             </div>
             <div className="p-imagen">
-              {/* Aquí eliminamos el modal y habilitamos el preview directamente en la imagen */}
               <Image
                 alt={producto.nombre}
                 src={imagenSeleccionada}
                 className="producto-imagen"
-                preview={{ src: imagenSeleccionada }} // Esta propiedad muestra la imagen en pantalla completa cuando se hace clic
+                preview={{ src: imagenSeleccionada }}
               />
             </div>
             <div className="p-carrousel">
@@ -165,10 +165,28 @@ const ProductoPage = () => {
 
           <div className="p-info">
             <div className="p-tag">
-              <span>Versión:</span>
-              <Tag color={obtenerColorPorGrado(producto.grado)} style={{ marginLeft: '8px' }}>
-                {producto.grado}
-              </Tag>
+              <div className="p-tag1">
+                <span>Versión:</span>
+                <Tag color={obtenerColorPorGrado(producto.grado)} style={{ marginLeft: '8px' }}>
+                  {producto.grado}
+                </Tag>
+              </div>
+              <div className="p-tag2">
+                  <button
+                    className={`btn-primary btn-youtube ${
+                      producto.video_si === 'no' ? 'disabled' : ''
+                    }`}
+                    disabled={producto.video_si === 'no'}
+                    onClick={() => {
+                      const demoSection = document.getElementById('p-info2');
+                      if (demoSection) {
+                        demoSection.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
+                  >
+                    Demo
+                  </button>
+                </div>
             </div>
             <div className="p-nombre titulo-central">
               <RiFileExcel2Line />
@@ -208,7 +226,7 @@ const ProductoPage = () => {
           </div>
         </div>
 
-        <div className="p-info2">
+        <div id="p-info2" className="p-info2">
           <hr />
           <div className="p-titulovideo">
             <FaYoutube /><h2>Video demostrativo</h2>

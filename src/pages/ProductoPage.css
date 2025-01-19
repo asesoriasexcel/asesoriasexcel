@@ -76,10 +76,14 @@
 }
 
 .producto-container .p-info .p-tag {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   color: var(--comentarios);
   font-size: .8rem;
   background-color: transparent;
   padding-left: 0px;
+  padding-right: 0px;
   margin: 10px 0;
 }
 
@@ -191,6 +195,29 @@
   margin-bottom: 0px;
 }
 
+.producto-container .p-info .btn-youtube {
+  font-size: .8rem;
+  border-radius: 32px;
+  padding: 4px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ff0000; /* Color de fondo típico de YouTube */
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+.producto-container .p-info .btn-youtube svg {
+  font-size: 1rem; /* Ajusta el tamaño del ícono */
+  margin-right: 4px;
+}
+
+.producto-container .p-info .btn-youtube {
+  display: none;
+}
 @media (max-width: 768px) {
 
   .producto-container .volver-tienda {
@@ -231,6 +258,9 @@
   }
 
   .producto-container .p-info .p-tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0px;
     margin-bottom: 10px;
   }
@@ -268,4 +298,9 @@
   .producto-container .p-info2 .p-video iframe {
     height: 300px;
   }
+
+  .producto-container .p-info .btn-youtube {
+    display: block;
+  }
+
 }
