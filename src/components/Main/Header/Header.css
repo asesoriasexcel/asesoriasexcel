@@ -117,6 +117,25 @@
   border: 1px solid #4096ff;
 }
 
+  .header-content .column {
+    margin-bottom: 20px;
+  }
+
+  .column h1 {
+    overflow: visible;
+  }
+
+  .column h1 .header1 {
+    font-size: 5rem;
+    font-weight: 600;
+    width: 100% !important;
+  }
+
+  .column h1 .header2 {
+    font-size: 1.6rem;
+    color: rgb(116, 116, 116);
+  }
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .header {
@@ -188,6 +207,21 @@
     padding: 1.3rem 1.7rem !important;
     font-size: 18px;
     font-weight: 400;
+  }
+
+  .header-content .column {
+    margin-bottom: 20px;
+  }
+
+  .column h1 .header1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: rgb(38, 51, 68)
+  }
+
+  .column h1 .header2 {
+    font-size: 1.6rem;
+    font-weight: 600;
   }
 
 }
