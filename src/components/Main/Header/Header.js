@@ -24,7 +24,7 @@ const Header = () => {
         <div className="header-content">
           <div className="column">
               <h1>
-              <span className="header1">Aló! AsesoriasExcel</span><br />
+              <span className="header1">Aló! AsesoriasExcel</span>
               <span className="header2">Soluciones en Excel y Otras Tecnologías</span>
               </h1>
             <div className="button-group">

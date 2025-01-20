@@ -16,6 +16,7 @@
 
 .header-sheet {
   width: 75%;
+
 }
 
 /* Header Content */
@@ -24,12 +25,13 @@
   width: 87%;
   justify-content: space-between;
   align-items: center;
-  margin: 100px auto;
+  margin: 150px auto;
+  margin-bottom: 50px;
   gap: 50px;
 }
 
 .column {
-  width: 50%;
+  width: 60%;
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
@@ -49,6 +51,34 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+}
+
+.column h1 {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.column h1 .header1 {
+  font-size: 4.35rem;
+  text-align: left;
+  line-height: 1.1;
+  font-weight: 600;
+  max-width: 32rem; 
+  color: #ffffff;
+  margin-bottom: 30px;
+  background: linear-gradient(to right, var(--seccion_header_titulo_2), rgb(32, 32, 32));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0px;
+}
+
+.column h1 .header2 {
+  line-height: 1.1;
+  color: rgb(92, 94, 97);
+  font-size: 2.5rem;
+  font-weight: 600;
 }
 
 /* Estilos para el párrafo (p) */
@@ -117,24 +147,14 @@
   border: 1px solid #4096ff;
 }
 
-  .header-content .column {
-    margin-bottom: 20px;
-  }
+.header-content .column {
+  margin-bottom: 20px;
+}
 
-  .column h1 {
-    overflow: visible;
-  }
+.column h1 {
+  overflow: visible;
+}
 
-  .column h1 .header1 {
-    font-size: 5rem;
-    font-weight: 600;
-    width: 100% !important;
-  }
-
-  .column h1 .header2 {
-    font-size: 1.6rem;
-    color: rgb(116, 116, 116);
-  }
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -213,14 +233,20 @@
     margin-bottom: 20px;
   }
 
+  .column h1 {
+    line-height: 1;
+  }
+
   .column h1 .header1 {
+    text-align: center;
     font-size: 2.2rem;
     font-weight: 600;
-    color: rgb(38, 51, 68)
+    color: rgb(58, 62, 66);
   }
 
   .column h1 .header2 {
-    font-size: 1.6rem;
+    text-align: center;
+    font-size: 1.3rem;
     font-weight: 600;
   }
 
