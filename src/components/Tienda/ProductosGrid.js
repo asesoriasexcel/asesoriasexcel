@@ -2,6 +2,8 @@ import React from 'react';
 import { Tag } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
+import './ProductoGrid.css';
+
 const obtenerColorPorGrado = (grado) => {
   switch (grado) {
     case 'Estándar':
@@ -46,7 +48,7 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
       {productos.map((producto) => (
         <div
           key={producto.id_articulo}
-          className="producto-card card-effect"
+          className="producto-card"
           onClick={() => {
             if (producto.liberado !== 'si') {
               navigate(`/producto/${producto.id_articulo}`);

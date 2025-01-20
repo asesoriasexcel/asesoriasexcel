@@ -4,6 +4,7 @@ import { MenuOutlined } from '@ant-design/icons';
 import { FiShoppingCart } from 'react-icons/fi';
 import { Badge } from 'antd';
 
+import './MenuBar.css';
 
 // Importar la imagen usando require
 const logo = require('../../images/logo/logo4.png');

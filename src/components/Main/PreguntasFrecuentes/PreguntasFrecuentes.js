@@ -21,9 +21,9 @@ const PreguntasFrecuentes = () => {
           </AccordionTab>
         </Accordion>
         <Accordion>
-          <AccordionTab header="¿Cómo funciona la compra?">
-            <p>Compras el producto en nuestra web, y en menos de 24 horas lo enviamos a tu correo junto con una guía y un video explicativo para que lo uses fácilmente</p>
-          </AccordionTab> 
+        <AccordionTab header="¿Cómo funciona la compra?">
+          <p>Realizas la compra en nuestra web y, en menos de 1 hora, recibirás el producto en tu correo electrónico, junto con <b>dos (2) llaves de activación</b>, la <b>guía de activación</b> y el <b>video explicativo de uso</b> para que puedas comenzar a usarlo sin problemas. Las llaves de activación permiten usar la planilla en un máximo de 2 dispositivos.</p>
+        </AccordionTab>
         </Accordion>
         <Accordion>
           <AccordionTab header="¿Cómo puedo comprar?">

@@ -1,11 +1,10 @@
 import React, { useState } from 'react'; 
 import { useParams, Link } from 'react-router-dom';
-import { Typography, Button, Tag, Image, Alert, Badge } from 'antd';  // Importamos Image de Ant Design
+import { Typography, Button, Tag, Image, Alert, Badge } from 'antd';
 import { Carousel } from 'primereact/carousel';
 import { RiFileExcel2Line } from "react-icons/ri";
 import { FaYoutube } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
-import { HiOutlineSearch } from "react-icons/hi";
 import tiendaProductos from '../data/tiendaProductos';
 import tiendaCategorias from '../data/tiendaCategorias';
 import tiendaSubcategorias from '../data/tiendaSubcategorias';

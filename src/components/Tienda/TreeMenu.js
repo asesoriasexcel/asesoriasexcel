@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Tree } from 'antd';
 import { AiOutlineHome } from "react-icons/ai";
-import { TbFilter, TbFilterX } from "react-icons/tb";
 import { IoGridOutline } from "react-icons/io5";
-import { Link } from 'react-router-dom'; // Importar Link de react-router-dom
+import { Link } from 'react-router-dom';
 import tiendaCategorias from '../../data/tiendaCategorias';
 import tiendaSubcategorias from '../../data/tiendaSubcategorias';
 import tiendaProductos from '../../data/tiendaProductos';

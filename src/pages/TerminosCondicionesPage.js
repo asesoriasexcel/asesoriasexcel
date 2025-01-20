@@ -36,7 +36,7 @@ const TerminosCondicionesPage = () => {
           {/* Proceso de Compra */}
           <h2>3. Proceso de Compra</h2>
           <p>
-            Para realizar una compra, deberás completar el pedido en nuestro sitio web. Actualmente, aceptamos únicamente <b>transferencias electrónicas</b>. Una vez confirmado el pago, recibirás el producto en tu correo electrónico dentro de un plazo aproximado de <b>1 hora</b>, junto con una <b>guía de uso</b> y un <b>video explicativo</b>.
+            Para realizar una compra, deberás completar el pedido en nuestro sitio web. Actualmente, aceptamos únicamente <b>transferencias electrónicas</b>. Una vez confirmado el pago, recibirás el producto en tu correo electrónico dentro de un plazo aproximado de <b>1 hora</b>, junto con dos(2) llaves de activación, la <b>guía de activación</b> y el <b>video explicativo de uso</b>.
           </p>
 
           {/* Política de Reembolsos */}
@@ -62,15 +62,9 @@ const TerminosCondicionesPage = () => {
           <p>
             No nos hacemos responsables por el <b>uso incorrecto</b> de nuestras planillas ni por incompatibilidades técnicas derivadas de su uso en <b>sistemas no especificados</b> en estos términos. El cliente es responsable de asegurarse de cumplir con los <b>requisitos técnicos</b> antes de la compra.
           </p>
-
-          {/* Ley Aplicable */}
-          <h2>8. Ley Aplicable</h2>
-          <p>
-            Estos <b>Términos y Condiciones</b> se rigen por las <b>leyes vigentes en Chile</b>. Cualquier disputa será resuelta en los <b>tribunales de la jurisdicción correspondiente</b>.
-          </p>
-
+          
           {/* Contacto */}
-          <h2>9. Contacto</h2>
+          <h2>8. Contacto</h2>
           <p>
             Para consultas adicionales, puedes escribirnos a nuestro correo electrónico: <b>aloasesoriasexcel@gmail.com</b>.
           </p>

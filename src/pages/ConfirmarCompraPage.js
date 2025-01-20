@@ -6,7 +6,7 @@ import tiendaProductos from '../data/tiendaProductos';
 import { Steps } from 'primereact/steps';
 import './ConfirmarCompraPage.css';
 
-const { Title, Text, Paragraph } = Typography;
+const { Text, Paragraph } = Typography;
 
 const ConfirmarCompraPage = () => {
   const [productosCarrito, setProductosCarrito] = useState([]);
@@ -86,7 +86,7 @@ const ConfirmarCompraPage = () => {
     },
   ];
 
-  const formularioGoogleUrl = "https://forms.gle/tu-enlace-de-formulario";
+  const formularioGoogleUrl = "https://docs.google.com/forms/d/e/1FAIpQLSckunkQIiO2q392JRO2qmTtpASay1cj_xmCldFMAlFaOOMGiw/viewform?usp=dialog";
 
   // Items para los pasos con iconos
   const items = [

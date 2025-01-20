@@ -212,6 +212,7 @@
 
   .confirmar-compra-container .p-steps .p-steps-item:before {
     transform: translateY(-1000%);
+    border-top: 1px solid transparent;
   }
 
   .confirmar-compra-container .p-steps .p-steps-item.p-highlight .p-steps-number {
@@ -233,6 +234,7 @@
 
   .confirmar-compra-container .p-steps .p-steps-item:before {
     transform: translateY(-2000%);
+    border-top: 1px solid transparent;
   }
 
   .confirmar-compra-container .stepmodificado ol {
@@ -241,7 +243,6 @@
     overflow: auto;
     box-sizing: border-box;
     display: flex;
-    
   }
   
   .confirmar-compra-container .stepmodificado li {
