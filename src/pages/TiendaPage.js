@@ -26,6 +26,15 @@ const TiendaPage = () => {
   const [isErrorModalVisible, setIsErrorModalVisible] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
+  // Función para convertir el enlace de YouTube a formato embed
+  const convertirEnlaceEmbed = (link) => {
+    if (link.includes("youtube.com/watch?v=")) {
+      const videoId = link.split("v=")[1];
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+    return link;
+  };
+
   useEffect(() => {
     if (id_categoria) {
       setCategoriaSeleccionada(id_categoria);
@@ -80,7 +89,8 @@ const TiendaPage = () => {
   };
 
   const handleOpenModal = (videoLink) => {
-    setCurrentVideoLink(videoLink);
+    const videoEmbedLink = convertirEnlaceEmbed(videoLink);
+    setCurrentVideoLink(videoEmbedLink);
     setIsModalVisible(true);
   };
 
