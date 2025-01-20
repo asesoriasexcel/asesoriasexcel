@@ -191,4 +191,55 @@
     }
   }
   
+
+  /* Sobreescritura de estilos de Steps */
+  .confirmar-compra-container .stepmodificado {
+    width: 40%;
+    margin: 15px 0 20px 10% !important;
+  }
+
+  .confirmar-compra-container .p-steps-number {
+    border: 1px solid #d0d1d3;
+  }
+
+  .confirmar-compra-container .stepmodificado li a {
+    padding: 10px;
+  }
+
+  .confirmar-compra-container .stepmodificado .p-menuitem-icon {
+    margin-top: 10px;
+  }
+
+  .confirmar-compra-container .p-steps .p-steps-item:before {
+    transform: translateY(-1000%);
+  }
+
+  .confirmar-compra-container .p-steps .p-steps-item.p-highlight .p-steps-number {
+    color: #fff;
+    background-color: var(--lh_o);
+  }
+
+  @media (max-width: 768px) {
+  .confirmar-compra-container .stepmodificado ol {
+    gap: 10px !important;
+    max-width: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+    display: flex;
+    
+  }
   
+  .confirmar-compra-container .stepmodificado li {
+    flex: 1 1 33.33%;
+  }
+  
+  .confirmar-compra-container .stepmodificado li .p-steps-title {
+    text-align: center;
+    white-space: normal;
+    overflow-wrap: break-word !important;
+  }
+  
+  .confirmar-compra-container .stepmodificado .p-steps-title {
+    font-size: 1rem;
+  }
+  }

@@ -121,7 +121,7 @@ const ConfirmarCompraPage = () => {
         model={items} 
         activeIndex={activeIndex} 
         onSelect={(e) => setActiveIndex(e.index)} 
-        className="m-2 pt-4"
+        className="m-2 pt-4 stepmodificado"
         readOnly={false}  // Asegúrate de que no esté en `true`
       />
 
