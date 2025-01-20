@@ -231,6 +231,10 @@
     background-color: var(--lh_o) !important; 
   }
 
+  .confirmar-compra-container .p-steps .p-steps-item:before {
+    transform: translateY(-2000%);
+  }
+
   .confirmar-compra-container .stepmodificado ol {
     gap: 10px !important;
     max-width: 100%;
