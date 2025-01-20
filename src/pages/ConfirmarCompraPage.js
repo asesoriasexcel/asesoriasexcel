@@ -3,6 +3,7 @@ import { Table, Button, Typography, Card, message } from 'antd';
 import { CopyOutlined } from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import tiendaProductos from '../data/tiendaProductos';
+import { Steps } from 'primereact/steps';
 import './ConfirmarCompraPage.css';
 
 const { Title, Text, Paragraph } = Typography;
@@ -10,6 +11,7 @@ const { Title, Text, Paragraph } = Typography;
 const ConfirmarCompraPage = () => {
   const [productosCarrito, setProductosCarrito] = useState([]);
   const [total, setTotal] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0); // Para el control del paso activo
 
   useEffect(() => {
     const carrito = JSON.parse(localStorage.getItem('ae-carrito')) || [];
@@ -86,6 +88,22 @@ const ConfirmarCompraPage = () => {
 
   const formularioGoogleUrl = "https://forms.gle/tu-enlace-de-formulario";
 
+  // Items para los pasos con iconos
+  const items = [
+    {
+      label: 'Realiza el pago',
+      icon: 'pi pi-wallet', // Icono de billetera
+    },
+    {
+      label: 'Sube el comprobante',
+      icon: 'pi pi-upload', // Icono de subida de archivo
+    },
+    {
+      label: 'Recibe tu producto',
+      icon: 'pi pi-check', // Icono de confirmación
+    },
+  ];
+
   return (
     <div className="confirmar-compra-container">
       {/* Enlace para volver al carrito */}
@@ -98,42 +116,56 @@ const ConfirmarCompraPage = () => {
       {/* Título */}
       <h2 className="carrito-title">Confirmar Compra</h2>
 
+      {/* Pasos */}
+      <Steps 
+        model={items} 
+        activeIndex={activeIndex} 
+        onSelect={(e) => setActiveIndex(e.index)} 
+        className="m-2 pt-4"
+        readOnly={false}  // Asegúrate de que no esté en `true`
+      />
+
       {/* Contenido principal */}
       <div className="confirmacompra-contenido">
         {/* Paso 1: Transferencia */}
-        <Card className="confirmacompra-card" title="Paso 1: Realiza el pago" bordered>
-          <Table
-            dataSource={datosTransferencia}
-            columns={columns}
-            pagination={false}
-            showHeader={false}
-            rowKey="label"
-          />
-        </Card>
+        {activeIndex === 0 && (
+          <Card className="confirmacompra-card" title="Paso 1: Realiza el pago" bordered>
+            <Table
+              dataSource={datosTransferencia}
+              columns={columns}
+              pagination={false}
+              showHeader={false}
+              rowKey="label"
+            />
+          </Card>
+        )}
 
         {/* Paso 2: Subir comprobante */}
-        <Card className="confirmacompra-card" title="Paso 2: Sube tu comprobante al formulario para recibir tu producto" bordered>
-          <Paragraph>
-            Por favor, sube tu comprobante de transferencia al formulario de Google para completar tu compra.
-          </Paragraph>
-          <Button
-            type="primary"
-            href={formularioGoogleUrl}
-            target="_blank"
-            className='confirmacompraform btn-azul'
-            block
-          >
-            Ir al formulario
-          </Button>
-        </Card>
+        {activeIndex === 1 && (
+          <Card className="confirmacompra-card" title="Paso 2: Sube tu comprobante al formulario para recibir tu producto" bordered>
+            <Paragraph>
+              Por favor, sube tu comprobante de transferencia al formulario de Google para completar tu compra.
+            </Paragraph>
+            <Button
+              type="primary"
+              href={formularioGoogleUrl}
+              target="_blank"
+              className='confirmacompraform btn-azul'
+              block
+            >
+              Ir al formulario
+            </Button>
+          </Card>
+        )}
 
         {/* Paso 3: Confirmación */}
-        <Card className="confirmacompra-card" title="Paso 3: Recibirás tu producto" bordered>
-          <Paragraph>
-            En aproximadamente <Text strong>1 hora</Text>, recibirás tu producto junto con las instrucciones de uso y un video demostrativo.
-          </Paragraph>
-        </Card>
-        <div>.</div>
+        {activeIndex === 2 && (
+          <Card className="confirmacompra-card" title="Paso 3: Recibirás tu producto" bordered>
+            <Paragraph>
+              En aproximadamente <Text strong>1 hora</Text>, recibirás tu producto junto con las instrucciones de uso y un video demostrativo.
+            </Paragraph>
+          </Card>
+        )}
       </div>
     </div>
   );

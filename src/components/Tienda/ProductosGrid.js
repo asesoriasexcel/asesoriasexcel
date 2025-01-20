@@ -46,7 +46,7 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
       {productos.map((producto) => (
         <div
           key={producto.id_articulo}
-          className="producto-card"
+          className="producto-card card-effect"
           onClick={() => {
             if (producto.liberado !== 'si') {
               navigate(`/producto/${producto.id_articulo}`);
