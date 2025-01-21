@@ -88,6 +88,7 @@ const tiendaProductos = [
     imagen: require('../images/productos/analisis_1_1.png'),
     disponible: 'si',
     liberado: 'si',
+    download: 'Escala de Notas 2025.xlsm',
     },
 ];
 
