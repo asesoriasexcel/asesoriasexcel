@@ -9,7 +9,7 @@
 }
 
 .producto-container .volver-tienda .carrito-link {
-  padding-right: 30px;
+  padding-right: 0px;
 }
 
 .producto-container .producto-card {
@@ -205,30 +205,13 @@
   margin-bottom: 0px;
 }
 
-.producto-container .p-info .btn-youtube {
-  font-size: .8rem;
-  border-radius: 32px;
-  padding: 4px 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ff0000; /* Color de fondo típico de YouTube */
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
-}
 
-.producto-container .p-info .btn-youtube svg {
-  font-size: 1rem; /* Ajusta el tamaño del ícono */
-  margin-right: 4px;
+/* === Media Queries === */
+@media (min-width: 769px) {
+  .producto-container .volver-tienda .carrito-link {
+    padding-right: 30px;
+  }
 }
-
-.producto-container .p-info .btn-youtube {
-  display: none;
-}
-
 
 @media (max-width: 768px) {
 
@@ -311,8 +294,6 @@
     height: 300px;
   }
 
-  .producto-container .p-info .btn-youtube {
-    display: block;
-  }
+
 
 }

@@ -26,7 +26,7 @@
   font-size: 1.1rem;  
   font-weight: 300;  
   text-align: left;
-  text-transform: uppercase;  
+  
 }
 
 .footer-subtitle {
@@ -53,10 +53,14 @@
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .footer-title .footer-title_b {
   color: #107c10;  /* Color verde de Excel */
+  font-weight: 400;
+  font-size: 1.1rem;
 }
 
 .social-icons {

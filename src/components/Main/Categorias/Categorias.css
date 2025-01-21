@@ -92,6 +92,14 @@
   font-size: .9rem;
 }
 
+@media (min-width: 769px) {
+  .categoria-card h3 {
+    font-size: 1.6rem;
+  }
+  .categoria-card p {
+    font-size: 1rem;
+  } 
+}
 @media (max-width: 768px) {
   .categoria-grid {
     display: flex;

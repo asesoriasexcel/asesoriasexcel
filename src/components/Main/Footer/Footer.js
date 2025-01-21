@@ -16,7 +16,7 @@ const Footer = () => {
             <span className="footer-title_a">Asesorias</span>
             <span className="footer-title_b">Excel</span>
           </span>
-          <span className="footer-subtitle">Soluciones precisas, en Excel y otras tecnologías.</span>
+          <span className="footer-subtitle">Soluciones en Excel y Otras Tecnologías.</span>
           <span>Síguenos</span>
           <div className="social-icons">
             <a href="https://www.facebook.com/profile.php?id=61566069431755&mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer">
@@ -32,7 +32,7 @@ const Footer = () => {
               <FaTiktok className="footer-tiktok" />
             </a>
           </div>
-          <span className="copyright">Copyright Asesorias Excel 2024. Todos los derechos reservados.</span>
+          <span className="copyright">© AsesoriasExcel 2025.</span>
         </div>
 
         {/* Columna 2 */}

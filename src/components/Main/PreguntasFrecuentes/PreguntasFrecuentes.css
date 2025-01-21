@@ -89,3 +89,9 @@
 .p-accordion-header-link svg {
     margin-top: 7.2px;
 }
+
+@media (max-width: 768px) {
+    .referencias-section .seccion-encabezado {
+        margin-bottom: 2.6rem;
+    }
+}

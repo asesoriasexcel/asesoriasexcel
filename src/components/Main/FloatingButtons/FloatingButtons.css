@@ -1,7 +1,7 @@
 .floating-buttons-container {
   position: fixed;
   bottom: 40px; /* Espacio desde la parte inferior */
-  right: 20px;  /* Espacio desde la parte derecha */
+  right: 30px;  /* Espacio desde la parte derecha */
   display: flex;
   flex-direction: column; /* Apilar los botones uno debajo del otro */
   gap: 20px; /* Espacio entre los botones */

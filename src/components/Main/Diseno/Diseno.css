@@ -102,6 +102,12 @@
   background-color: #40a9ff;
 }
 
+@media (min-width: 769px) {
+  .diseno-section .centered-content {
+    padding-top: 50px;
+  }
+}
+
 /* Responsividad para pantallas pequeñas */
 @media (max-width: 768px) {
 

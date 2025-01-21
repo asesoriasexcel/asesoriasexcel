@@ -171,21 +171,7 @@ const ProductoPage = () => {
                 </Tag>
               </div>
               <div className="p-tag2">
-                  <button
-                    className={`btn-primary btn-youtube ${
-                      producto.video_si === 'no' ? 'disabled' : ''
-                    }`}
-                    disabled={producto.video_si === 'no'}
-                    onClick={() => {
-                      const demoSection = document.getElementById('p-info2');
-                      if (demoSection) {
-                        demoSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                  >
-                    Demo
-                  </button>
-                </div>
+              </div>
             </div>
             <div className="p-nombre titulo-central">
               <RiFileExcel2Line />
