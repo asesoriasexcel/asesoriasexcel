@@ -106,10 +106,12 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
               <p className="producto-precio">CLP ${producto.precio}</p>
             )}
 
-            <div className="producto-botones">
-              {producto.liberado === 'si' ? (
+          <div className="producto-botones">
+            {producto.liberado === 'si' ? (
+              <div className="descarga-con-texto">
+                <span className="producto-liberado-banner">¡Producto Liberado!</span>
                 <button
-                  className="btn-primary btn-verde"
+                  className="btn-primary btn-verde btn-descargar"
                   onClick={(e) => {
                     e.stopPropagation();
                     handleDescargar(producto);
@@ -117,29 +119,31 @@ const ProductosGrid = ({ productos, onAddToCart, onOpenModal }) => {
                 >
                   Descargar
                 </button>
-              ) : (
-                <>
-                  <button
-                    className="btn-primary btn-azul"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleComprar(producto);
-                    }}
-                  >
-                    Comprar
-                  </button>
-                  <button
-                    className="btn-primary btn-azulsecundario"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      onAddToCart(producto);
-                    }}
-                  >
-                    Añadir al carrito
-                  </button>
-                </>
-              )}
-            </div>
+              </div>
+            ) : (
+              <>
+                <button
+                  className="btn-primary btn-azul"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    handleComprar(producto);
+                  }}
+                >
+                  Comprar
+                </button>
+                <button
+                  className="btn-primary btn-azulsecundario"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onAddToCart(producto);
+                  }}
+                >
+                  Añadir al carrito
+                </button>
+              </>
+            )}
+          </div>
+
           </div>
         </div>
       ))}
